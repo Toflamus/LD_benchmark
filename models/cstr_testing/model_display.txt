@@ -1,0 +1,170 @@
+Model gdp_reactors
+
+  Variables:
+    Q : Outlet flow rate of the superstructure unit [L/s]
+        Size=7, Index=N
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          1 :     0 :     0 :    10 : False : False : NonNegativeReals
+          2 :     0 :     0 :    10 : False : False : NonNegativeReals
+          3 :     0 :     0 :    10 : False : False : NonNegativeReals
+          4 :     0 :     0 :    10 : False : False : NonNegativeReals
+          5 :     0 :     0 :    10 : False : False : NonNegativeReals
+          6 :     0 :     0 :    10 : False : False : NonNegativeReals
+          7 :     0 :     0 :    10 : False : False : NonNegativeReals
+    QFR : Outlet flow rate recycle activation of the superstructure unit [L/s]
+        Size=7, Index=N
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          1 :     0 :     0 :    10 : False : False : NonNegativeReals
+          2 :     0 :     0 :    10 : False : False : NonNegativeReals
+          3 :     0 :     0 :    10 : False : False : NonNegativeReals
+          4 :     0 :     0 :    10 : False : False : NonNegativeReals
+          5 :     0 :     0 :    10 : False : False : NonNegativeReals
+          6 :     0 :     0 :    10 : False : False : NonNegativeReals
+          7 :     0 :     0 :    10 : False : False : NonNegativeReals
+    F : Molar flow [mol/s]
+        Size=14, Index=F_index
+        Key      : Lower : Value : Upper : Fixed : Stale : Domain
+        ('A', 1) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 2) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 3) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 4) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 5) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 6) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 7) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 1) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 2) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 3) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 4) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 5) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 6) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 7) :     0 :     0 :    10 : False : False : NonNegativeReals
+    FR : Molar flow  recycle activation [mol/s]
+        Size=14, Index=FR_index
+        Key      : Lower : Value : Upper : Fixed : Stale : Domain
+        ('A', 1) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 2) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 3) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 4) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 5) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 6) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 7) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 1) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 2) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 3) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 4) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 5) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 6) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 7) :     0 :     0 :    10 : False : False : NonNegativeReals
+    rate : Reaction rate [mol/(L*s)]
+        Size=14, Index=rate_index
+        Key      : Lower : Value : Upper : Fixed : Stale : Domain
+        ('A', 1) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 2) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 3) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 4) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 5) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 6) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 7) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 1) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 2) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 3) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 4) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 5) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 6) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 7) :   -10 :     0 :    10 : False : False :  Reals
+    V : Reactor volume [L]
+        Size=7, Index=N
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          1 :     0 :     0 :    10 : False : False : NonNegativeReals
+          2 :     0 :     0 :    10 : False : False : NonNegativeReals
+          3 :     0 :     0 :    10 : False : False : NonNegativeReals
+          4 :     0 :     0 :    10 : False : False : NonNegativeReals
+          5 :     0 :     0 :    10 : False : False : NonNegativeReals
+          6 :     0 :     0 :    10 : False : False : NonNegativeReals
+          7 :     0 :     0 :    10 : False : False : NonNegativeReals
+    c : Volume activation [L]
+        Size=7, Index=N
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          1 :     0 :     0 :    10 : False : False : NonNegativeReals
+          2 :     0 :     0 :    10 : False : False : NonNegativeReals
+          3 :     0 :     0 :    10 : False : False : NonNegativeReals
+          4 :     0 :     0 :    10 : False : False : NonNegativeReals
+          5 :     0 :     0 :    10 : False : False : NonNegativeReals
+          6 :     0 :     0 :    10 : False : False : NonNegativeReals
+          7 :     0 :     0 :    10 : False : False : NonNegativeReals
+    QR : Recycle flow rate  [L/s]
+        Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :     0 :    10 : False : False : NonNegativeReals
+    QP : Product flow rate  [L/s]
+        Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :     0 :    10 : False : False : NonNegativeReals
+    R : Recycle molar flow [mol/s]
+        Size=2, Index=I
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          A :     0 :     0 :    10 : False : False : NonNegativeReals
+          B :     0 :     0 :    10 : False : False : NonNegativeReals
+    P : Product molar flow [mol/s]
+        Size=2, Index=I
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          A :     0 :     0 :    10 : False : False : NonNegativeReals
+          B :     0 :     0 :    10 : False : False : NonNegativeReals
+
+  Objectives:
+    obj : Size=1, Index=None, Active=True
+        Key  : Active : Value
+        None :   True :     0
+
+  Constraints:
+    unreact_mole : Size=2
+        Key      : Lower : Body : Upper
+        ('A', 7) :   0.0 : 0.99 :   0.0
+        ('B', 7) :   0.0 : 0.01 :   0.0
+    unreact_cont : Size=1
+        Key : Lower : Body : Upper
+          7 :   0.0 :    1 :   0.0
+    react_mole : Size=12
+        Key      : Lower : Body : Upper
+        ('A', 1) :   0.0 :    0 :   0.0
+        ('A', 2) :   0.0 :    0 :   0.0
+        ('A', 3) :   0.0 :    0 :   0.0
+        ('A', 4) :   0.0 :    0 :   0.0
+        ('A', 5) :   0.0 :    0 :   0.0
+        ('A', 6) :   0.0 :    0 :   0.0
+        ('B', 1) :   0.0 :    0 :   0.0
+        ('B', 2) :   0.0 :    0 :   0.0
+        ('B', 3) :   0.0 :    0 :   0.0
+        ('B', 4) :   0.0 :    0 :   0.0
+        ('B', 5) :   0.0 :    0 :   0.0
+        ('B', 6) :   0.0 :    0 :   0.0
+    react_cont : Size=6
+        Key : Lower : Body : Upper
+          1 :   0.0 :    0 :   0.0
+          2 :   0.0 :    0 :   0.0
+          3 :   0.0 :    0 :   0.0
+          4 :   0.0 :    0 :   0.0
+          5 :   0.0 :    0 :   0.0
+          6 :   0.0 :    0 :   0.0
+    split_mole : Size=2
+        Key : Lower : Body : Upper
+          A :   0.0 :    0 :   0.0
+          B :   0.0 :    0 :   0.0
+    split_cont : Size=1
+        Key  : Lower : Body : Upper
+        None :   0.0 :    0 :   0.0
+    split_add : Size=2
+        Key : Lower : Body : Upper
+          A :   0.0 :    0 :   0.0
+          B :   0.0 :    0 :   0.0
+    prod_spec : Size=1
+        Key  : Lower : Body : Upper
+        None :   0.0 :  0.0 :   0.0
+    vol_cons : Size=6
+        Key : Lower : Body : Upper
+          2 :   0.0 :    0 :   0.0
+          3 :   0.0 :    0 :   0.0
+          4 :   0.0 :    0 :   0.0
+          5 :   0.0 :    0 :   0.0
+          6 :   0.0 :    0 :   0.0
+          7 :   0.0 :    0 :   0.0

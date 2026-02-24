@@ -1,0 +1,1057 @@
+6 Set Declarations
+    FR_index : Size=1, Index=None, Ordered=True
+        Key  : Dimen : Domain : Size : Members
+        None :     2 :    I*N :   14 : {('A', 1), ('A', 2), ('A', 3), ('A', 4), ('A', 5), ('A', 6), ('A', 7), ('B', 1), ('B', 2), ('B', 3), ('B', 4), ('B', 5), ('B', 6), ('B', 7)}
+    F_index : Size=1, Index=None, Ordered=True
+        Key  : Dimen : Domain : Size : Members
+        None :     2 :    I*N :   14 : {('A', 1), ('A', 2), ('A', 3), ('A', 4), ('A', 5), ('A', 6), ('A', 7), ('B', 1), ('B', 2), ('B', 3), ('B', 4), ('B', 5), ('B', 6), ('B', 7)}
+    I : Set of components
+        Size=1, Index=None, Ordered=Insertion
+        Key  : Dimen : Domain : Size : Members
+        None :     1 :    Any :    2 : {'A', 'B'}
+    rate_index : Size=1, Index=None, Ordered=True
+        Key  : Dimen : Domain : Size : Members
+        None :     2 :    I*N :   14 : {('A', 1), ('A', 2), ('A', 3), ('A', 4), ('A', 5), ('A', 6), ('A', 7), ('B', 1), ('B', 2), ('B', 3), ('B', 4), ('B', 5), ('B', 6), ('B', 7)}
+    react_mole_index : Size=1, Index=None, Ordered=True
+        Key  : Dimen : Domain : Size : Members
+        None :     2 :    I*N :   14 : {('A', 1), ('A', 2), ('A', 3), ('A', 4), ('A', 5), ('A', 6), ('A', 7), ('B', 1), ('B', 2), ('B', 3), ('B', 4), ('B', 5), ('B', 6), ('B', 7)}
+    unreact_mole_index : Size=1, Index=None, Ordered=True
+        Key  : Dimen : Domain : Size : Members
+        None :     2 :    I*N :   14 : {('A', 1), ('A', 2), ('A', 3), ('A', 4), ('A', 5), ('A', 6), ('A', 7), ('B', 1), ('B', 2), ('B', 3), ('B', 4), ('B', 5), ('B', 6), ('B', 7)}
+
+1 RangeSet Declarations
+    N : Set of units in the superstructure
+        Dimen=1, Size=7, Bounds=(1, 7)
+        Key  : Finite : Members
+        None :   True :   [1:7]
+
+6 Param Declarations
+    C0 : Initial concentration of reagents [mol/L]
+        Size=2, Index=I, Domain=Any, Default=None, Mutable=False
+        Key : Value
+          A :  0.99
+          B :  0.01
+    F0 : Inlet molar flow [mol/s]
+        Size=2, Index=I, Domain=Any, Default=None, Mutable=False
+        Key : Value
+          A :  0.99
+          B :  0.01
+    QF0 : Inlet volumetric flow [L/s]
+        Size=1, Index=None, Domain=Any, Default=None, Mutable=False
+        Key  : Value
+        None :     1
+    k : Kinetic constant [L/(mol*s)]
+        Size=1, Index=None, Domain=Any, Default=None, Mutable=False
+        Key  : Value
+        None :     2
+    order1 : Partial order of reaction 1
+        Size=1, Index=None, Domain=Any, Default=None, Mutable=False
+        Key  : Value
+        None :     1
+    order2 : Partial order of reaction 2
+        Size=1, Index=None, Domain=Any, Default=None, Mutable=False
+        Key  : Value
+        None :     1
+
+11 Var Declarations
+    F : Molar flow [mol/s]
+        Size=14, Index=F_index
+        Key      : Lower : Value : Upper : Fixed : Stale : Domain
+        ('A', 1) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 2) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 3) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 4) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 5) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 6) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 7) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 1) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 2) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 3) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 4) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 5) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 6) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 7) :     0 :     0 :    10 : False : False : NonNegativeReals
+    FR : Molar flow  recycle activation [mol/s]
+        Size=14, Index=FR_index
+        Key      : Lower : Value : Upper : Fixed : Stale : Domain
+        ('A', 1) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 2) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 3) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 4) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 5) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 6) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('A', 7) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 1) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 2) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 3) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 4) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 5) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 6) :     0 :     0 :    10 : False : False : NonNegativeReals
+        ('B', 7) :     0 :     0 :    10 : False : False : NonNegativeReals
+    P : Product molar flow [mol/s]
+        Size=2, Index=I
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          A :     0 :     0 :    10 : False : False : NonNegativeReals
+          B :     0 :     0 :    10 : False : False : NonNegativeReals
+    Q : Outlet flow rate of the superstructure unit [L/s]
+        Size=7, Index=N
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          1 :     0 :     0 :    10 : False : False : NonNegativeReals
+          2 :     0 :     0 :    10 : False : False : NonNegativeReals
+          3 :     0 :     0 :    10 : False : False : NonNegativeReals
+          4 :     0 :     0 :    10 : False : False : NonNegativeReals
+          5 :     0 :     0 :    10 : False : False : NonNegativeReals
+          6 :     0 :     0 :    10 : False : False : NonNegativeReals
+          7 :     0 :     0 :    10 : False : False : NonNegativeReals
+    QFR : Outlet flow rate recycle activation of the superstructure unit [L/s]
+        Size=7, Index=N
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          1 :     0 :     0 :    10 : False : False : NonNegativeReals
+          2 :     0 :     0 :    10 : False : False : NonNegativeReals
+          3 :     0 :     0 :    10 : False : False : NonNegativeReals
+          4 :     0 :     0 :    10 : False : False : NonNegativeReals
+          5 :     0 :     0 :    10 : False : False : NonNegativeReals
+          6 :     0 :     0 :    10 : False : False : NonNegativeReals
+          7 :     0 :     0 :    10 : False : False : NonNegativeReals
+    QP : Product flow rate  [L/s]
+        Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :     0 :    10 : False : False : NonNegativeReals
+    QR : Recycle flow rate  [L/s]
+        Size=1, Index=None
+        Key  : Lower : Value : Upper : Fixed : Stale : Domain
+        None :     0 :     0 :    10 : False : False : NonNegativeReals
+    R : Recycle molar flow [mol/s]
+        Size=2, Index=I
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          A :     0 :     0 :    10 : False : False : NonNegativeReals
+          B :     0 :     0 :    10 : False : False : NonNegativeReals
+    V : Reactor volume [L]
+        Size=7, Index=N
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          1 :     0 :     0 :    10 : False : False : NonNegativeReals
+          2 :     0 :     0 :    10 : False : False : NonNegativeReals
+          3 :     0 :     0 :    10 : False : False : NonNegativeReals
+          4 :     0 :     0 :    10 : False : False : NonNegativeReals
+          5 :     0 :     0 :    10 : False : False : NonNegativeReals
+          6 :     0 :     0 :    10 : False : False : NonNegativeReals
+          7 :     0 :     0 :    10 : False : False : NonNegativeReals
+    c : Volume activation [L]
+        Size=7, Index=N
+        Key : Lower : Value : Upper : Fixed : Stale : Domain
+          1 :     0 :     0 :    10 : False : False : NonNegativeReals
+          2 :     0 :     0 :    10 : False : False : NonNegativeReals
+          3 :     0 :     0 :    10 : False : False : NonNegativeReals
+          4 :     0 :     0 :    10 : False : False : NonNegativeReals
+          5 :     0 :     0 :    10 : False : False : NonNegativeReals
+          6 :     0 :     0 :    10 : False : False : NonNegativeReals
+          7 :     0 :     0 :    10 : False : False : NonNegativeReals
+    rate : Reaction rate [mol/(L*s)]
+        Size=14, Index=rate_index
+        Key      : Lower : Value : Upper : Fixed : Stale : Domain
+        ('A', 1) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 2) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 3) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 4) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 5) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 6) :   -10 :     0 :    10 : False : False :  Reals
+        ('A', 7) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 1) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 2) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 3) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 4) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 5) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 6) :   -10 :     0 :    10 : False : False :  Reals
+        ('B', 7) :   -10 :     0 :    10 : False : False :  Reals
+
+1 Objective Declarations
+    obj : Objective function: Total reactor network volume, (21.Q) [1]
+        Size=1, Index=None, Active=True
+        Key  : Active : Sense    : Expression
+        None :   True : minimize : c[1] + c[2] + c[3] + c[4] + c[5] + c[6] + c[7]
+
+9 Constraint Declarations
+    prod_spec : Product specification constraint, (21.O) [1]
+        Size=1, Index=None, Active=True
+        Key  : Lower : Body           : Upper : Active
+        None :   0.0 : 0.95*QP - P[B] :   0.0 :   True
+    react_cont : Reactor sequence: Continuity, (21.I) [1]
+        Size=6, Index=N, Active=True
+        Key : Lower : Body                 : Upper : Active
+          1 :   0.0 : Q[2] + QFR[1] - Q[1] :   0.0 :   True
+          2 :   0.0 : Q[3] + QFR[2] - Q[2] :   0.0 :   True
+          3 :   0.0 : Q[4] + QFR[3] - Q[3] :   0.0 :   True
+          4 :   0.0 : Q[5] + QFR[4] - Q[4] :   0.0 :   True
+          5 :   0.0 : Q[6] + QFR[5] - Q[5] :   0.0 :   True
+          6 :   0.0 : Q[7] + QFR[6] - Q[6] :   0.0 :   True
+    react_mole : Reactor sequence: Partial Molar Balance, (21.H) [1]
+        Size=12, Index=react_mole_index, Active=True
+        Key      : Lower : Body                                       : Upper : Active
+        ('A', 1) :   0.0 : F[A,2] + FR[A,1] - F[A,1] + rate[A,1]*V[1] :   0.0 :   True
+        ('A', 2) :   0.0 : F[A,3] + FR[A,2] - F[A,2] + rate[A,2]*V[2] :   0.0 :   True
+        ('A', 3) :   0.0 : F[A,4] + FR[A,3] - F[A,3] + rate[A,3]*V[3] :   0.0 :   True
+        ('A', 4) :   0.0 : F[A,5] + FR[A,4] - F[A,4] + rate[A,4]*V[4] :   0.0 :   True
+        ('A', 5) :   0.0 : F[A,6] + FR[A,5] - F[A,5] + rate[A,5]*V[5] :   0.0 :   True
+        ('A', 6) :   0.0 : F[A,7] + FR[A,6] - F[A,6] + rate[A,6]*V[6] :   0.0 :   True
+        ('B', 1) :   0.0 : F[B,2] + FR[B,1] - F[B,1] + rate[B,1]*V[1] :   0.0 :   True
+        ('B', 2) :   0.0 : F[B,3] + FR[B,2] - F[B,2] + rate[B,2]*V[2] :   0.0 :   True
+        ('B', 3) :   0.0 : F[B,4] + FR[B,3] - F[B,3] + rate[B,3]*V[3] :   0.0 :   True
+        ('B', 4) :   0.0 : F[B,5] + FR[B,4] - F[B,4] + rate[B,4]*V[4] :   0.0 :   True
+        ('B', 5) :   0.0 : F[B,6] + FR[B,5] - F[B,5] + rate[B,5]*V[5] :   0.0 :   True
+        ('B', 6) :   0.0 : F[B,7] + FR[B,6] - F[B,6] + rate[B,6]*V[6] :   0.0 :   True
+    split_add : Splitting point: additional constraints, Molarity constraints over initial and final flows, (21.N) [1]
+        Size=2, Index=I, Active=True
+        Key : Lower : Body                  : Upper : Active
+          A :   0.0 : P[A]*Q[1] - F[A,1]*QP :   0.0 :   True
+          B :   0.0 : P[B]*Q[1] - F[B,1]*QP :   0.0 :   True
+    split_cont : Splitting point: continuity, (21.M) [1]
+        Size=1, Index=None, Active=True
+        Key  : Lower : Body           : Upper : Active
+        None :   0.0 : Q[1] - QP - QR :   0.0 :   True
+    split_mole : Splitting point: Partial mole balance, (21.L) [1]
+        Size=2, Index=I, Active=True
+        Key : Lower : Body                 : Upper : Active
+          A :   0.0 : F[A,1] - P[A] - R[A] :   0.0 :   True
+          B :   0.0 : F[B,1] - P[B] - R[B] :   0.0 :   True
+    unreact_cont : Unreacted feed unit: Continuity, (21.E) [1]
+        Size=1, Index=N, Active=True
+        Key : Lower : Body              : Upper : Active
+          7 :   0.0 : 1 + QFR[7] - Q[7] :   0.0 :   True
+    unreact_mole : Unreacted feed unite: Partial mole balance, (21.D) [1]
+        Size=2, Index=unreact_mole_index, Active=True
+        Key      : Lower : Body                                     : Upper : Active
+        ('A', 7) :   0.0 : 0.99 + FR[A,7] - F[A,7] + rate[A,7]*V[7] :   0.0 :   True
+        ('B', 7) :   0.0 : 0.01 + FR[B,7] - F[B,7] + rate[B,7]*V[7] :   0.0 :   True
+    vol_cons : Volume constraint, (21.P) [1]
+        Size=6, Index=N, Active=True
+        Key : Lower : Body        : Upper : Active
+          2 :   0.0 : V[2] - V[1] :   0.0 :   True
+          3 :   0.0 : V[3] - V[2] :   0.0 :   True
+          4 :   0.0 : V[4] - V[3] :   0.0 :   True
+          5 :   0.0 : V[5] - V[4] :   0.0 :   True
+          6 :   0.0 : V[6] - V[5] :   0.0 :   True
+          7 :   0.0 : V[7] - V[6] :   0.0 :   True
+
+3 BooleanVar Declarations
+    YF : Unreacted feed in reactor n
+        Size=7, Index=N
+        Key : Value : Fixed : Stale
+          1 :  None : False :  True
+          2 :  None : False :  True
+          3 :  None : False :  True
+          4 :  None : False :  True
+          5 :  None : False :  True
+          6 :  None : False :  True
+          7 :  None : False :  True
+    YP : Unit operation in n
+        Size=7, Index=N
+        Key : Value : Fixed : Stale
+          1 :  None : False :  True
+          2 :  None : False :  True
+          3 :  None : False :  True
+          4 :  None : False :  True
+          5 :  None : False :  True
+          6 :  None : False :  True
+          7 :  None : False :  True
+    YR : Existence of recycle flow in unit n
+        Size=7, Index=N
+        Key : Value : Fixed : Stale
+          1 :  None : False :  True
+          2 :  None : False :  True
+          3 :  None : False :  True
+          4 :  None : False :  True
+          5 :  None : False :  True
+          6 :  None : False :  True
+          7 :  None : False :  True
+
+4 Disjunct Declarations
+    YP_is_bypass : Disjunct for bypass equations
+        Size=7, Index=N, Active=True
+        YP_is_bypass[1] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            4 Constraint Declarations
+                neg_YPD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,1] :   0.0 :   True
+                      B :   0.0 : FR[B,1] :   0.0 :   True
+                neg_YPD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[1] :   0.0 :   True
+                neg_YPD_rate_desact : Rate deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body      : Upper : Active
+                      A :   0.0 : rate[A,1] :   0.0 :   True
+                      B :   0.0 : rate[B,1] :   0.0 :   True
+                neg_YPD_vol_desact : Volume deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body : Upper : Active
+                    None :   0.0 : c[1] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            6 Declarations: indicator_var binary_indicator_var neg_YPD_FR_desact neg_YPD_rate_desact neg_YPD_QFR_desact neg_YPD_vol_desact
+        YP_is_bypass[2] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            4 Constraint Declarations
+                neg_YPD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,2] :   0.0 :   True
+                      B :   0.0 : FR[B,2] :   0.0 :   True
+                neg_YPD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[2] :   0.0 :   True
+                neg_YPD_rate_desact : Rate deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body      : Upper : Active
+                      A :   0.0 : rate[A,2] :   0.0 :   True
+                      B :   0.0 : rate[B,2] :   0.0 :   True
+                neg_YPD_vol_desact : Volume deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body : Upper : Active
+                    None :   0.0 : c[2] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            6 Declarations: indicator_var binary_indicator_var neg_YPD_FR_desact neg_YPD_rate_desact neg_YPD_QFR_desact neg_YPD_vol_desact
+        YP_is_bypass[3] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            4 Constraint Declarations
+                neg_YPD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,3] :   0.0 :   True
+                      B :   0.0 : FR[B,3] :   0.0 :   True
+                neg_YPD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[3] :   0.0 :   True
+                neg_YPD_rate_desact : Rate deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body      : Upper : Active
+                      A :   0.0 : rate[A,3] :   0.0 :   True
+                      B :   0.0 : rate[B,3] :   0.0 :   True
+                neg_YPD_vol_desact : Volume deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body : Upper : Active
+                    None :   0.0 : c[3] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            6 Declarations: indicator_var binary_indicator_var neg_YPD_FR_desact neg_YPD_rate_desact neg_YPD_QFR_desact neg_YPD_vol_desact
+        YP_is_bypass[4] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            4 Constraint Declarations
+                neg_YPD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,4] :   0.0 :   True
+                      B :   0.0 : FR[B,4] :   0.0 :   True
+                neg_YPD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[4] :   0.0 :   True
+                neg_YPD_rate_desact : Rate deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body      : Upper : Active
+                      A :   0.0 : rate[A,4] :   0.0 :   True
+                      B :   0.0 : rate[B,4] :   0.0 :   True
+                neg_YPD_vol_desact : Volume deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body : Upper : Active
+                    None :   0.0 : c[4] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            6 Declarations: indicator_var binary_indicator_var neg_YPD_FR_desact neg_YPD_rate_desact neg_YPD_QFR_desact neg_YPD_vol_desact
+        YP_is_bypass[5] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            4 Constraint Declarations
+                neg_YPD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,5] :   0.0 :   True
+                      B :   0.0 : FR[B,5] :   0.0 :   True
+                neg_YPD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[5] :   0.0 :   True
+                neg_YPD_rate_desact : Rate deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body      : Upper : Active
+                      A :   0.0 : rate[A,5] :   0.0 :   True
+                      B :   0.0 : rate[B,5] :   0.0 :   True
+                neg_YPD_vol_desact : Volume deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body : Upper : Active
+                    None :   0.0 : c[5] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            6 Declarations: indicator_var binary_indicator_var neg_YPD_FR_desact neg_YPD_rate_desact neg_YPD_QFR_desact neg_YPD_vol_desact
+        YP_is_bypass[6] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            4 Constraint Declarations
+                neg_YPD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,6] :   0.0 :   True
+                      B :   0.0 : FR[B,6] :   0.0 :   True
+                neg_YPD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[6] :   0.0 :   True
+                neg_YPD_rate_desact : Rate deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body      : Upper : Active
+                      A :   0.0 : rate[A,6] :   0.0 :   True
+                      B :   0.0 : rate[B,6] :   0.0 :   True
+                neg_YPD_vol_desact : Volume deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body : Upper : Active
+                    None :   0.0 : c[6] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            6 Declarations: indicator_var binary_indicator_var neg_YPD_FR_desact neg_YPD_rate_desact neg_YPD_QFR_desact neg_YPD_vol_desact
+        YP_is_bypass[7] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            4 Constraint Declarations
+                neg_YPD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,7] :   0.0 :   True
+                      B :   0.0 : FR[B,7] :   0.0 :   True
+                neg_YPD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[7] :   0.0 :   True
+                neg_YPD_rate_desact : Rate deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body      : Upper : Active
+                      A :   0.0 : rate[A,7] :   0.0 :   True
+                      B :   0.0 : rate[B,7] :   0.0 :   True
+                neg_YPD_vol_desact : Volume deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body : Upper : Active
+                    None :   0.0 : c[7] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            6 Declarations: indicator_var binary_indicator_var neg_YPD_FR_desact neg_YPD_rate_desact neg_YPD_QFR_desact neg_YPD_vol_desact
+    YP_is_cstr : Disjunct for CSTR equations
+        Size=7, Index=N, Active=True
+        YP_is_cstr[1] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            3 Constraint Declarations
+                YPD_rate_calc : Reaction rates calculation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                                  : Upper : Active
+                    None :   0.0 : rate[A,1]*Q[1]*Q[1] + 2*F[A,1]*F[B,1] :   0.0 :   True
+                YPD_rate_rel : Reaction rate relation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                  : Upper : Active
+                    None :   0.0 : rate[B,1] + rate[A,1] :   0.0 :   True
+                YPD_vol_act : Volume activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : c[1] - V[1] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            5 Declarations: indicator_var binary_indicator_var YPD_rate_calc YPD_rate_rel YPD_vol_act
+        YP_is_cstr[2] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            3 Constraint Declarations
+                YPD_rate_calc : Reaction rates calculation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                                  : Upper : Active
+                    None :   0.0 : rate[A,2]*Q[2]*Q[2] + 2*F[A,2]*F[B,2] :   0.0 :   True
+                YPD_rate_rel : Reaction rate relation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                  : Upper : Active
+                    None :   0.0 : rate[B,2] + rate[A,2] :   0.0 :   True
+                YPD_vol_act : Volume activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : c[2] - V[2] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            5 Declarations: indicator_var binary_indicator_var YPD_rate_calc YPD_rate_rel YPD_vol_act
+        YP_is_cstr[3] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            3 Constraint Declarations
+                YPD_rate_calc : Reaction rates calculation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                                  : Upper : Active
+                    None :   0.0 : rate[A,3]*Q[3]*Q[3] + 2*F[A,3]*F[B,3] :   0.0 :   True
+                YPD_rate_rel : Reaction rate relation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                  : Upper : Active
+                    None :   0.0 : rate[B,3] + rate[A,3] :   0.0 :   True
+                YPD_vol_act : Volume activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : c[3] - V[3] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            5 Declarations: indicator_var binary_indicator_var YPD_rate_calc YPD_rate_rel YPD_vol_act
+        YP_is_cstr[4] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            3 Constraint Declarations
+                YPD_rate_calc : Reaction rates calculation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                                  : Upper : Active
+                    None :   0.0 : rate[A,4]*Q[4]*Q[4] + 2*F[A,4]*F[B,4] :   0.0 :   True
+                YPD_rate_rel : Reaction rate relation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                  : Upper : Active
+                    None :   0.0 : rate[B,4] + rate[A,4] :   0.0 :   True
+                YPD_vol_act : Volume activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : c[4] - V[4] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            5 Declarations: indicator_var binary_indicator_var YPD_rate_calc YPD_rate_rel YPD_vol_act
+        YP_is_cstr[5] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            3 Constraint Declarations
+                YPD_rate_calc : Reaction rates calculation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                                  : Upper : Active
+                    None :   0.0 : rate[A,5]*Q[5]*Q[5] + 2*F[A,5]*F[B,5] :   0.0 :   True
+                YPD_rate_rel : Reaction rate relation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                  : Upper : Active
+                    None :   0.0 : rate[B,5] + rate[A,5] :   0.0 :   True
+                YPD_vol_act : Volume activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : c[5] - V[5] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            5 Declarations: indicator_var binary_indicator_var YPD_rate_calc YPD_rate_rel YPD_vol_act
+        YP_is_cstr[6] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            3 Constraint Declarations
+                YPD_rate_calc : Reaction rates calculation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                                  : Upper : Active
+                    None :   0.0 : rate[A,6]*Q[6]*Q[6] + 2*F[A,6]*F[B,6] :   0.0 :   True
+                YPD_rate_rel : Reaction rate relation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                  : Upper : Active
+                    None :   0.0 : rate[B,6] + rate[A,6] :   0.0 :   True
+                YPD_vol_act : Volume activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : c[6] - V[6] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            5 Declarations: indicator_var binary_indicator_var YPD_rate_calc YPD_rate_rel YPD_vol_act
+        YP_is_cstr[7] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            3 Constraint Declarations
+                YPD_rate_calc : Reaction rates calculation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                                  : Upper : Active
+                    None :   0.0 : rate[A,7]*Q[7]*Q[7] + 2*F[A,7]*F[B,7] :   0.0 :   True
+                YPD_rate_rel : Reaction rate relation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body                  : Upper : Active
+                    None :   0.0 : rate[B,7] + rate[A,7] :   0.0 :   True
+                YPD_vol_act : Volume activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : c[7] - V[7] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            5 Declarations: indicator_var binary_indicator_var YPD_rate_calc YPD_rate_rel YPD_vol_act
+    YR_is_not_recycle : Disjunct for non existence of recycle equations
+        Size=7, Index=N, Active=True
+        YR_is_not_recycle[1] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                neg_YRD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,1] :   0.0 :   True
+                      B :   0.0 : FR[B,1] :   0.0 :   True
+                neg_YRD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[1] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var neg_YRD_FR_desact neg_YRD_QFR_desact
+        YR_is_not_recycle[2] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                neg_YRD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,2] :   0.0 :   True
+                      B :   0.0 : FR[B,2] :   0.0 :   True
+                neg_YRD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[2] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var neg_YRD_FR_desact neg_YRD_QFR_desact
+        YR_is_not_recycle[3] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                neg_YRD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,3] :   0.0 :   True
+                      B :   0.0 : FR[B,3] :   0.0 :   True
+                neg_YRD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[3] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var neg_YRD_FR_desact neg_YRD_QFR_desact
+        YR_is_not_recycle[4] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                neg_YRD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,4] :   0.0 :   True
+                      B :   0.0 : FR[B,4] :   0.0 :   True
+                neg_YRD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[4] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var neg_YRD_FR_desact neg_YRD_QFR_desact
+        YR_is_not_recycle[5] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                neg_YRD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,5] :   0.0 :   True
+                      B :   0.0 : FR[B,5] :   0.0 :   True
+                neg_YRD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[5] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var neg_YRD_FR_desact neg_YRD_QFR_desact
+        YR_is_not_recycle[6] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                neg_YRD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,6] :   0.0 :   True
+                      B :   0.0 : FR[B,6] :   0.0 :   True
+                neg_YRD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[6] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var neg_YRD_FR_desact neg_YRD_QFR_desact
+        YR_is_not_recycle[7] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                neg_YRD_FR_desact : Molar flow recycle deactivation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body    : Upper : Active
+                      A :   0.0 : FR[A,7] :   0.0 :   True
+                      B :   0.0 : FR[B,7] :   0.0 :   True
+                neg_YRD_QFR_desact : Outlet flow rate recycle deactivation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body   : Upper : Active
+                    None :   0.0 : QFR[7] :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var neg_YRD_FR_desact neg_YRD_QFR_desact
+    YR_is_recycle : Disjunct for recycle equations
+        Size=7, Index=N, Active=True
+        YR_is_recycle[1] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                YRD_FR_act : Molar flow recycle activation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body           : Upper : Active
+                      A :   0.0 : FR[A,1] - R[A] :   0.0 :   True
+                      B :   0.0 : FR[B,1] - R[B] :   0.0 :   True
+                YRD_QFR_act : Outlet flow rate recycle activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : QFR[1] - QR :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var YRD_FR_act YRD_QFR_act
+        YR_is_recycle[2] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                YRD_FR_act : Molar flow recycle activation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body           : Upper : Active
+                      A :   0.0 : FR[A,2] - R[A] :   0.0 :   True
+                      B :   0.0 : FR[B,2] - R[B] :   0.0 :   True
+                YRD_QFR_act : Outlet flow rate recycle activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : QFR[2] - QR :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var YRD_FR_act YRD_QFR_act
+        YR_is_recycle[3] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                YRD_FR_act : Molar flow recycle activation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body           : Upper : Active
+                      A :   0.0 : FR[A,3] - R[A] :   0.0 :   True
+                      B :   0.0 : FR[B,3] - R[B] :   0.0 :   True
+                YRD_QFR_act : Outlet flow rate recycle activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : QFR[3] - QR :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var YRD_FR_act YRD_QFR_act
+        YR_is_recycle[4] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                YRD_FR_act : Molar flow recycle activation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body           : Upper : Active
+                      A :   0.0 : FR[A,4] - R[A] :   0.0 :   True
+                      B :   0.0 : FR[B,4] - R[B] :   0.0 :   True
+                YRD_QFR_act : Outlet flow rate recycle activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : QFR[4] - QR :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var YRD_FR_act YRD_QFR_act
+        YR_is_recycle[5] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                YRD_FR_act : Molar flow recycle activation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body           : Upper : Active
+                      A :   0.0 : FR[A,5] - R[A] :   0.0 :   True
+                      B :   0.0 : FR[B,5] - R[B] :   0.0 :   True
+                YRD_QFR_act : Outlet flow rate recycle activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : QFR[5] - QR :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var YRD_FR_act YRD_QFR_act
+        YR_is_recycle[6] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                YRD_FR_act : Molar flow recycle activation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body           : Upper : Active
+                      A :   0.0 : FR[A,6] - R[A] :   0.0 :   True
+                      B :   0.0 : FR[B,6] - R[B] :   0.0 :   True
+                YRD_QFR_act : Outlet flow rate recycle activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : QFR[6] - QR :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var YRD_FR_act YRD_QFR_act
+        YR_is_recycle[7] : Active=True
+            1 Var Declarations
+                binary_indicator_var : Size=1, Index=None
+                    Key  : Lower : Value : Upper : Fixed : Stale : Domain
+                    None :     0 :  None :     1 : False :  True : Binary
+
+            2 Constraint Declarations
+                YRD_FR_act : Molar flow recycle activation
+                    Size=2, Index=I, Active=True
+                    Key : Lower : Body           : Upper : Active
+                      A :   0.0 : FR[A,7] - R[A] :   0.0 :   True
+                      B :   0.0 : FR[B,7] - R[B] :   0.0 :   True
+                YRD_QFR_act : Outlet flow rate recycle activation
+                    Size=1, Index=None, Active=True
+                    Key  : Lower : Body        : Upper : Active
+                    None :   0.0 : QFR[7] - QR :   0.0 :   True
+
+            1 BooleanVar Declarations
+                indicator_var : Size=1, Index=None
+                    Key  : Value : Fixed : Stale
+                    None :  None : False :  True
+
+            4 Declarations: indicator_var binary_indicator_var YRD_FR_act YRD_QFR_act
+
+2 Disjunction Declarations
+    YP_is_cstr_or_bypass : Disjunction for unit operation in n
+        Size=7, Index=N, Active=True
+        Key : Disjuncts                            : Active : XOR
+          1 : ['YP_is_cstr[1]', 'YP_is_bypass[1]'] :   True : True
+          2 : ['YP_is_cstr[2]', 'YP_is_bypass[2]'] :   True : True
+          3 : ['YP_is_cstr[3]', 'YP_is_bypass[3]'] :   True : True
+          4 : ['YP_is_cstr[4]', 'YP_is_bypass[4]'] :   True : True
+          5 : ['YP_is_cstr[5]', 'YP_is_bypass[5]'] :   True : True
+          6 : ['YP_is_cstr[6]', 'YP_is_bypass[6]'] :   True : True
+          7 : ['YP_is_cstr[7]', 'YP_is_bypass[7]'] :   True : True
+    YR_is_recycle_or_not : Disjunction for existence of recycle flow in unit n
+        Size=7, Index=N, Active=True
+        Key : Disjuncts                                    : Active : XOR
+          1 : ['YR_is_recycle[1]', 'YR_is_not_recycle[1]'] :   True : True
+          2 : ['YR_is_recycle[2]', 'YR_is_not_recycle[2]'] :   True : True
+          3 : ['YR_is_recycle[3]', 'YR_is_not_recycle[3]'] :   True : True
+          4 : ['YR_is_recycle[4]', 'YR_is_not_recycle[4]'] :   True : True
+          5 : ['YR_is_recycle[5]', 'YR_is_not_recycle[5]'] :   True : True
+          6 : ['YR_is_recycle[6]', 'YR_is_not_recycle[6]'] :   True : True
+          7 : ['YR_is_recycle[7]', 'YR_is_not_recycle[7]'] :   True : True
+
+4 LogicalConstraint Declarations
+    cstr_if_recycle : If m.YR[n] is true, then m.YP[n] must also be true.
+        Size=7, Index=N, Active=True
+        Key : Body            : Active
+          1 : YR[1] --> YP[1] :   True
+          2 : YR[2] --> YP[2] :   True
+          3 : YR[3] --> YP[3] :   True
+          4 : YR[4] --> YP[4] :   True
+          5 : YR[5] --> YP[5] :   True
+          6 : YR[6] --> YP[6] :   True
+          7 : YR[7] --> YP[7] :   True
+    one_recycle : There is only one recycle stream, (21.C) [1]
+        Size=1, Index=None, Active=True
+        Key  : Body                                                          : Active
+        None : exactly(1: [YR[1], YR[2], YR[3], YR[4], YR[5], YR[6], YR[7]]) :   True
+    one_unreacted_feed : There is only one unreacted feed, (21.B) [1]
+        Size=1, Index=None, Active=True
+        Key  : Body                                                          : Active
+        None : exactly(1: [YF[1], YF[2], YF[3], YF[4], YF[5], YF[6], YF[7]]) :   True
+    unit_in_n : YP[1] is true when n=1, else YP[n] is equivalent to YF[n] or all YF[n] from 1 up to n-1 are false.
+        Size=7, Index=N, Active=True
+        Key : Body                                                                  : Active
+          1 :                                                      YP[1] iff 'True' :   True
+          2 :                                              YP[2] iff ~YF[1] ∨ YF[2] :   True
+          3 :                                     YP[3] iff ~YF[1] ∧ ~YF[2] ∨ YF[3] :   True
+          4 :                            YP[4] iff ~YF[1] ∧ ~YF[2] ∧ ~YF[3] ∨ YF[4] :   True
+          5 :                   YP[5] iff ~YF[1] ∧ ~YF[2] ∧ ~YF[3] ∧ ~YF[4] ∨ YF[5] :   True
+          6 :          YP[6] iff ~YF[1] ∧ ~YF[2] ∧ ~YF[3] ∧ ~YF[4] ∧ ~YF[5] ∨ YF[6] :   True
+          7 : YP[7] iff ~YF[1] ∧ ~YF[2] ∧ ~YF[3] ∧ ~YF[4] ∧ ~YF[5] ∧ ~YF[6] ∨ YF[7] :   True
+
+47 Declarations: I N k order1 order2 QF0 C0 F0 YF YR YP Q QFR F_index F FR_index FR rate_index rate V c QR QP R P unreact_mole_index unreact_mole unreact_cont react_mole_index react_mole react_cont split_mole split_cont split_add prod_spec vol_cons YR_is_recycle YR_is_not_recycle YP_is_cstr YP_is_bypass YP_is_cstr_or_bypass YR_is_recycle_or_not cstr_if_recycle one_unreacted_feed one_recycle unit_in_n obj
