@@ -22,11 +22,12 @@ Run everything and clear today's whole results folder first:
 from __future__ import annotations
 
 import argparse
+import json
 import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Iterable
+from typing import Any
 
 
 def _add_sys_path(path: Path) -> None:
@@ -42,6 +43,23 @@ def _ld_root() -> Path:
 
 def _default_date_stamp() -> str:
     return datetime.now().strftime("%Y%m%d")
+
+
+def _load_json(path: Path) -> dict[str, Any]:
+    with path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    if not isinstance(data, dict):
+        raise ValueError(f"Config JSON root must be an object: {path}")
+    return data
+
+
+def _get(d: dict[str, Any], keys: list[str], default: Any) -> Any:
+    cur: Any = d
+    for k in keys:
+        if not isinstance(cur, dict) or k not in cur:
+            return default
+        cur = cur[k]
+    return cur
 
 
 def _parse_int_list(values: list[str] | None) -> list[int] | None:
@@ -94,6 +112,15 @@ def _clear_path(path: Path) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Run LD_benchmark experiments.")
+
+    p.add_argument(
+        "--config",
+        default=None,
+        help=(
+            "Path to a JSON config file. If omitted, uses LD_benchmark/benchmark_config.json when present. "
+            "CLI flags override values loaded from JSON."
+        ),
+    )
 
     p.add_argument(
         "--test",
@@ -178,6 +205,82 @@ def main(argv: list[str] | None = None) -> int:
         run_toy,
     )
 
+    # Load JSON defaults (optional)
+    config_path: Path | None
+    if args.config:
+        config_path = Path(args.config).expanduser().resolve()
+    else:
+        candidate = ld_root / "benchmark_config.json"
+        config_path = candidate if candidate.exists() else None
+
+    cfg: dict[str, Any] = {}
+    if config_path is not None:
+        cfg = _load_json(config_path)
+
+    # Resolve run/test defaults
+    cfg_test = _get(cfg, ["run", "test"], None)
+    cfg_algs = _get(cfg, ["run", "algorithms"], None)
+    cfg_nt = _get(cfg, ["run", "cstr_nt_list"], None)
+    cfg_col_keys = _get(cfg, ["run", "column_keys"], None)
+
+    # If user didn't pass CLI values, take from config
+    if args.test == "all" and cfg_test in ("toy", "small_batch", "cstr", "column", "all"):
+        args.test = cfg_test
+
+    if args.algorithms == ["gdpopt.ldsda", "gdpopt.ldbd"] and isinstance(cfg_algs, list) and cfg_algs:
+        args.algorithms = [str(x) for x in cfg_algs]
+
+    if args.nt is None and isinstance(cfg_nt, list) and cfg_nt:
+        args.nt = [str(int(x)) for x in cfg_nt]
+
+    if args.column_keys is None and (cfg_col_keys is None or isinstance(cfg_col_keys, list)):
+        if cfg_col_keys is None:
+            args.column_keys = None
+        else:
+            args.column_keys = [str(int(x)) for x in cfg_col_keys]
+
+    # Resolve outputs defaults
+    cfg_date = _get(cfg, ["outputs", "date"], None)
+    cfg_results_dir = _get(cfg, ["outputs", "results_dir"], None)
+    cfg_clear = _get(cfg, ["outputs", "clear"], None)
+
+    if args.date == _default_date_stamp() and isinstance(cfg_date, str) and cfg_date:
+        if cfg_date.lower() == "today":
+            args.date = _default_date_stamp()
+        else:
+            args.date = cfg_date
+
+    if args.results_dir is None and cfg_results_dir:
+        args.results_dir = str(cfg_results_dir)
+
+    if args.clear is False and isinstance(cfg_clear, bool):
+        args.clear = cfg_clear
+
+    # Resolve common config defaults
+    def _cfg_common(name: str, default: Any) -> Any:
+        return _get(cfg, ["common", name], default)
+
+    if args.tee is False:
+        args.tee = bool(_cfg_common("tee", args.tee))
+
+    if args.time_limit == 900:
+        args.time_limit = int(_cfg_common("time_limit", args.time_limit))
+
+    if args.direction_norm == "Linf":
+        args.direction_norm = str(_cfg_common("direction_norm", args.direction_norm))
+
+    if args.nlp_solver == "ipopt":
+        args.nlp_solver = str(_cfg_common("nlp_solver", args.nlp_solver))
+
+    if args.mip_solver == "gurobi":
+        args.mip_solver = str(_cfg_common("mip_solver", args.mip_solver))
+
+    if args.separation_solver == "gurobi":
+        args.separation_solver = str(_cfg_common("separation_solver", args.separation_solver))
+
+    if args.minlp_solver == "gams":
+        args.minlp_solver = str(_cfg_common("minlp_solver", args.minlp_solver))
+
     algorithms = tuple(args.algorithms)
 
     # Resolve output directory
@@ -242,6 +345,8 @@ def main(argv: list[str] | None = None) -> int:
     else:
         raise AssertionError(f"Unhandled test: {args.test}")
 
+    if config_path is not None:
+        print("Config:", config_path)
     print("Done. Results written under:", results_day_dir)
     return 0
 

@@ -69,6 +69,20 @@ For Linux (or CI), you can run benchmarks without notebooks using:
 
 `run_benchmarks.py`
 
+### JSON configuration (no long command lines)
+
+The CLI runner automatically loads defaults from:
+
+`benchmark_config.json`
+
+So you can usually just:
+
+```bash
+python3 run_benchmarks.py
+```
+
+Edit `benchmark_config.json` to change solvers, which test(s) to run, algorithms, and sweep lists.
+
 Examples:
 
 ```bash

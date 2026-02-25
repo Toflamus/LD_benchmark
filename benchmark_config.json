@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "run": {
+    "test": "all",
+    "algorithms": [
+      "gdpopt.ldsda",
+      "gdpopt.ldbd"
+    ],
+    "cstr_nt_list": [5, 10, 15, 20, 25, 30],
+    "column_keys": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  "outputs": {
+    "date": "today",
+    "results_dir": null,
+    "clear": false
+  },
+  "common": {
+    "tee": false,
+    "time_limit": 900,
+    "direction_norm": "Linf",
+    "nlp_solver": "ipopt",
+    "mip_solver": "gurobi",
+    "separation_solver": "gurobi",
+    "minlp_solver": "gams"
+  }
+}
