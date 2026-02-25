@@ -23,7 +23,7 @@
     "separation_solver": "gurobi",
     "minlp_solver": "gams",
     "minlp_solver_args": {
-      "solver": "baron"
-    },
+      "solver": "ipopt"
+    }
   }
 }
