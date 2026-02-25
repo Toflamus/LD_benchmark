@@ -224,9 +224,15 @@ def run_all(
     common: CommonConfig,
     cstr_NT_list: Sequence[int] = (5, 10, 15, 20, 25, 30),
     column_keys: Iterable[int] | None = None,
+    algorithms: Sequence[str] = ("gdpopt.ldsda", "gdpopt.ldbd"),
 ) -> None:
     """Run toy, small-batch, CSTR sweep, and column random-init benchmarks."""
-    run_toy(date_results_dir=date_results_dir, common=common)
-    run_small_batch(date_results_dir=date_results_dir, common=common)
-    run_cstr(date_results_dir=date_results_dir, common=common, NT_list=cstr_NT_list)
-    run_column_random_init(date_results_dir=date_results_dir, common=common, initial_point_keys=column_keys)
+    run_toy(date_results_dir=date_results_dir, common=common, algorithms=algorithms)
+    run_small_batch(date_results_dir=date_results_dir, common=common, algorithms=algorithms)
+    run_cstr(date_results_dir=date_results_dir, common=common, NT_list=cstr_NT_list, algorithms=algorithms)
+    run_column_random_init(
+        date_results_dir=date_results_dir,
+        common=common,
+        algorithms=algorithms,
+        initial_point_keys=column_keys,
+    )

@@ -83,6 +83,10 @@ python3 run_benchmarks.py
 
 Edit `benchmark_config.json` to change solvers, which test(s) to run, algorithms, and sweep lists.
 
+To run the full suite for only one algorithm by default, set:
+
+- `run.algorithms` to a 1-element list (e.g. `["gdpopt.ldsda"]`)
+
 Examples:
 
 ```bash
@@ -97,6 +101,9 @@ python3 run_benchmarks.py --test column --column-keys 1-10 --clear
 
 # Run everything and clear today's entire results folder first
 python3 run_benchmarks.py --test all --clear
+
+# Run everything for only one algorithm (e.g., LDSDA)
+python3 run_benchmarks.py --test all --algorithms gdpopt.ldsda
 ```
 
 ## Results layout

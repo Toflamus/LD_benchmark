@@ -17,6 +17,9 @@ Run column for keys 1..10 and clear today's column outputs first:
 
 Run everything and clear today's whole results folder first:
     python3 run_benchmarks.py --test all --clear
+
+Run everything for only one algorithm (e.g., LDSDA):
+    python3 run_benchmarks.py --test all --algorithms gdpopt.ldsda
 """
 
 from __future__ import annotations
@@ -367,6 +370,7 @@ def main(argv: list[str] | None = None) -> int:
             common=common,
             cstr_NT_list=nt_list,
             column_keys=column_keys,
+            algorithms=algorithms,
         )
     else:
         raise AssertionError(f"Unhandled test: {args.test}")
