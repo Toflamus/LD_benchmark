@@ -63,6 +63,28 @@ When you rerun a benchmark **without clearing anything**:
 If you want a clean rerun for *one benchmark*, set the corresponding `CLEAR_*_FIRST = True` flag in that benchmark cell.
 This deletes that benchmark subfolder for the current day before running.
 
+## Running benchmarks (CLI / Linux)
+
+For Linux (or CI), you can run benchmarks without notebooks using:
+
+`run_benchmarks.py`
+
+Examples:
+
+```bash
+# Run toy for both algorithms
+python3 run_benchmarks.py --test toy
+
+# Run only LDSDA for CSTR NT=25
+python3 run_benchmarks.py --test cstr --algorithms gdpopt.ldsda --nt 25
+
+# Run column for keys 1..10, clearing today's column folder first
+python3 run_benchmarks.py --test column --column-keys 1-10 --clear
+
+# Run everything and clear today's entire results folder first
+python3 run_benchmarks.py --test all --clear
+```
+
 ## Results layout
 
 All outputs are written under a date-stamped folder:
