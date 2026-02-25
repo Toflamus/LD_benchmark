@@ -220,9 +220,19 @@ def run_gdpopt_case(
         "nlp_solver_args": common_config.get("nlp_solver_args", {}),
         "mip_solver": common_config.get("mip_solver", "gurobi"),
         "mip_solver_args": common_config.get("mip_solver_args", {}),
-        "minlp_solver": common_config.get("minlp_solver", None),
-        "minlp_solver_args": common_config.get("minlp_solver_args", {}),
     }
+
+    # Optional MINLP subproblem solver configuration.
+    # Only pass these kwargs when requested to avoid triggering unexpected-kw
+    # errors on GDPopt variants that don't accept MINLP options.
+    minlp_solver = common_config.get("minlp_solver", None)
+    if minlp_solver is not None and str(minlp_solver).strip():
+        solve_kwargs["minlp_solver"] = minlp_solver
+
+        minlp_solver_args = common_config.get("minlp_solver_args", None)
+        # Accept dict-like args; ignore None / empty dict.
+        if isinstance(minlp_solver_args, dict) and minlp_solver_args:
+            solve_kwargs["minlp_solver_args"] = minlp_solver_args
 
     # Optional: some GDPopt solvers (notably current LDSDA) do not accept these.
     if algo_tag != "ldsda" and common_config.get("separation_solver", None) is not None:
@@ -257,38 +267,114 @@ def run_gdpopt_case(
     # Write the config before solve so it's available even if solve fails.
     _write_run_config()
 
+    def _solve_with_fallback() -> Any:
+        """Solve with best-effort retries when kwargs are rejected.
+
+        Some GDPopt implementations (especially LDSDA) may reject optional
+        keywords such as separation/MINLP kwargs. This tries progressively
+        simpler kwarg sets rather than failing the whole benchmark.
+        """
+
+        nonlocal solve_kwargs
+
+        def _mk_variant(drop: Iterable[str]) -> dict[str, Any]:
+            return {k: v for k, v in solve_kwargs.items() if k not in set(drop)}
+
+        variants: list[tuple[str, dict[str, Any]]] = [("full", dict(solve_kwargs))]
+        # Remove separation kwargs
+        if "separation_solver" in solve_kwargs or "separation_solver_args" in solve_kwargs:
+            variants.append(("no_separation", _mk_variant(["separation_solver", "separation_solver_args"])))
+        # Remove MINLP args
+        if "minlp_solver_args" in solve_kwargs:
+            variants.append(("no_minlp_args", _mk_variant(["minlp_solver_args"])))
+        # Remove MINLP entirely
+        if "minlp_solver" in solve_kwargs or "minlp_solver_args" in solve_kwargs:
+            variants.append(("no_minlp", _mk_variant(["minlp_solver", "minlp_solver_args"])))
+
+        seen: set[tuple[str, ...]] = set()
+        last_exc: Exception | None = None
+
+        for tag, kwargs in variants:
+            key_sig = tuple(sorted(kwargs.keys()))
+            if key_sig in seen:
+                continue
+            seen.add(key_sig)
+
+            if kwargs.keys() != solve_kwargs.keys():
+                logger.warning("Retrying solve variant '%s' for solver '%s'.", tag, algorithm)
+                # Update persisted config to reflect the retried kwargs.
+                solve_kwargs = kwargs
+                _write_run_config()
+
+            try:
+                return solver.solve(model, **kwargs)
+            except (TypeError, ValueError) as e:
+                last_exc = e
+                logger.warning("Solve variant '%s' failed for '%s': %s", tag, algorithm, e)
+                continue
+
+        assert last_exc is not None
+        raise last_exc
+
     # Capture any stray stdout/stderr from subsolvers as well.
     buf = io.StringIO()
     t0 = time.perf_counter()
     with redirect_stdout(buf), redirect_stderr(buf):
         try:
-            results = solver.solve(model, **solve_kwargs)
-        except TypeError as e:
-            # Make `separation_solver` a best-effort option.
-            msg = str(e)
-            mentions_separation_kw = any(
-                s in msg
-                for s in (
-                    "separation_solver",
-                    "separation_solver_args",
-                    "unexpected keyword",
-                )
+            results = _solve_with_fallback()
+        except (TypeError, ValueError) as e:
+            # Do not crash the whole suite; record a failed run and return.
+            logger.error("Solve failed for '%s' (%s/%s): %s", algorithm, model_name, instance, e)
+            wall_time_s = time.perf_counter() - t0
+
+            traj_path = results_dir / "traj.csv"
+            write_traj_csv(traj_path, [])
+
+            summary_path = summary_dir / "summary.csv"
+            fieldnames = [
+                "model",
+                "instance",
+                "algorithm",
+                "algorithm_full",
+                "initial_point_key",
+                "starting_point",
+                "objective_value",
+                "wall_time_s",
+                "cpu_time_s",
+                "termination_condition",
+                "solver_status",
+            ]
+            append_row_csv(
+                summary_path,
+                {
+                    "model": model_name,
+                    "instance": instance,
+                    "algorithm": algo_tag.upper(),
+                    "algorithm_full": algorithm,
+                    "initial_point_key": initial_point_key,
+                    "starting_point": tuple(starting_point),
+                    "objective_value": None,
+                    "wall_time_s": wall_time_s,
+                    "cpu_time_s": None,
+                    "termination_condition": "EXCEPTION",
+                    "solver_status": "ERROR",
+                },
+                fieldnames,
             )
-            had_separation_kw = ("separation_solver" in solve_kwargs) or (
-                "separation_solver_args" in solve_kwargs
+
+            return RunResult(
+                model=model_name,
+                algorithm=algo_tag.upper(),
+                algorithm_full=algorithm,
+                instance=instance,
+                starting_point=tuple(starting_point),
+                objective_value=None,
+                wall_time_s=wall_time_s,
+                cpu_time_s=None,
+                termination_condition="EXCEPTION",
+                solver_status="ERROR",
+                traj=[],
             )
-            if mentions_separation_kw and had_separation_kw:
-                solve_kwargs.pop("separation_solver", None)
-                solve_kwargs.pop("separation_solver_args", None)
-                logger.warning(
-                    "Solver '%s' rejected separation_solver kwargs; retrying without them.",
-                    algorithm,
-                )
-                # Update persisted config to reflect the retried kwargs.
-                _write_run_config()
-                results = solver.solve(model, **solve_kwargs)
-            else:
-                raise
     wall_time_s = time.perf_counter() - t0
 
     # Objective

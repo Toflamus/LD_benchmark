@@ -39,6 +39,21 @@ You also need working solver backends matching your configuration. The default n
 - MIP solver: `gurobi`
 - MINLP solver: `gams`
 
+If you use `gams` for MINLP subproblems, the *actual* MINLP solver used by GAMS can be selected via `minlp_solver_args`.
+For example, to run BARON through GAMS and tighten the optimality tolerance:
+
+```json
+{
+	"common": {
+		"minlp_solver": "gams",
+		"minlp_solver_args": {
+			"solver": "baron",
+			"add_options": ["option optcr=0.0001;"]
+		}
+	}
+}
+```
+
 Make sure these are installed/licensed and discoverable in your environment.
 
 ## Running benchmarks (ModelTestingScript)
