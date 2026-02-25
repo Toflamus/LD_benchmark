@@ -291,6 +291,13 @@ def main(argv: list[str] | None = None) -> int:
     if args.minlp_solver == "gams":
         args.minlp_solver = str(_cfg_common("minlp_solver", args.minlp_solver))
 
+    minlp_solver_args = _cfg_common("minlp_solver_args", None)
+    if minlp_solver_args is not None and not isinstance(minlp_solver_args, dict):
+        raise TypeError(
+            "common.minlp_solver_args must be an object/dict (or null) in the JSON config; "
+            f"got {type(minlp_solver_args).__name__}"
+        )
+
     algorithms = tuple(args.algorithms)
 
     # Resolve output directory
@@ -309,6 +316,7 @@ def main(argv: list[str] | None = None) -> int:
         mip_solver=str(args.mip_solver),
         separation_solver=str(args.separation_solver),
         minlp_solver=(str(args.minlp_solver) if str(args.minlp_solver).strip() else None),
+        minlp_solver_args=minlp_solver_args,
     )
 
     # Parse optional lists

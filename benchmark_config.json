@@ -21,6 +21,9 @@
     "nlp_solver": "ipopt",
     "mip_solver": "gurobi",
     "separation_solver": "gurobi",
-    "minlp_solver": "gams"
+    "minlp_solver": "gams",
+    "minlp_solver_args": {
+      "solver": "baron"
+    },
   }
 }

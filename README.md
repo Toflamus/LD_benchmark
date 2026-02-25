@@ -20,6 +20,7 @@ The suite currently includes four benchmarks:
 2. **Small-batch (3D)**: process superstructure with 3 external variables.
 3. **CSTR sweep**: runs multiple sizes `NT ∈ {5,10,15,20,25,30}`.
 4. **Distillation column (random init)**: runs multiple randomized initializations (keys in `models/column/column_initial_test.py`).
+	- By default, the harness runs **all** available keys. Use `--column-keys ...` (CLI) or `run.column_keys` (JSON config) to restrict.
 
 All benchmarks are run for both algorithms using a shared configuration object (`workflow/benchmark_suite.py::CommonConfig`).
 
@@ -86,6 +87,10 @@ Edit `benchmark_config.json` to change solvers, which test(s) to run, algorithms
 To run the full suite for only one algorithm by default, set:
 
 - `run.algorithms` to a 1-element list (e.g. `["gdpopt.ldsda"]`)
+
+To explore **all** column initial points by default, set:
+
+- `run.column_keys` to `null` (use a list like `[1,2,3]` to restrict)
 
 Examples:
 
