@@ -169,6 +169,41 @@ Open `workflow/DataProcessingScript.ipynb` and run cells to:
 
 This notebook assumes you have already run the corresponding benchmark(s) for the same `today` date stamp.
 
+## Saving figures (CLI)
+
+If you want to generate and save all figures **without** opening the plotting notebook, use:
+
+`save_figures.py`
+
+This reads from:
+
+`results/<YYYYMMDD>/...`
+
+and writes PNGs to:
+
+`figure/<YYYYMMDD>/...`
+
+Examples:
+
+```bash
+# Save all figures for today's date
+python3 save_figures.py
+
+# Save figures for a specific date
+python3 save_figures.py --date 20260225
+
+# Save only LDSDA figures
+python3 save_figures.py --date 20260225 --algorithms gdpopt.ldsda
+
+# Save CSTR NT=25 trajectory plots (and combined) for that date
+python3 save_figures.py --date 20260225 --nt 25
+```
+
+Notes:
+
+- `save_figures.py` expects the corresponding benchmark results to already exist for the date you request.
+- The CSTR heatmap overlay figure is currently generated only for `--nt 30` (because the landscape CSV is stored in `assets/compl_enum_cstr_30_baron_dantzig.csv`).
+
 ## Troubleshooting
 
 - **`init.xlsx` not found (column init)**: the column initializer reads `models/column/init.xlsx`.
@@ -182,6 +217,7 @@ This notebook assumes you have already run the corresponding benchmark(s) for th
 Generated outputs are ignored by default via `LD_benchmark/.gitignore`:
 
 - `results/`
+- `figure/`
 - `__pycache__/`, `*.py[cod]`
 - `.ipynb_checkpoints/`
 
