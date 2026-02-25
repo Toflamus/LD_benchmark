@@ -1,17 +1,26 @@
 from __future__ import annotations
 
+"""Result writing utilities for LD benchmark notebooks.
+
+The benchmark workflow writes small CSV artifacts that are easy to load from
+`DataProcessingScript.ipynb`:
+- `summary.csv`: one row per run, appended over time
+- `traj.csv`: a compact representation of the external-variable trajectory
+"""
+
 import csv
 from pathlib import Path
 from typing import Iterable, Mapping, Sequence
 
 
 def ensure_dir(path: Path) -> Path:
+    """Create `path` (and parents) if needed, then return it."""
     path.mkdir(parents=True, exist_ok=True)
     return path
 
 
 def append_row_csv(path: Path, row: Mapping[str, object], fieldnames: Sequence[str]) -> None:
-    """Append a single row to a CSV file; create with header if missing."""
+    """Append one row to a CSV file, creating it with a header if missing."""
     path.parent.mkdir(parents=True, exist_ok=True)
     file_exists = path.exists()
     with path.open("a", newline="", encoding="utf-8") as f:
@@ -22,6 +31,7 @@ def append_row_csv(path: Path, row: Mapping[str, object], fieldnames: Sequence[s
 
 
 def write_rows_csv(path: Path, rows: Iterable[Mapping[str, object]], fieldnames: Sequence[str]) -> None:
+    """Write all rows to a CSV file, overwriting any existing file."""
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(fieldnames))
@@ -31,7 +41,12 @@ def write_rows_csv(path: Path, rows: Iterable[Mapping[str, object]], fieldnames:
 
 
 def write_traj_csv(path: Path, traj_points: Sequence[Sequence[int]]) -> None:
-    """Write trajectory points to CSV with columns: step, e1..eN."""
+    """Write trajectory points to CSV with columns `step,e1..eN`.
+
+    The number of `e*` columns is inferred as the maximum dimension seen in
+    `traj_points`. If `traj_points` is empty, the file is still created with a
+    minimal header (`step`) so downstream code can detect "no trajectory".
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
     if not traj_points:
         # Still write an empty file with a minimal header for tooling.

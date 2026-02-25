@@ -1,5 +1,18 @@
 from __future__ import annotations
 
+"""Single-case runner for LD-SDA / LD-BD benchmark experiments.
+
+This module provides:
+- `run_gdpopt_case(...)`: runs one (model, algorithm) configuration and writes
+    artifacts under a results directory.
+- Standardized artifacts: `solver.log`, `traj.csv`, and an appended `summary.csv`.
+
+Notes
+-----
+Pyomo is imported lazily inside `run_gdpopt_case` so that notebooks can inject
+the local Pyomo source tree into `sys.path` at runtime.
+"""
+
 import io
 import logging
 import re
@@ -19,6 +32,8 @@ _TUPLE_RE = re.compile(r"\((?:\s*\d+\s*,)*\s*\d+\s*\)")
 class RunResult:
     model: str
     algorithm: str
+    # Full solver string passed to SolverFactory, e.g. "gdpopt.ldsda".
+    algorithm_full: str
     instance: str
     starting_point: tuple[int, ...]
     objective_value: float | None
@@ -30,7 +45,19 @@ class RunResult:
 
 
 def find_ld_benchmark_root(start: Path | None = None) -> Path:
-    """Find the LD_benchmark root (folder containing models/ and results/)."""
+    """Find the LD_benchmark root (folder containing `models/` and `results/`).
+
+    Parameters
+    ----------
+    start:
+        Starting directory for discovery. Defaults to the current working
+        directory.
+
+    Returns
+    -------
+    pathlib.Path
+        Path to the LD_benchmark root.
+    """
     if start is None:
         start = Path.cwd()
 
@@ -55,6 +82,11 @@ def find_ld_benchmark_root(start: Path | None = None) -> Path:
 
 
 def _setup_run_logger(log_path: Path, name: str) -> logging.Logger:
+    """Create a dedicated file logger for a single benchmark run.
+
+    The logger is configured to write to `log_path` and to avoid stacking
+    handlers across repeated notebook executions.
+    """
     log_path.parent.mkdir(parents=True, exist_ok=True)
 
     logger = logging.getLogger(name)
@@ -75,6 +107,12 @@ def _setup_run_logger(log_path: Path, name: str) -> logging.Logger:
 
 
 def _parse_traj_from_log_text(text: str) -> list[tuple[int, ...]]:
+    """Extract a trajectory (sequence of integer tuples) from log text.
+
+    This is a best-effort fallback used when the solver object does not expose
+    an internal path (e.g., `_path`). The parser searches the full log/console
+    text for tuple-like substrings such as `(5, 1)` or `(3, 2, 4)`.
+    """
     traj: list[tuple[int, ...]] = []
     for m in _TUPLE_RE.finditer(text):
         raw = m.group(0)
@@ -86,6 +124,7 @@ def _parse_traj_from_log_text(text: str) -> list[tuple[int, ...]]:
 
 
 def _try_get_ldbd_path(solver: Any) -> list[tuple[int, ...]] | None:
+    """Return the LDBD internal trajectory path if exposed by the solver."""
     path = getattr(solver, "_path", None)
     if path and isinstance(path, list):
         try:
@@ -108,7 +147,37 @@ def run_gdpopt_case(
     common_config: dict[str, Any],
     initial_point_key: int | None = None,
 ) -> RunResult:
-    """Run a single (model, algorithm) benchmark and write log/traj/summary files."""
+    """Run one benchmark case and write standardized artifacts.
+
+    Parameters
+    ----------
+    model_name:
+        Short model identifier (e.g., "toy", "cstr").
+    instance:
+        Instance identifier (e.g., "default", "NT25").
+    model:
+        A fully constructed Pyomo model (typically GDP).
+    algorithm:
+        GDPopt solver name, e.g. `"gdpopt.ldsda"` or `"gdpopt.ldbd"`.
+    starting_point:
+        Initial external-variable vector in the solver's expected index space.
+    logical_constraint_list:
+        Logical constraints used to define the external variables.
+    results_dir:
+        Directory that receives the per-run `solver.log` and `traj.csv`.
+    summary_dir:
+        Directory where the aggregated `summary.csv` should be appended.
+        Defaults to `results_dir`.
+    common_config:
+        Dictionary of shared solver configuration used for both algorithms.
+    initial_point_key:
+        Optional stable identifier for an initial point (useful for sweeps).
+
+    Returns
+    -------
+    RunResult
+        In-memory summary of the run, including objective value and trajectory.
+    """
 
     ensure_dir(results_dir)
     if summary_dir is None:
@@ -125,30 +194,61 @@ def run_gdpopt_case(
 
     solver = SolverFactory(algorithm)
 
+    solve_kwargs: dict[str, Any] = {
+        # common config
+        "tee": bool(common_config.get("tee", False)),
+        "time_limit": common_config.get("time_limit", None),
+        "logger": logger,
+        # discrete
+        "starting_point": list(starting_point),
+        "logical_constraint_list": list(logical_constraint_list),
+        "direction_norm": common_config.get("direction_norm", "Linf"),
+        # subsolvers
+        "nlp_solver": common_config.get("nlp_solver", "ipopt"),
+        "nlp_solver_args": common_config.get("nlp_solver_args", {}),
+        "mip_solver": common_config.get("mip_solver", "gurobi"),
+        "mip_solver_args": common_config.get("mip_solver_args", {}),
+        "minlp_solver": common_config.get("minlp_solver", None),
+        "minlp_solver_args": common_config.get("minlp_solver_args", {}),
+    }
+
+    # Optional: some GDPopt solvers (notably current LDSDA) do not accept these.
+    if algo_tag != "ldsda" and common_config.get("separation_solver", None) is not None:
+        solve_kwargs["separation_solver"] = common_config.get("separation_solver")
+        solve_kwargs["separation_solver_args"] = common_config.get(
+            "separation_solver_args", {}
+        )
+
     # Capture any stray stdout/stderr from subsolvers as well.
     buf = io.StringIO()
     t0 = time.perf_counter()
     with redirect_stdout(buf), redirect_stderr(buf):
-        results = solver.solve(
-            model,
-            # common config
-            tee=bool(common_config.get("tee", False)),
-            time_limit=common_config.get("time_limit", None),
-            logger=logger,
-            # discrete
-            starting_point=list(starting_point),
-            logical_constraint_list=list(logical_constraint_list),
-            direction_norm=common_config.get("direction_norm", "Linf"),
-            # solvers
-            nlp_solver=common_config.get("nlp_solver", "ipopt"),
-            nlp_solver_args=common_config.get("nlp_solver_args", {}),
-            mip_solver=common_config.get("mip_solver", "gurobi"),
-            mip_solver_args=common_config.get("mip_solver_args", {}),
-            separation_solver=common_config.get("separation_solver", "gurobi"),
-            separation_solver_args=common_config.get("separation_solver_args", {}),
-            minlp_solver=common_config.get("minlp_solver", None),
-            minlp_solver_args=common_config.get("minlp_solver_args", {}),
-        )
+        try:
+            results = solver.solve(model, **solve_kwargs)
+        except TypeError as e:
+            # Make `separation_solver` a best-effort option.
+            msg = str(e)
+            mentions_separation_kw = any(
+                s in msg
+                for s in (
+                    "separation_solver",
+                    "separation_solver_args",
+                    "unexpected keyword",
+                )
+            )
+            had_separation_kw = ("separation_solver" in solve_kwargs) or (
+                "separation_solver_args" in solve_kwargs
+            )
+            if mentions_separation_kw and had_separation_kw:
+                solve_kwargs.pop("separation_solver", None)
+                solve_kwargs.pop("separation_solver_args", None)
+                logger.warning(
+                    "Solver '%s' rejected separation_solver kwargs; retrying without them.",
+                    algorithm,
+                )
+                results = solver.solve(model, **solve_kwargs)
+            else:
+                raise
     wall_time_s = time.perf_counter() - t0
 
     # Objective
@@ -183,6 +283,7 @@ def run_gdpopt_case(
         "model",
         "instance",
         "algorithm",
+        "algorithm_full",
         "initial_point_key",
         "starting_point",
         "objective_value",
@@ -197,6 +298,7 @@ def run_gdpopt_case(
             "model": model_name,
             "instance": instance,
             "algorithm": algo_tag.upper(),
+            "algorithm_full": algorithm,
             "initial_point_key": initial_point_key,
             "starting_point": tuple(starting_point),
             "objective_value": obj,
@@ -211,6 +313,7 @@ def run_gdpopt_case(
     return RunResult(
         model=model_name,
         algorithm=algo_tag.upper(),
+        algorithm_full=algorithm,
         instance=instance,
         starting_point=tuple(starting_point),
         objective_value=obj,

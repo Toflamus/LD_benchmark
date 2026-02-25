@@ -1,0 +1,9 @@
+# Benchmark outputs (generated files)
+results/
+
+# Python cache artifacts
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/

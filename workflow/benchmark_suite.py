@@ -1,5 +1,16 @@
 from __future__ import annotations
 
+"""Model-specific benchmark wrappers for LD-SDA / LD-BD.
+
+This module is the orchestration layer that:
+- Imports/constructs each benchmark model.
+- Chooses model-specific `logical_constraint_list` and default `starting_point`.
+- Calls `workflow.benchmark_runner.run_gdpopt_case` to execute and record runs.
+
+All outputs are written beneath a caller-provided `date_results_dir`, typically
+`LD_benchmark/results/<YYYYMMDD>/`.
+"""
+
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -10,6 +21,7 @@ from .result_io import ensure_dir
 
 
 def _add_sys_path(path: Path) -> None:
+    """Prepend `path` to `sys.path` if it is not already present."""
     p = str(path)
     if p not in sys.path:
         sys.path.insert(0, p)
@@ -17,12 +29,19 @@ def _add_sys_path(path: Path) -> None:
 
 @dataclass(frozen=True)
 class CommonConfig:
+    """Shared GDPopt and subsolver configuration.
+
+    This configuration is intentionally used for *both* `gdpopt.ldsda` and
+    `gdpopt.ldbd` so benchmarks compare algorithm behavior under consistent
+    solver settings.
+    """
     # GDPopt common
     tee: bool = False
     time_limit: int | None = 900
     direction_norm: str = "Linf"
 
     # Subsolvers
+    
     nlp_solver: str = "ipopt"
     nlp_solver_args: dict[str, Any] | None = None
     mip_solver: str = "gurobi"
@@ -31,10 +50,12 @@ class CommonConfig:
     separation_solver_args: dict[str, Any] | None = None
 
     # Optional (kept for compatibility with existing scripts)
-    minlp_solver: str | None = None
+    # Set a default to allow consistent MINLP subproblem solving across runs.
+    minlp_solver: str | None = "gams"
     minlp_solver_args: dict[str, Any] | None = None
 
     def as_dict(self) -> dict[str, Any]:
+        """Convert to the keyword-argument dict expected by `run_gdpopt_case`."""
         return {
             "tee": self.tee,
             "time_limit": self.time_limit,
@@ -57,6 +78,7 @@ def run_toy(
     algorithms: Sequence[str] = ("gdpopt.ldsda", "gdpopt.ldbd"),
     starting_point: Sequence[int] = (5, 1),
 ) -> None:
+    """Run the 2D Linan toy problem for the requested algorithms."""
     root = find_ld_benchmark_root(date_results_dir)
     model_dir = root / "models" / "linan_toy"
     _add_sys_path(model_dir)
@@ -85,6 +107,7 @@ def run_small_batch(
     algorithms: Sequence[str] = ("gdpopt.ldsda", "gdpopt.ldbd"),
     starting_point: Sequence[int] = (3, 3, 3),
 ) -> None:
+    """Run the small-batch process benchmark for the requested algorithms."""
     root = find_ld_benchmark_root(date_results_dir)
     model_dir = root / "models" / "small_batch"
     _add_sys_path(model_dir)
@@ -114,6 +137,7 @@ def run_cstr(
     algorithms: Sequence[str] = ("gdpopt.ldsda", "gdpopt.ldbd"),
     starting_point: Sequence[int] = (1, 1),
 ) -> None:
+    """Run the CSTR benchmark for a list of stage counts (`NT_list`)."""
     root = find_ld_benchmark_root(date_results_dir)
     model_dir = root / "models" / "cstr_testing"
     _add_sys_path(model_dir)
@@ -143,9 +167,19 @@ def run_column_random_init(
     algorithms: Sequence[str] = ("gdpopt.ldsda", "gdpopt.ldbd"),
     initial_point_keys: Iterable[int] | None = None,
 ) -> None:
-    """Run the column benchmark over a set of initial points.
+    """Run the column benchmark over a set of randomized initial points.
 
-    `initial_point_keys` refers to the keys in `column_initial_test.POINT_DICT`.
+    Parameters
+    ----------
+    initial_point_keys:
+        Keys from `models/column/column_initial_test.POINT_DICT`.
+        If None, runs all available initializations.
+
+    Notes
+    -----
+    Each initialization writes its own `solver.log` and `traj.csv` under
+    `column/<algo>/init_###/` while all runs append to a single
+    `column/<algo>/summary.csv`.
     """
 
     root = find_ld_benchmark_root(date_results_dir)
@@ -191,6 +225,7 @@ def run_all(
     cstr_NT_list: Sequence[int] = (5, 10, 15, 20, 25, 30),
     column_keys: Iterable[int] | None = None,
 ) -> None:
+    """Run toy, small-batch, CSTR sweep, and column random-init benchmarks."""
     run_toy(date_results_dir=date_results_dir, common=common)
     run_small_batch(date_results_dir=date_results_dir, common=common)
     run_cstr(date_results_dir=date_results_dir, common=common, NT_list=cstr_NT_list)

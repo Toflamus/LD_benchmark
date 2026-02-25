@@ -2,6 +2,7 @@
 from __future__ import division
 
 from math import fabs, floor
+from pathlib import Path
 
 import pandas
 from pyomo.environ import exp, value
@@ -11,7 +12,8 @@ def initialize(m):
     m.reflux_frac.set_value(value(m.reflux_ratio / (1 + m.reflux_ratio)))
     m.boilup_frac.set_value(value(m.reboil_ratio / (1 + m.reboil_ratio)))
 
-    _excel_sheets = pandas.read_excel('init.xlsx', sheet_name=None, engine='openpyxl')
+    excel_path = Path(__file__).with_name("init.xlsx")
+    _excel_sheets = pandas.read_excel(excel_path, sheet_name=None, engine="openpyxl")
 
     def set_value_if_not_fixed(var, val):
         """Set variable to the value if it is not fixed."""
