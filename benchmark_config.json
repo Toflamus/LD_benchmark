@@ -7,7 +7,7 @@
       "gdpopt.ldbd"
     ],
     "cstr_nt_list": [5, 10, 15, 20, 25, 30],
-    "column_keys": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    "column_keys": null
   },
   "outputs": {
     "date": "today",
