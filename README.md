@@ -110,6 +110,11 @@ Standard artifacts:
 - `solver.log` — solver / subsolver console and GDPopt logs
 - `traj.csv` — external-variable trajectory (path)
 - `summary.csv` — one row per run with objective and timing
+- `run_config.json` — per-run configuration snapshot (common config + effective solve kwargs)
+
+When using the CLI runner, the date folder also includes:
+
+- `benchmark_config.resolved.json` — the resolved configuration for that invocation (JSON defaults + CLI overrides)
 
 Example structure:
 

@@ -19,10 +19,11 @@ import re
 import time
 from contextlib import redirect_stderr, redirect_stdout
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Sequence
 
-from .result_io import append_row_csv, ensure_dir, write_traj_csv
+from .result_io import append_row_csv, ensure_dir, write_json, write_traj_csv
 
 
 _TUPLE_RE = re.compile(r"\((?:\s*\d+\s*,)*\s*\d+\s*\)")
@@ -134,6 +135,16 @@ def _try_get_ldbd_path(solver: Any) -> list[tuple[int, ...]] | None:
     return None
 
 
+def store_run_config(results_dir: Path, config: dict[str, Any]) -> Path:
+    """Persist a per-run configuration snapshot.
+
+    Writes `run_config.json` into `results_dir`.
+    """
+    path = results_dir / "run_config.json"
+    write_json(path, config)
+    return path
+
+
 def run_gdpopt_case(
     *,
     model_name: str,
@@ -190,6 +201,7 @@ def run_gdpopt_case(
     logger = _setup_run_logger(log_path, name=f"ld_benchmark.{run_id}")
 
     # Lazy import so notebooks can add the local Pyomo source tree to sys.path.
+    import pyomo  # type: ignore
     from pyomo.environ import SolverFactory, value  # type: ignore
 
     solver = SolverFactory(algorithm)
@@ -219,6 +231,32 @@ def run_gdpopt_case(
             "separation_solver_args", {}
         )
 
+    def _write_run_config() -> None:
+        # Keep this small and JSON-friendly.
+        cfg = {
+            "schema_version": 1,
+            "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+            "model": model_name,
+            "instance": instance,
+            "algorithm_tag": algo_tag.upper(),
+            "algorithm_full": algorithm,
+            "initial_point_key": initial_point_key,
+            "starting_point": list(map(int, starting_point)),
+            "common_config": dict(common_config),
+            "solve_kwargs": {
+                # Exclude non-serializable / very large objects.
+                k: v
+                for k, v in solve_kwargs.items()
+                if k not in {"logger", "logical_constraint_list"}
+            },
+            "logical_constraint_count": len(logical_constraint_list),
+            "pyomo_version": getattr(pyomo, "__version__", None),
+        }
+        store_run_config(results_dir, cfg)
+
+    # Write the config before solve so it's available even if solve fails.
+    _write_run_config()
+
     # Capture any stray stdout/stderr from subsolvers as well.
     buf = io.StringIO()
     t0 = time.perf_counter()
@@ -246,6 +284,8 @@ def run_gdpopt_case(
                     "Solver '%s' rejected separation_solver kwargs; retrying without them.",
                     algorithm,
                 )
+                # Update persisted config to reflect the retried kwargs.
+                _write_run_config()
                 results = solver.solve(model, **solve_kwargs)
             else:
                 raise

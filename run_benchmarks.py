@@ -53,6 +53,13 @@ def _load_json(path: Path) -> dict[str, Any]:
     return data
 
 
+def _write_json(path: Path, data: object) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, sort_keys=True, default=str)
+        f.write("\n")
+
+
 def _get(d: dict[str, Any], keys: list[str], default: Any) -> Any:
     cur: Any = d
     for k in keys:
@@ -315,6 +322,25 @@ def main(argv: list[str] | None = None) -> int:
             results_day_dir.mkdir(parents=True, exist_ok=True)
         else:
             _clear_path(results_day_dir / args.test)
+
+    # Persist the resolved configuration for reproducibility.
+    resolved_cfg = {
+        "schema_version": 1,
+        "timestamp_local": datetime.now().isoformat(),
+        "source_config_path": str(config_path) if config_path is not None else None,
+        "loaded_config": cfg,
+        "resolved": {
+            "test": args.test,
+            "algorithms": list(algorithms),
+            "date": str(args.date),
+            "results_day_dir": str(results_day_dir),
+            "clear": bool(args.clear),
+            "cstr_nt_list": nt_list,
+            "column_keys": column_keys,
+            "common": common.as_dict(),
+        },
+    }
+    _write_json(results_day_dir / "benchmark_config.resolved.json", resolved_cfg)
 
     # Run
     if args.test == "toy":

@@ -1,5 +1,6 @@
 # Benchmark outputs (generated files)
 results/
+figure/
 
 # Python cache artifacts
 __pycache__/

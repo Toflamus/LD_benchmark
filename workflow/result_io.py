@@ -9,6 +9,7 @@ The benchmark workflow writes small CSV artifacts that are easy to load from
 """
 
 import csv
+import json
 from pathlib import Path
 from typing import Iterable, Mapping, Sequence
 
@@ -65,3 +66,15 @@ def write_traj_csv(path: Path, traj_points: Sequence[Sequence[int]]) -> None:
             for j, v in enumerate(p, start=1):
                 row[f"e{j}"] = int(v)
             writer.writerow(row)
+
+
+def write_json(path: Path, data: object) -> None:
+    """Write `data` to JSON, overwriting any existing file.
+
+    Uses `default=str` so common non-JSON types (e.g., Path, enums) get a
+    reasonable string representation.
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, sort_keys=True, default=str)
+        f.write("\n")
