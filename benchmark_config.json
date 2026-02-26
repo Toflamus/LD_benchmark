@@ -21,15 +21,20 @@
     "nlp_solver": "ipopt",
     "mip_solver": "gurobi",
     "separation_solver": "gurobi",
-    "minlp_solver": "gams",
+    "minlp_solver": "ipopt",
     "minlp_solver_args": {
-      "solver": "ipopt",
-      "add_options": [
-            "option reslim = 3600;",
-            "option optcr = 1e-8;",
-            "option optca = 1e-8;",
-            "option threads = 1;"
-        ]
+      "options": {
+        "mu_strategy": "adaptive",     
+        "tol": 1e-6,                  
+        "acceptable_tol": 1e-5,        
+        "acceptable_iter": 15,         
+        "bound_push": 0.01,           
+        "bound_frac": 0.01,            
+        "mumps_pivtol": 1e-4,          
+        "mumps_pivtolmax": 0.1,       
+        "max_iter": 5000,              
+        "diverging_iterates_tol": 1e20
+      }
     }
   }
 }
