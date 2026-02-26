@@ -25,6 +25,7 @@
     "minlp_solver_args": {
       "solver": "conopt",
       "add_options": [
+        "option threads = 1;", 
         "option reslim = 3600;",       
         "option iterlim = 5000;",      
         "$onecho > conopt.opt",
