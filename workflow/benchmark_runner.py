@@ -401,6 +401,20 @@ def run_gdpopt_case(
         log_text = log_text + "\n" + buf.getvalue()
         traj = _parse_traj_from_log_text(log_text)
 
+    # Optional: report objective values for specific CSTR points if visited.
+    if model_name == "cstr":
+        point_info = getattr(getattr(solver, "data_manager", None), "point_info", None)
+        if isinstance(point_info, dict):
+            for pt in ((2, 1), (2, 2)):
+                info = point_info.get(tuple(pt))
+                if info is not None:
+                    logger.info(
+                        "Visited point %s: objective=%s, feasible=%s",
+                        pt,
+                        info.get("objective"),
+                        info.get("feasible"),
+                    )
+
     traj_path = results_dir / "traj.csv"
     write_traj_csv(traj_path, traj)
 
