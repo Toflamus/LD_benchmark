@@ -28,7 +28,7 @@
             "option reslim = 3600;",
             "option optcr = 1e-8;",
             "option optca = 1e-8;",
-            "option threads = 1;",
+            "option threads = 1;"
         ]
     }
   }
