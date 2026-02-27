@@ -211,30 +211,25 @@ def run_gdpopt_case(
         "tee": bool(common_config.get("tee", False)),
         "time_limit": common_config.get("time_limit", None),
         "logger": logger,
-        # discrete
+        # discrete algorithm common config
         "starting_point": list(starting_point),
         "logical_constraint_list": list(logical_constraint_list),
         "direction_norm": common_config.get("direction_norm", "Linf"),
-        # subsolvers
-        "nlp_solver": common_config.get("nlp_solver", "ipopt"),
-        "nlp_solver_args": common_config.get("nlp_solver_args", {}),
+        # master/mip solver
         "mip_solver": common_config.get("mip_solver", "gurobi"),
         "mip_solver_args": common_config.get("mip_solver_args", {}),
     }
 
-    # Optional MINLP subproblem solver configuration.
-    # Only pass these kwargs when requested to avoid triggering unexpected-kw
-    # errors on GDPopt variants that don't accept MINLP options.
-    minlp_solver = common_config.get("minlp_solver", None)
-    if minlp_solver is not None and str(minlp_solver).strip():
-        solve_kwargs["minlp_solver"] = minlp_solver
+    # Subproblem solver configuration (replaces the old minlp_solver config).
+    subproblem_solver = common_config.get("subproblem_solver", None)
+    if subproblem_solver is not None and str(subproblem_solver).strip():
+        solve_kwargs["subproblem_solver"] = subproblem_solver
 
-        minlp_solver_args = common_config.get("minlp_solver_args", None)
-        # Accept dict-like args; ignore None / empty dict.
-        if isinstance(minlp_solver_args, dict) and minlp_solver_args:
-            solve_kwargs["minlp_solver_args"] = minlp_solver_args
+        subproblem_solver_args = common_config.get("subproblem_solver_args", None)
+        if isinstance(subproblem_solver_args, dict) and subproblem_solver_args:
+            solve_kwargs["subproblem_solver_args"] = subproblem_solver_args
 
-    # Optional: some GDPopt solvers (notably current LDSDA) do not accept these.
+    # LDBD-specific: separation solver for the cut refinement LP.
     if algo_tag != "ldsda" and common_config.get("separation_solver", None) is not None:
         solve_kwargs["separation_solver"] = common_config.get("separation_solver")
         solve_kwargs["separation_solver_args"] = common_config.get(

@@ -41,18 +41,15 @@ class CommonConfig:
     direction_norm: str = "Linf"
 
     # Subsolvers
-    
-    nlp_solver: str = "ipopt"
-    nlp_solver_args: dict[str, Any] | None = None
     mip_solver: str = "gurobi"
     mip_solver_args: dict[str, Any] | None = None
     separation_solver: str = "gurobi"
     separation_solver_args: dict[str, Any] | None = None
 
-    # Optional (kept for compatibility with existing scripts)
-    # Set a default to allow consistent MINLP subproblem solving across runs.
-    minlp_solver: str | None = "gams"
-    minlp_solver_args: dict[str, Any] | None = None
+    # Subproblem solver for discrete algorithms (LDSDA / LDBD).
+    # The subproblem may be NLP or MINLP depending on the model structure.
+    subproblem_solver: str | None = "gams"
+    subproblem_solver_args: dict[str, Any] | None = None
 
     def as_dict(self) -> dict[str, Any]:
         """Convert to the keyword-argument dict expected by `run_gdpopt_case`."""
@@ -60,14 +57,12 @@ class CommonConfig:
             "tee": self.tee,
             "time_limit": self.time_limit,
             "direction_norm": self.direction_norm,
-            "nlp_solver": self.nlp_solver,
-            "nlp_solver_args": self.nlp_solver_args or {},
             "mip_solver": self.mip_solver,
             "mip_solver_args": self.mip_solver_args or {},
             "separation_solver": self.separation_solver,
             "separation_solver_args": self.separation_solver_args or {},
-            "minlp_solver": self.minlp_solver,
-            "minlp_solver_args": self.minlp_solver_args or {},
+            "subproblem_solver": self.subproblem_solver,
+            "subproblem_solver_args": self.subproblem_solver_args or {},
         }
 
 

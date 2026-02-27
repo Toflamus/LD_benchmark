@@ -446,8 +446,8 @@ if __name__ == "__main__":
     m = build_model()
     pyo.SolverFactory("gdpopt.ldbd").solve(
         m,
-        minlp_solver="gams",
-        minlp_solver_args=dict(
+        subproblem_solver="gams",
+        subproblem_solver_args=dict(
             solver="knitro",
             add_options=["option optcr=0.001;"],
             # tee=True,

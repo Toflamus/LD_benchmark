@@ -171,10 +171,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--tee", action="store_true", help="Enable solver tee output.")
     p.add_argument("--time-limit", type=int, default=900, help="Time limit in seconds.")
     p.add_argument("--direction-norm", default="Linf", help="Direction norm passed to GDPopt.")
-    p.add_argument("--nlp-solver", default="ipopt", help="NLP solver name.")
     p.add_argument("--mip-solver", default="gurobi", help="MIP solver name.")
     p.add_argument("--separation-solver", default="gurobi", help="Separation solver name.")
-    p.add_argument("--minlp-solver", default="gams", help="MINLP solver name (or empty to disable).")
+    p.add_argument("--subproblem-solver", default="gams", help="Subproblem solver name (or empty to disable).")
 
     # CSTR
     p.add_argument(
@@ -279,23 +278,20 @@ def main(argv: list[str] | None = None) -> int:
     if args.direction_norm == "Linf":
         args.direction_norm = str(_cfg_common("direction_norm", args.direction_norm))
 
-    if args.nlp_solver == "ipopt":
-        args.nlp_solver = str(_cfg_common("nlp_solver", args.nlp_solver))
-
     if args.mip_solver == "gurobi":
         args.mip_solver = str(_cfg_common("mip_solver", args.mip_solver))
 
     if args.separation_solver == "gurobi":
         args.separation_solver = str(_cfg_common("separation_solver", args.separation_solver))
 
-    if args.minlp_solver == "gams":
-        args.minlp_solver = str(_cfg_common("minlp_solver", args.minlp_solver))
+    if args.subproblem_solver == "gams":
+        args.subproblem_solver = str(_cfg_common("subproblem_solver", args.subproblem_solver))
 
-    minlp_solver_args = _cfg_common("minlp_solver_args", None)
-    if minlp_solver_args is not None and not isinstance(minlp_solver_args, dict):
+    subproblem_solver_args = _cfg_common("subproblem_solver_args", None)
+    if subproblem_solver_args is not None and not isinstance(subproblem_solver_args, dict):
         raise TypeError(
-            "common.minlp_solver_args must be an object/dict (or null) in the JSON config; "
-            f"got {type(minlp_solver_args).__name__}"
+            "common.subproblem_solver_args must be an object/dict (or null) in the JSON config; "
+            f"got {type(subproblem_solver_args).__name__}"
         )
 
     algorithms = tuple(args.algorithms)
@@ -312,11 +308,10 @@ def main(argv: list[str] | None = None) -> int:
         tee=bool(args.tee),
         time_limit=int(args.time_limit) if args.time_limit else None,
         direction_norm=str(args.direction_norm),
-        nlp_solver=str(args.nlp_solver),
         mip_solver=str(args.mip_solver),
         separation_solver=str(args.separation_solver),
-        minlp_solver=(str(args.minlp_solver) if str(args.minlp_solver).strip() else None),
-        minlp_solver_args=minlp_solver_args,
+        subproblem_solver=(str(args.subproblem_solver) if str(args.subproblem_solver).strip() else None),
+        subproblem_solver_args=subproblem_solver_args,
     )
 
     # Parse optional lists

@@ -58,14 +58,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Solver wall time limit in seconds (default: 900).",
     )
     parser.add_argument(
-        "--minlp-solver",
+        "--subproblem-solver",
         default="gams",
-        help="MINLP solver interface/name (default: gams).",
-    )
-    parser.add_argument(
-        "--nlp-solver",
-        default="baron",
-        help="NLP solver name (default: baron).",
+        help="Subproblem solver interface/name (default: gams).",
     )
     parser.add_argument(
         "--direction-norm",
@@ -99,8 +94,7 @@ def main(argv: list[str] | None = None) -> int:
 
     pe.SolverFactory("gdpopt.ldbd").solve(
         m,
-        minlp_solver=args.minlp_solver,
-        nlp_solver=args.nlp_solver,
+        subproblem_solver=args.subproblem_solver,
         starting_point=[1, 1],
         logical_constraint_list=[
             m.one_unreacted_feed,

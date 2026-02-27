@@ -18,11 +18,10 @@
     "tee": false,
     "time_limit": 900,
     "direction_norm": "Linf",
-    "nlp_solver": "ipopt",
     "mip_solver": "gurobi",
     "separation_solver": "gurobi",
-    "minlp_solver": "gams",
-    "minlp_solver_args": {
+    "subproblem_solver": "gams",
+    "subproblem_solver_args": {
       "solver": "conopt",
       "add_options": [
         "option threads = 1;", 

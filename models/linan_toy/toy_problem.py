@@ -250,8 +250,8 @@ if __name__ == "__main__":
         starting_point=[5, 1],
         direction_norm="Linf",
         logical_constraint_list=[m.oneY1, m.oneY2],
-        minlp_solver="gams",
-        # minlp_solver_args=dict(solver="baron", add_options=["option optcr=0.001;"]),
+        subproblem_solver="gams",
+        # subproblem_solver_args=dict(solver="baron", add_options=["option optcr=0.001;"]),
         tee=True,
     )
     # end time

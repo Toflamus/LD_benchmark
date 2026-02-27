@@ -35,18 +35,17 @@ At minimum you need a Python environment with:
 
 You also need working solver backends matching your configuration. The default notebook config is:
 
-- NLP solver: `ipopt`
 - MIP solver: `gurobi`
-- MINLP solver: `gams`
+- Subproblem solver: `gams` (handles both NLP and MINLP subproblems)
 
-If you use `gams` for MINLP subproblems, the *actual* MINLP solver used by GAMS can be selected via `minlp_solver_args`.
+If you use `gams` for subproblems, the *actual* solver used by GAMS can be selected via `subproblem_solver_args`.
 For example, to run BARON through GAMS and tighten the optimality tolerance:
 
 ```json
 {
 	"common": {
-		"minlp_solver": "gams",
-		"minlp_solver_args": {
+		"subproblem_solver": "gams",
+		"subproblem_solver_args": {
 			"solver": "baron",
 			"add_options": ["option optcr=0.0001;"]
 		}
@@ -106,6 +105,15 @@ To run the full suite for only one algorithm by default, set:
 To explore **all** column initial points by default, set:
 
 - `run.column_keys` to `null` (use a list like `[1,2,3]` to restrict)
+
+To **avoid always starting from the first column key**, explicitly set the
+initialization keys you want to run:
+
+- In `benchmark_config.json` set `run.column_keys` to a list, e.g. `[3, 7, 9]`
+- Or use the CLI flag: `python3 run_benchmarks.py --test column --column-keys 3 7 9`
+
+This directly controls the starting points used by the column benchmark
+(`models/column/column_initial_test.POINT_DICT`).
 
 Examples:
 
