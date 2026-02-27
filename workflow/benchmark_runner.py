@@ -267,61 +267,12 @@ def run_gdpopt_case(
     # Write the config before solve so it's available even if solve fails.
     _write_run_config()
 
-    def _solve_with_fallback() -> Any:
-        """Solve with best-effort retries when kwargs are rejected.
-
-        Some GDPopt implementations (especially LDSDA) may reject optional
-        keywords such as separation/MINLP kwargs. This tries progressively
-        simpler kwarg sets rather than failing the whole benchmark.
-        """
-
-        nonlocal solve_kwargs
-
-        def _mk_variant(drop: Iterable[str]) -> dict[str, Any]:
-            return {k: v for k, v in solve_kwargs.items() if k not in set(drop)}
-
-        variants: list[tuple[str, dict[str, Any]]] = [("full", dict(solve_kwargs))]
-        # Remove separation kwargs
-        if "separation_solver" in solve_kwargs or "separation_solver_args" in solve_kwargs:
-            variants.append(("no_separation", _mk_variant(["separation_solver", "separation_solver_args"])))
-        # Remove MINLP args
-        if "minlp_solver_args" in solve_kwargs:
-            variants.append(("no_minlp_args", _mk_variant(["minlp_solver_args"])))
-        # Remove MINLP entirely
-        if "minlp_solver" in solve_kwargs or "minlp_solver_args" in solve_kwargs:
-            variants.append(("no_minlp", _mk_variant(["minlp_solver", "minlp_solver_args"])))
-
-        seen: set[tuple[str, ...]] = set()
-        last_exc: Exception | None = None
-
-        for tag, kwargs in variants:
-            key_sig = tuple(sorted(kwargs.keys()))
-            if key_sig in seen:
-                continue
-            seen.add(key_sig)
-
-            if kwargs.keys() != solve_kwargs.keys():
-                logger.warning("Retrying solve variant '%s' for solver '%s'.", tag, algorithm)
-                # Update persisted config to reflect the retried kwargs.
-                solve_kwargs = kwargs
-                _write_run_config()
-
-            try:
-                return solver.solve(model, **kwargs)
-            except (TypeError, ValueError) as e:
-                last_exc = e
-                logger.warning("Solve variant '%s' failed for '%s': %s", tag, algorithm, e)
-                continue
-
-        assert last_exc is not None
-        raise last_exc
-
     # Capture any stray stdout/stderr from subsolvers as well.
     buf = io.StringIO()
     t0 = time.perf_counter()
     with redirect_stdout(buf), redirect_stderr(buf):
         try:
-            results = _solve_with_fallback()
+            results = solver.solve(model, **solve_kwargs)
         except (TypeError, ValueError) as e:
             # Do not crash the whole suite; record a failed run and return.
             logger.error("Solve failed for '%s' (%s/%s): %s", algorithm, model_name, instance, e)
@@ -382,6 +333,20 @@ def run_gdpopt_case(
         obj = float(value(model.obj))
     except Exception:
         obj = None
+
+    # If no feasible point was found, force objective to None so summaries
+    # don't treat infeasible initial points as valid outcomes.
+    try:
+        data_manager = getattr(solver, "data_manager", None)
+        if data_manager is not None:
+            best_point, best_obj = data_manager.get_best_solution(
+                sense=getattr(solver, "objective_sense", None)
+            )
+            if best_point is None or best_obj is None:
+                obj = None
+    except Exception:
+        # Best-effort only; keep existing obj on failure.
+        pass
 
     # CPU time (not always populated)
     cpu_time_s = getattr(getattr(results, "solver", None), "user_time", None)

@@ -1,6 +1,7 @@
 # Benchmark outputs (generated files)
 results/
 figure/
+figuredantzig/
 
 # Python cache artifacts
 __pycache__/
