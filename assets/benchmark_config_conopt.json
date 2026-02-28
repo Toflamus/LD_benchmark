@@ -19,20 +19,14 @@
     "time_limit": 900,
     "direction_norm": "Linf",
     "mip_solver": "gurobi",
-    "separation_solver": "scipy_highs_ds",
-    "separation_solver_args": {
-      "options": {
-        "presolve": "on",
-        "simplex_strategy": 1
-      }
-    },
+    "separation_solver": "gurobi",
     "subproblem_solver": "gams",
     "subproblem_solver_args": {
       "solver": "conopt",
       "add_options": [
-        "option threads = 1;",
-        "option reslim = 3600;",
-        "option iterlim = 5000;",
+        "option threads = 1;", 
+        "option reslim = 3600;",       
+        "option iterlim = 5000;",      
         "$onecho > conopt.opt",
         "rtnwma 1e-06",
         "rtnopt 1e-06",
@@ -42,9 +36,8 @@
         "lsisol 1",
         "rtmaxv 1.0e10",
         "$offecho",
-        "GAMS_MODEL.optfile = 1;"
+        "GAMS_MODEL.optfile = 1;"      
       ]
     }
   }
 }
-
