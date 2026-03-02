@@ -19,7 +19,7 @@
     "time_limit": 900,
     "direction_norm": "Linf",
     "mip_solver": "gurobi",
-    "separation_solver": "scipy_highs_ds",
+    "separation_solver": "gurobi",
     "separation_solver_args": {
       "options": {
         "presolve": "on",
