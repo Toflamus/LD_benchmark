@@ -236,6 +236,12 @@ def run_gdpopt_case(
             "separation_solver_args", {}
         )
 
+    # LDBD-specific: linear no-good cuts to exclude visited points.
+    if algo_tag != "ldsda":
+        add_ng = common_config.get("add_no_good_cuts", False)
+        if add_ng:
+            solve_kwargs["add_no_good_cuts"] = True
+
     def _write_run_config() -> None:
         # Keep this small and JSON-friendly.
         cfg = {

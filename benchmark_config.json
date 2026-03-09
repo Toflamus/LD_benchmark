@@ -18,6 +18,7 @@
     "tee": false,
     "time_limit": 900,
     "direction_norm": "Linf",
+    "add_no_good_cuts": false,
     "mip_solver": "gurobi",
     "separation_solver": "gurobi",
     "separation_solver_args": {

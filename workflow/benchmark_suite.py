@@ -40,6 +40,9 @@ class CommonConfig:
     time_limit: int | None = 900
     direction_norm: str = "Linf"
 
+    # No-good cuts (LDBD only)
+    add_no_good_cuts: bool = False
+
     # Subsolvers
     mip_solver: str = "gurobi"
     mip_solver_args: dict[str, Any] | None = None
@@ -57,6 +60,7 @@ class CommonConfig:
             "tee": self.tee,
             "time_limit": self.time_limit,
             "direction_norm": self.direction_norm,
+            "add_no_good_cuts": self.add_no_good_cuts,
             "mip_solver": self.mip_solver,
             "mip_solver_args": self.mip_solver_args or {},
             "separation_solver": self.separation_solver,

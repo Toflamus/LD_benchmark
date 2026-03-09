@@ -24,6 +24,17 @@ The suite currently includes four benchmarks:
 
 All benchmarks are run for both algorithms using a shared configuration object (`workflow/benchmark_suite.py::CommonConfig`).
 
+### No-good cuts (LD-BD only)
+
+LD-BD supports optional **linear no-good cuts** that exclude previously visited external-variable points from the master MILP. This can help avoid revisiting stalled points.
+
+To enable no-good cuts:
+
+- **JSON config**: set `"add_no_good_cuts": true` in the `"common"` block of `benchmark_config.json`.
+- **CLI**: pass `--no-good-cuts` to `run_benchmarks.py`.
+
+The option only affects `gdpopt.ldbd` runs; it is silently ignored for `gdpopt.ldsda`.
+
 ## Requirements
 
 At minimum you need a Python environment with:
@@ -132,6 +143,9 @@ python3 run_benchmarks.py --test all --clear
 
 # Run everything for only one algorithm (e.g., LDSDA)
 python3 run_benchmarks.py --test all --algorithms gdpopt.ldsda
+
+# Run toy with LD-BD no-good cuts enabled
+python3 run_benchmarks.py --test toy --algorithms gdpopt.ldbd --no-good-cuts
 ```
 
 ## Results layout

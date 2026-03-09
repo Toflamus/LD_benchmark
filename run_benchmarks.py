@@ -174,6 +174,12 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--mip-solver", default="gurobi", help="MIP solver name.")
     p.add_argument("--separation-solver", default="gurobi", help="Separation solver name.")
     p.add_argument("--subproblem-solver", default="gams", help="Subproblem solver name (or empty to disable).")
+    p.add_argument(
+        "--no-good-cuts",
+        action="store_true",
+        default=False,
+        help="Enable linear no-good cuts in LD-BD to exclude visited points.",
+    )
 
     # CSTR
     p.add_argument(
@@ -287,6 +293,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.subproblem_solver == "gams":
         args.subproblem_solver = str(_cfg_common("subproblem_solver", args.subproblem_solver))
 
+    if args.no_good_cuts is False:
+        args.no_good_cuts = bool(_cfg_common("add_no_good_cuts", False))
+
     subproblem_solver_args = _cfg_common("subproblem_solver_args", None)
     if subproblem_solver_args is not None and not isinstance(subproblem_solver_args, dict):
         raise TypeError(
@@ -308,6 +317,7 @@ def main(argv: list[str] | None = None) -> int:
         tee=bool(args.tee),
         time_limit=int(args.time_limit) if args.time_limit else None,
         direction_norm=str(args.direction_norm),
+        add_no_good_cuts=bool(args.no_good_cuts),
         mip_solver=str(args.mip_solver),
         separation_solver=str(args.separation_solver),
         subproblem_solver=(str(args.subproblem_solver) if str(args.subproblem_solver).strip() else None),
