@@ -15,6 +15,7 @@
     "clear": false
   },
   "common": {
+    "preprocessing": true,
     "tee": false,
     "time_limit": 900,
     "direction_norm": "Linf",

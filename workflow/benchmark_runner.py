@@ -215,6 +215,8 @@ def run_gdpopt_case(
         "starting_point": list(starting_point),
         "logical_constraint_list": list(logical_constraint_list),
         "direction_norm": common_config.get("direction_norm", "Linf"),
+        # preprocessing
+        "preprocessing": common_config.get("preprocessing", True),
         # master/mip solver
         "mip_solver": common_config.get("mip_solver", "gurobi"),
         "mip_solver_args": common_config.get("mip_solver_args", {}),

@@ -174,6 +174,11 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--mip-solver", default="gurobi", help="MIP solver name.")
     p.add_argument("--separation-solver", default="gurobi", help="Separation solver name.")
     p.add_argument("--subproblem-solver", default="gams", help="Subproblem solver name (or empty to disable).")
+    p.add_argument(
+        "--no-preprocessing",
+        action="store_true",
+        help="Disable two-phase feasibility preprocessing in LD-SDA/LD-BD.",
+    )
 
     # CSTR
     p.add_argument(
@@ -294,6 +299,12 @@ def main(argv: list[str] | None = None) -> int:
             f"got {type(subproblem_solver_args).__name__}"
         )
 
+    # Preprocessing: CLI --no-preprocessing wins, then JSON config, then default (True).
+    if args.no_preprocessing:
+        preprocessing = False
+    else:
+        preprocessing = bool(_cfg_common("preprocessing", True))
+
     algorithms = tuple(args.algorithms)
 
     # Resolve output directory
@@ -312,6 +323,7 @@ def main(argv: list[str] | None = None) -> int:
         separation_solver=str(args.separation_solver),
         subproblem_solver=(str(args.subproblem_solver) if str(args.subproblem_solver).strip() else None),
         subproblem_solver_args=subproblem_solver_args,
+        preprocessing=preprocessing,
     )
 
     # Parse optional lists

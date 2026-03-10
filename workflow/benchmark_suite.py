@@ -51,6 +51,9 @@ class CommonConfig:
     subproblem_solver: str | None = "gams"
     subproblem_solver_args: dict[str, Any] | None = None
 
+    # Preprocessing (two-phase feasibility check before the main solve).
+    preprocessing: bool = True
+
     def as_dict(self) -> dict[str, Any]:
         """Convert to the keyword-argument dict expected by `run_gdpopt_case`."""
         return {
@@ -63,6 +66,7 @@ class CommonConfig:
             "separation_solver_args": self.separation_solver_args or {},
             "subproblem_solver": self.subproblem_solver,
             "subproblem_solver_args": self.subproblem_solver_args or {},
+            "preprocessing": self.preprocessing,
         }
 
 
