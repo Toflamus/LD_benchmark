@@ -9,3 +9,6 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+
+models/cstr_testing/__pycache__/cstr.cpython-312.pyc
+models/column/__pycache__/initialize.cpython-312.pyc
