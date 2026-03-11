@@ -253,6 +253,58 @@ Notes:
 - `save_figures.py` expects the corresponding benchmark results to already exist for the date you request.
 - The CSTR heatmap overlay figure is currently generated only for `--nt 30` (because the landscape CSV is stored in `assets/compl_enum_cstr_30_baron_dantzig.csv`).
 
+## Trajectory heatmap plots (plot_trajectory_heatmap.py)
+
+`plot_trajectory_heatmap.py` overlays the algorithm's search trajectory on a heatmap of the complete-enumeration objective landscape. Feasible points are coloured by objective value; infeasible / unenumerated points are shown as red crosses.
+
+### Single trajectory
+
+Plot one initialization:
+
+```bash
+python plot_trajectory_heatmap.py --date 20260311_ipopt_preprocess_off \
+    --algorithm ldbd --init 38
+```
+
+Plot all available initializations at once (omit `--init`):
+
+```bash
+python plot_trajectory_heatmap.py --date 20260311_ipopt_preprocess_off \
+    --algorithm ldbd
+```
+
+Output is saved to `figure/<date>_column_traj/`.
+
+### Compare two initializations (same date)
+
+```bash
+python plot_trajectory_heatmap.py --date 20260311_ipopt_preprocess_off \
+    --algorithm ldbd --compare 1 38
+```
+
+This generates a side-by-side figure comparing init 1 and init 38, saved to `figure/<date>_column_traj/`.
+
+### Compare two dates (same init)
+
+```bash
+python plot_trajectory_heatmap.py \
+    --date 20260311_ipopt_preprocess_off \
+    --date2 20260311_ipopt_preprocess_on \
+    --algorithm ldbd --init 38
+```
+
+Output is saved to `figure/<date>-vs-<date2>_column_traj/`. Omit `--init` to compare all initializations.
+
+### Additional options
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--algorithm` | `ldbd` or `ldsda` | `ldbd` |
+| `--enum-csv` | Path to complete-enumeration CSV | `assets/compl_enum_column_17_optimal_baron_bigm.csv` |
+| `--output-dir` | Override output directory | (auto, see above) |
+| `--x-range` | e1 axis range as `start,stop` | `1,16` |
+| `--y-range` | e2 axis range as `start,stop` | `1,16` |
+
 ## Troubleshooting
 
 - **`init.xlsx` not found (column init)**: the column initializer reads `models/column/init.xlsx`.
