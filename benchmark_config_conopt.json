@@ -21,25 +21,31 @@
     "direction_norm": "Linf",
     "mip_solver": "gurobi",
     "separation_solver": "gurobi",
+    "separation_solver_args": {
+      "options": {
+        "presolve": "on",
+        "simplex_strategy": 1
+      }
+    },
     "subproblem_solver": "gams",
     "subproblem_solver_args": {
-      "solver": "ipopt",
+      "solver": "conopt",
       "add_options": [
         "option threads = 1;",
         "option reslim = 3600;",
         "option iterlim = 5000;",
-        "$onecho > ipopt.opt",
-        "tol 1e-06",
-        "constr_viol_tol 1e-06",
-        "acceptable_iter 15",
-        "min_hessian_perturbation 1e-08",
-        "nlp_upper_bound_inf 1.0e10",
-        "nlp_lower_bound_inf -1.0e10",
-        "max_iter 5000",
-        "max_cpu_time 3600",
+        "$onecho > conopt.opt",
+        "rtnwma 1e-06",
+        "rtnopt 1e-06",
+        "lstall 15",
+        "rtvmin 1e-08",
+        "lsmeth 2",
+        "lsisol 1",
+        "rtmaxv 1.0e10",
         "$offecho",
         "GAMS_MODEL.optfile = 1;"
       ]
     }
   }
 }
+
