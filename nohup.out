@@ -1,0 +1,41 @@
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+Traceback (most recent call last):
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/LD_benchmark/run_benchmarks.py", line 398, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/LD_benchmark/run_benchmarks.py", line 374, in main
+    run_column_random_init(
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/LD_benchmark/workflow/benchmark_suite.py", line 206, in run_column_random_init
+    run_gdpopt_case(
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/LD_benchmark/workflow/benchmark_runner.py", line 276, in run_gdpopt_case
+    results = solver.solve(model, **solve_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/ldsda.py", line 70, in solve
+    return super().solve(model, **kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/algorithm_base_class.py", line 130, in solve
+    self._solve_gdp(model, config)
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/ldsda.py", line 132, in _solve_gdp
+    _, self.current_obj = self._solve_discrete_point(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/discrete_algorithm_base_class.py", line 630, in _solve_discrete_point
+    primal_improved, primal_bound = self._solve_GDP_subproblem(
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/discrete_algorithm_base_class.py", line 830, in _solve_GDP_subproblem
+    sub_results = configure_and_call_solver(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/contrib/gdpopt/solve_subproblem.py", line 33, in configure_and_call_solver
+    if not opt.available():
+           ^^^^^^^^^^^^^^^
+  File "/home/atom/a/wang7617/SECQUOIA/Pyomos/pyomo/pyomo/solvers/plugins/solvers/GAMS.py", line 676, in available
+    raise NameError(
+NameError: No 'gams' command found on system PATH - GAMS shell solver functionality is not available.

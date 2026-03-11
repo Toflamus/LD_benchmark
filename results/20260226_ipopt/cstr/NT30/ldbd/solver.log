@@ -1,0 +1,68 @@
+2026-02-26 12:48:29,627 | INFO | ld_benchmark.cstr-NT30-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-02-26 12:48:29,627 | INFO | ld_benchmark.cstr-NT30-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.cstr-NT30-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  add_options: ['option reslim = 3600;', 'option optcr = 1e-8;', 'option optca = 1e-8;', 'option threads = 1;']
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f3860d9c360>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [1, 1]
+logical_constraint_list: ComponentSet(['one_unreacted_feed (key=one_unreacted_feed)', 'one_recycle (key=one_recycle)'])
+disjunction_list: None
+infinity_output: 100000000.0
+separation_solver: gurobi
+separation_solver_args:
+
+2026-02-26 12:48:29,628 | INFO | ld_benchmark.cstr-NT30-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 12:48:29,628 | INFO | ld_benchmark.cstr-NT30-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-02-26 12:48:29,641 | INFO | ld_benchmark.cstr-NT30-ldbd | Original model has 575 constraints (92 nonlinear) and 60 disjunctions, with 426 variables, of which 120 are binary, 0 are integer, and 306 are continuous.
+2026-02-26 12:48:29,752 | INFO | ld_benchmark.cstr-NT30-ldbd | Reformulation Summary:
+2026-02-26 12:48:29,752 | INFO | ld_benchmark.cstr-NT30-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 12:48:29,752 | INFO | ld_benchmark.cstr-NT30-ldbd | =====================================================================================================
+2026-02-26 12:48:29,753 | INFO | ld_benchmark.cstr-NT30-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 12:48:31,380 | INFO | ld_benchmark.cstr-NT30-ldbd |         0     Initial point                 (1, 1)          -inf       9.89474       inf%      1.75  *
+2026-02-26 12:48:31,381 | INFO | ld_benchmark.cstr-NT30-ldbd |         1    Skipped Anchor                 (1, 1)          -inf       9.89474       inf%      1.75  
+2026-02-26 12:48:33,341 | INFO | ld_benchmark.cstr-NT30-ldbd |         1          Neighbor                 (2, 1)          -inf       4.06188       inf%      3.71  *
+2026-02-26 12:48:34,974 | INFO | ld_benchmark.cstr-NT30-ldbd |         1          Neighbor                 (2, 2)          -inf       4.06188       inf%      5.34  *
+2026-02-26 12:48:35,024 | INFO | ld_benchmark.cstr-NT30-ldbd |         1            Master               (30, 30)    -159.25806       4.06188   4020.80%      5.40  
+2026-02-26 12:48:35,024 | INFO | ld_benchmark.cstr-NT30-ldbd |         1         UB update                 (2, 2)    -159.25806       4.06188   4020.80%      5.40  
+2026-02-26 12:48:39,100 | INFO | ld_benchmark.cstr-NT30-ldbd |         2            Master                 (2, 1)       4.06188       4.06188      0.00%      9.47  
+2026-02-26 12:48:39,100 | INFO | ld_benchmark.cstr-NT30-ldbd |         2         UB update                 (2, 2)       4.06188       4.06188      0.00%      9.47  
+2026-02-26 12:48:39,100 | INFO | ld_benchmark.cstr-NT30-ldbd |         2   Anchor (promoted)                 (2, 1)       4.06188       4.06188      0.00%      9.47  
+2026-02-26 12:48:39,101 | INFO | ld_benchmark.cstr-NT30-ldbd | LDBD bounds converged: UB=4.061881654046266, LB=4.061881676316261
+2026-02-26 12:48:39,102 | INFO | ld_benchmark.cstr-NT30-ldbd | Search path: (1, 1) -> (30, 30) -> (2, 1)
+2026-02-26 12:48:39,103 | INFO | ld_benchmark.cstr-NT30-ldbd | Anchor points: (1, 1) -> (30, 30) -> (2, 1)
+2026-02-26 12:48:39,105 | INFO | ld_benchmark.cstr-NT30-ldbd | 
+Solved in 2 iterations and 9.47644 seconds
+Optimal objective value 4.0618816540
+Relative optimality gap 0.00000%

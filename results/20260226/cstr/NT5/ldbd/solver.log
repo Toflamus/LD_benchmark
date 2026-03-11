@@ -1,0 +1,74 @@
+2026-02-26 18:08:46,252 | INFO | ld_benchmark.cstr-NT5-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-02-26 18:08:46,252 | INFO | ld_benchmark.cstr-NT5-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.cstr-NT5-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  add_options: ['option threads = 1;', 'option reslim = 3600;', 'option iterlim = 5000;', '$onecho > conopt.opt', 'rtnwma 1e-06', 'rtnopt 1e-06', 'lstall 15', 'rtvmin 1e-08', 'lsmeth 2', 'lsisol 1', 'rtmaxv 1.0e10', '$offecho', 'GAMS_MODEL.optfile = 1;']
+  solver: conopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f5ab5430400>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [1, 1]
+logical_constraint_list: ComponentSet(['one_unreacted_feed (key=one_unreacted_feed)', 'one_recycle (key=one_recycle)'])
+disjunction_list: None
+infinity_output: 100000000.0
+separation_solver: gurobi
+separation_solver_args:
+
+2026-02-26 18:08:46,253 | INFO | ld_benchmark.cstr-NT5-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 18:08:46,253 | INFO | ld_benchmark.cstr-NT5-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-02-26 18:08:46,256 | INFO | ld_benchmark.cstr-NT5-ldbd | Original model has 100 constraints (17 nonlinear) and 10 disjunctions, with 76 variables, of which 20 are binary, 0 are integer, and 56 are continuous.
+2026-02-26 18:08:46,269 | INFO | ld_benchmark.cstr-NT5-ldbd | Reformulation Summary:
+2026-02-26 18:08:46,269 | INFO | ld_benchmark.cstr-NT5-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 18:08:46,269 | INFO | ld_benchmark.cstr-NT5-ldbd | =====================================================================================================
+2026-02-26 18:08:46,270 | INFO | ld_benchmark.cstr-NT5-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 18:08:46,872 | INFO | ld_benchmark.cstr-NT5-ldbd |         0     Initial point                 (1, 1)          -inf       9.89474       inf%      0.62  *
+2026-02-26 18:08:46,873 | INFO | ld_benchmark.cstr-NT5-ldbd |         1    Skipped Anchor                 (1, 1)          -inf       9.89474       inf%      0.62  
+2026-02-26 18:08:47,547 | INFO | ld_benchmark.cstr-NT5-ldbd |         1          Neighbor                 (2, 1)          -inf       4.06188       inf%      1.29  *
+2026-02-26 18:08:48,128 | INFO | ld_benchmark.cstr-NT5-ldbd |         1          Neighbor                 (2, 2)          -inf       4.06188       inf%      1.87  
+2026-02-26 18:08:48,169 | INFO | ld_benchmark.cstr-NT5-ldbd |         1            Master                 (5, 1)     -13.43668       4.06188    430.80%      1.92  
+2026-02-26 18:08:48,169 | INFO | ld_benchmark.cstr-NT5-ldbd |         1         UB update                 (2, 1)     -13.43668       4.06188    430.80%      1.92  
+2026-02-26 18:08:48,788 | INFO | ld_benchmark.cstr-NT5-ldbd |         2            Anchor                 (5, 1)     -13.43668       3.13020    529.26%      2.53  *
+2026-02-26 18:08:49,394 | INFO | ld_benchmark.cstr-NT5-ldbd |         2          Neighbor                 (4, 1)     -13.43668       3.13020    529.26%      3.14  
+2026-02-26 18:08:50,007 | INFO | ld_benchmark.cstr-NT5-ldbd |         2          Neighbor                 (4, 2)     -13.43668       3.13020    529.26%      3.75  
+2026-02-26 18:08:50,629 | INFO | ld_benchmark.cstr-NT5-ldbd |         2          Neighbor                 (5, 2)     -13.43668       3.13020    529.26%      4.38  
+2026-02-26 18:08:50,640 | INFO | ld_benchmark.cstr-NT5-ldbd |         2            Master                 (5, 1)       3.13020       3.13020      0.00%      4.39  
+2026-02-26 18:08:50,640 | INFO | ld_benchmark.cstr-NT5-ldbd |         2         UB update                 (5, 1)       3.13020       3.13020      0.00%      4.39  
+2026-02-26 18:08:50,641 | INFO | ld_benchmark.cstr-NT5-ldbd | Master stalled and best point is already an anchor. Terminating.
+2026-02-26 18:08:50,641 | INFO | ld_benchmark.cstr-NT5-ldbd | LDBD bounds converged: UB=3.1301981327547503, LB=3.130198121070862
+2026-02-26 18:08:50,641 | INFO | ld_benchmark.cstr-NT5-ldbd | Search path: (1, 1) -> (5, 1) -> (5, 1)
+2026-02-26 18:08:50,642 | INFO | ld_benchmark.cstr-NT5-ldbd | Anchor points: (1, 1) -> (5, 1)
+2026-02-26 18:08:50,643 | INFO | ld_benchmark.cstr-NT5-ldbd | 
+Solved in 2 iterations and 4.38930 seconds
+Optimal objective value 3.1301981328
+Relative optimality gap 0.00000%
+2026-02-26 18:08:50,643 | INFO | ld_benchmark.cstr-NT5-ldbd | Visited point (2, 1): objective=4.061881684654232, feasible=True
+2026-02-26 18:08:50,643 | INFO | ld_benchmark.cstr-NT5-ldbd | Visited point (2, 2): objective=4.061881684897114, feasible=True

@@ -1,0 +1,66 @@
+2026-02-26 17:18:49,215 | INFO | ld_benchmark.toy-default-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-02-26 17:18:49,215 | INFO | ld_benchmark.toy-default-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.toy-default-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  add_options: ['option reslim = 3600;', 'option iterlim = 5000;', '$onecho > conopt.opt', 'rtnwma 1e-06', 'rtnopt 1e-06', 'lstall 15', 'rtvmin 1e-08', 'lsmeth 2', 'lsisol 1', 'rtmaxv 1.0e10', '$offecho', 'GAMS_MODEL.optfile = 1;']
+  solver: conopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f3d36174360>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [5, 1]
+logical_constraint_list: ComponentSet(['oneY1 (key=oneY1)', 'oneY2 (key=oneY2)'])
+disjunction_list: None
+
+2026-02-26 17:18:49,215 | INFO | ld_benchmark.toy-default-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 17:18:49,215 | INFO | ld_benchmark.toy-default-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-02-26 17:18:49,217 | INFO | ld_benchmark.toy-default-ldsda | Original model has 10 constraints (0 nonlinear) and 2 disjunctions, with 12 variables, of which 10 are binary, 0 are integer, and 2 are continuous.
+2026-02-26 17:18:49,642 | INFO | ld_benchmark.toy-default-ldsda | Reformulation Summary:
+2026-02-26 17:18:49,642 | INFO | ld_benchmark.toy-default-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 17:18:49,642 | INFO | ld_benchmark.toy-default-ldsda | =====================================================================================================
+2026-02-26 17:18:49,643 | INFO | ld_benchmark.toy-default-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 17:18:50,196 | INFO | ld_benchmark.toy-default-ldsda |         0     Initial point                 (5, 1)          -inf      -0.54237       inf%      0.98  *
+2026-02-26 17:18:50,726 | INFO | ld_benchmark.toy-default-ldsda |         1   Neighbor search                 (4, 1)          -inf      -0.63894       inf%      1.51  *
+2026-02-26 17:18:51,252 | INFO | ld_benchmark.toy-default-ldsda |         1   Neighbor search                 (4, 2)          -inf      -0.92494       inf%      2.04  *
+2026-02-26 17:18:51,775 | INFO | ld_benchmark.toy-default-ldsda |         1   Neighbor search                 (5, 2)          -inf      -0.92494       inf%      2.56  
+2026-02-26 17:18:52,315 | INFO | ld_benchmark.toy-default-ldsda |         2   Neighbor search                 (4, 3)          -inf      -0.98294       inf%      3.10  *
+2026-02-26 17:18:52,823 | INFO | ld_benchmark.toy-default-ldsda |         2   Neighbor search                 (5, 3)          -inf      -0.98294       inf%      3.61  
+2026-02-26 17:18:53,312 | INFO | ld_benchmark.toy-default-ldsda |         2       Line search                 (4, 4)          -inf      -0.98294       inf%      4.10  
+2026-02-26 17:18:53,836 | INFO | ld_benchmark.toy-default-ldsda |         3   Neighbor search                 (5, 4)          -inf      -0.98294       inf%      4.62  
+2026-02-26 17:18:53,837 | INFO | ld_benchmark.toy-default-ldsda | Search path: (5, 1) -> (4, 2) -> (4, 3)
+2026-02-26 17:18:53,837 | INFO | ld_benchmark.toy-default-ldsda | 
+Solved in 3 iterations and 4.62152 seconds
+Optimal objective value -0.9829386667
+Relative optimality gap inf%

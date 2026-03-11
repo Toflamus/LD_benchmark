@@ -1,0 +1,59 @@
+2026-02-25 16:08:05,171 | INFO | ld_benchmark.column-NT17-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-02-25 16:08:05,171 | INFO | ld_benchmark.column-NT17-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.column-NT17-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f737d4044a0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [11, 8]
+logical_constraint_list: ComponentSet(['one_reflux (key=one_reflux)', 'one_boilup (key=one_boilup)'])
+disjunction_list: None
+
+2026-02-25 16:08:05,172 | INFO | ld_benchmark.column-NT17-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-25 16:08:05,172 | INFO | ld_benchmark.column-NT17-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-02-25 16:08:05,196 | INFO | ld_benchmark.column-NT17-ldsda | Original model has 637 constraints (255 nonlinear) and 15 disjunctions, with 467 variables, of which 28 are binary, 0 are integer, and 439 are continuous.
+2026-02-25 16:08:05,312 | INFO | ld_benchmark.column-NT17-ldsda | Reformulation Summary:
+2026-02-25 16:08:05,312 | INFO | ld_benchmark.column-NT17-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-25 16:08:05,312 | INFO | ld_benchmark.column-NT17-ldsda |   0 | 1 | 15 | ['YR[2]', 'YR[3]', 'YR[4]', 'YR[5]', 'YR[6]', 'YR[7]', 'YR[8]', 'YR[9]', 'YR[10]', 'YR[11]', 'YR[12]', 'YR[13]', 'YR[14]', 'YR[15]', 'YR[16]']
+2026-02-25 16:08:05,312 | INFO | ld_benchmark.column-NT17-ldsda |   1 | 1 | 15 | ['YB[2]', 'YB[3]', 'YB[4]', 'YB[5]', 'YB[6]', 'YB[7]', 'YB[8]', 'YB[9]', 'YB[10]', 'YB[11]', 'YB[12]', 'YB[13]', 'YB[14]', 'YB[15]', 'YB[16]']
+2026-02-25 16:08:05,312 | INFO | ld_benchmark.column-NT17-ldsda | =====================================================================================================
+2026-02-25 16:08:05,313 | INFO | ld_benchmark.column-NT17-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-25 16:08:12,752 | INFO | ld_benchmark.column-NT17-ldsda | 
+Solved in 1 iterations and 7.57988 seconds
+Optimal objective value inf
+Relative optimality gap nan%
+2026-02-25 16:08:12,752 | INFO | ld_benchmark.column-NT17-ldsda | No feasible solutions found.

@@ -1,0 +1,47 @@
+{
+  "algorithm_full": "gdpopt.ldsda",
+  "algorithm_tag": "LDSDA",
+  "common_config": {
+    "direction_norm": "Linf",
+    "minlp_solver": "gams",
+    "minlp_solver_args": {
+      "solver": "ipopt"
+    },
+    "mip_solver": "gurobi",
+    "mip_solver_args": {},
+    "nlp_solver": "ipopt",
+    "nlp_solver_args": {},
+    "separation_solver": "gurobi",
+    "separation_solver_args": {},
+    "tee": false,
+    "time_limit": 900
+  },
+  "initial_point_key": 17,
+  "instance": "NT17",
+  "logical_constraint_count": 2,
+  "model": "column",
+  "pyomo_version": "6.10.0.dev0",
+  "schema_version": 1,
+  "solve_kwargs": {
+    "direction_norm": "Linf",
+    "minlp_solver": "gams",
+    "minlp_solver_args": {
+      "solver": "ipopt"
+    },
+    "mip_solver": "gurobi",
+    "mip_solver_args": {},
+    "nlp_solver": "ipopt",
+    "nlp_solver_args": {},
+    "starting_point": [
+      15,
+      3
+    ],
+    "tee": false,
+    "time_limit": 900
+  },
+  "starting_point": [
+    15,
+    3
+  ],
+  "timestamp_utc": "2026-02-26T17:15:50.529786+00:00"
+}

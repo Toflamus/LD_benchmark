@@ -1,0 +1,92 @@
+2026-02-26 11:49:48,617 | INFO | ld_benchmark.toy-default-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-02-26 11:49:48,617 | INFO | ld_benchmark.toy-default-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.toy-default-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7fb543804360>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [5, 1]
+logical_constraint_list: ComponentSet(['oneY1 (key=oneY1)', 'oneY2 (key=oneY2)'])
+disjunction_list: None
+infinity_output: 100000000.0
+separation_solver: gurobi
+separation_solver_args:
+
+2026-02-26 11:49:48,618 | INFO | ld_benchmark.toy-default-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 11:49:48,618 | INFO | ld_benchmark.toy-default-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-02-26 11:49:48,619 | INFO | ld_benchmark.toy-default-ldbd | Original model has 10 constraints (0 nonlinear) and 2 disjunctions, with 12 variables, of which 10 are binary, 0 are integer, and 2 are continuous.
+2026-02-26 11:49:48,622 | INFO | ld_benchmark.toy-default-ldbd | Reformulation Summary:
+2026-02-26 11:49:48,623 | INFO | ld_benchmark.toy-default-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 11:49:48,623 | INFO | ld_benchmark.toy-default-ldbd | =====================================================================================================
+2026-02-26 11:49:48,623 | INFO | ld_benchmark.toy-default-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 11:49:49,139 | INFO | ld_benchmark.toy-default-ldbd |         0     Initial point                 (5, 1)          -inf      -0.54237       inf%      0.52  *
+2026-02-26 11:49:49,140 | INFO | ld_benchmark.toy-default-ldbd |         1    Skipped Anchor                 (5, 1)          -inf      -0.54237       inf%      0.52  
+2026-02-26 11:49:49,628 | INFO | ld_benchmark.toy-default-ldbd |         1          Neighbor                 (4, 1)          -inf      -0.63894       inf%      1.01  *
+2026-02-26 11:49:50,169 | INFO | ld_benchmark.toy-default-ldbd |         1          Neighbor                 (4, 2)          -inf      -0.92494       inf%      1.55  *
+2026-02-26 11:49:50,696 | INFO | ld_benchmark.toy-default-ldbd |         1          Neighbor                 (5, 2)          -inf      -0.92494       inf%      2.08  
+2026-02-26 11:49:50,745 | INFO | ld_benchmark.toy-default-ldbd |         1            Master                 (1, 5)      -2.07265      -0.92494    124.09%      2.13  
+2026-02-26 11:49:50,745 | INFO | ld_benchmark.toy-default-ldbd |         1         UB update                 (4, 2)      -2.07265      -0.92494    124.09%      2.13  
+2026-02-26 11:49:51,224 | INFO | ld_benchmark.toy-default-ldbd |         2            Anchor                 (1, 5)      -2.07265      -0.92494    124.09%      2.61  
+2026-02-26 11:49:51,755 | INFO | ld_benchmark.toy-default-ldbd |         2          Neighbor                 (1, 4)      -2.07265      -0.92494    124.09%      3.14  
+2026-02-26 11:49:52,243 | INFO | ld_benchmark.toy-default-ldbd |         2          Neighbor                 (2, 4)      -2.07265      -0.92494    124.09%      3.62  
+2026-02-26 11:49:52,750 | INFO | ld_benchmark.toy-default-ldbd |         2          Neighbor                 (2, 5)      -2.07265      -0.92494    124.09%      4.13  
+2026-02-26 11:49:52,764 | INFO | ld_benchmark.toy-default-ldbd |         2            Master                 (5, 4)      -1.22097      -0.92494     32.01%      4.15  
+2026-02-26 11:49:52,764 | INFO | ld_benchmark.toy-default-ldbd |         2         UB update                 (4, 2)      -1.22097      -0.92494     32.01%      4.15  
+2026-02-26 11:49:53,266 | INFO | ld_benchmark.toy-default-ldbd |         3            Anchor                 (5, 4)      -1.22097      -0.92494     32.01%      4.65  
+2026-02-26 11:49:53,767 | INFO | ld_benchmark.toy-default-ldbd |         3          Neighbor                 (4, 3)      -1.22097      -0.98294     24.22%      5.15  *
+2026-02-26 11:49:54,285 | INFO | ld_benchmark.toy-default-ldbd |         3          Neighbor                 (4, 4)      -1.22097      -0.98294     24.22%      5.67  
+2026-02-26 11:49:54,795 | INFO | ld_benchmark.toy-default-ldbd |         3          Neighbor                 (4, 5)      -1.22097      -0.98294     24.22%      6.18  
+2026-02-26 11:49:55,321 | INFO | ld_benchmark.toy-default-ldbd |         3          Neighbor                 (5, 3)      -1.22097      -0.98294     24.22%      6.70  
+2026-02-26 11:49:55,821 | INFO | ld_benchmark.toy-default-ldbd |         3          Neighbor                 (5, 5)      -1.22097      -0.98294     24.22%      7.20  
+2026-02-26 11:49:55,836 | INFO | ld_benchmark.toy-default-ldbd |         3            Master                 (1, 2)      -1.14501      -0.98294     16.49%      7.22  
+2026-02-26 11:49:55,836 | INFO | ld_benchmark.toy-default-ldbd |         3         UB update                 (4, 3)      -1.14501      -0.98294     16.49%      7.22  
+2026-02-26 11:49:56,359 | INFO | ld_benchmark.toy-default-ldbd |         4            Anchor                 (1, 2)      -1.14501      -0.98294     16.49%      7.74  
+2026-02-26 11:49:56,864 | INFO | ld_benchmark.toy-default-ldbd |         4          Neighbor                 (1, 1)      -1.14501      -0.98294     16.49%      8.25  
+2026-02-26 11:49:57,367 | INFO | ld_benchmark.toy-default-ldbd |         4          Neighbor                 (1, 3)      -1.14501      -0.98294     16.49%      8.75  
+2026-02-26 11:49:57,876 | INFO | ld_benchmark.toy-default-ldbd |         4          Neighbor                 (2, 1)      -1.14501      -0.98294     16.49%      9.26  
+2026-02-26 11:49:58,392 | INFO | ld_benchmark.toy-default-ldbd |         4          Neighbor                 (2, 2)      -1.14501      -0.98294     16.49%      9.77  
+2026-02-26 11:49:58,875 | INFO | ld_benchmark.toy-default-ldbd |         4          Neighbor                 (2, 3)      -1.14501      -0.99960     14.55%     10.26  *
+2026-02-26 11:49:58,897 | INFO | ld_benchmark.toy-default-ldbd |         4            Master                 (3, 3)      -1.11951      -0.99960     12.00%     10.28  
+2026-02-26 11:49:58,897 | INFO | ld_benchmark.toy-default-ldbd |         4         UB update                 (2, 3)      -1.11951      -0.99960     12.00%     10.28  
+2026-02-26 11:49:58,928 | INFO | ld_benchmark.toy-default-ldbd |         5            Master                 (3, 4)      -1.01151      -0.99960      1.19%     10.31  
+2026-02-26 11:49:58,928 | INFO | ld_benchmark.toy-default-ldbd |         5         UB update                 (2, 3)      -1.01151      -0.99960      1.19%     10.31  
+2026-02-26 11:49:58,962 | INFO | ld_benchmark.toy-default-ldbd |         6            Master                 (2, 3)      -0.99960      -0.99960      0.00%     10.34  
+2026-02-26 11:49:58,962 | INFO | ld_benchmark.toy-default-ldbd |         6         UB update                 (2, 3)      -0.99960      -0.99960      0.00%     10.34  
+2026-02-26 11:49:58,962 | INFO | ld_benchmark.toy-default-ldbd |         6   Anchor (promoted)                 (2, 3)      -0.99960      -0.99960      0.00%     10.34  
+2026-02-26 11:49:58,963 | INFO | ld_benchmark.toy-default-ldbd | LDBD bounds converged: UB=-0.9995999999999999, LB=-0.9995999999999999
+2026-02-26 11:49:58,964 | INFO | ld_benchmark.toy-default-ldbd | Search path: (5, 1) -> (1, 5) -> (5, 4) -> (1, 2) -> (3, 3) -> (3, 4) -> (2, 3)
+2026-02-26 11:49:58,965 | INFO | ld_benchmark.toy-default-ldbd | Anchor points: (5, 1) -> (1, 5) -> (5, 4) -> (1, 2) -> (3, 3) -> (3, 4) -> (2, 3)
+2026-02-26 11:49:58,965 | INFO | ld_benchmark.toy-default-ldbd | 
+Solved in 6 iterations and 10.34673 seconds
+Optimal objective value -0.9996000000
+Relative optimality gap 0.00000%

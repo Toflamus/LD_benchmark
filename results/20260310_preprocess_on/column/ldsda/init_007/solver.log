@@ -1,0 +1,76 @@
+2026-03-10 15:14:08,207 | INFO | ld_benchmark.column-NT17-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-03-10 15:14:08,207 | INFO | ld_benchmark.column-NT17-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.column-NT17-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+subproblem_solver: gams
+subproblem_solver_args:
+  add_options: ['option threads = 1;', 'option reslim = 3600;', 'option iterlim = 5000;', '$onecho > conopt.opt', 'rtnwma 1e-06', 'rtnopt 1e-06', 'lstall 15', 'rtvmin 1e-08', 'lsmeth 2', 'lsisol 1', 'rtmaxv 1.0e10', '$offecho', 'GAMS_MODEL.optfile = 1;', 'option reslim=861.464522715658;', 'option reslim=858.7578033776954;', 'option reslim=856.3183887246996;', 'option reslim=853.7173236887902;', 'option reslim=851.3898120569065;', 'option reslim=849.1998883001506;', 'option reslim=846.6357971308753;', 'option reslim=841.0136646274477;', 'option reslim=838.122965618968;', 'option reslim=835.4600915275514;', 'option reslim=833.0823175767437;', 'option reslim=830.8069670107216;', 'option reslim=828.42225755658;', 'option reslim=826.2570751998574;', 'option reslim=821.403243673034;', 'option reslim=817.2268734658137;', 'option reslim=814.6475927438587;', 'option reslim=812.4809132181108;', 'option reslim=810.2747928593308;', 'option reslim=807.9900410566479;', 'option reslim=805.812320352532;', 'option reslim=803.3829424558207;', 'option reslim=798.6878263624385;', 'option reslim=796.0114479381591;', 'option reslim=865.1262521110475;', 'option reslim=862.9003197383136;', 'option reslim=860.5750434789807;', 'option reslim=858.3933310741559;', 'option reslim=856.2376186409965;', 'option reslim=852.2668756311759;', 'option reslim=849.447783456184;', 'option reslim=846.01261515636;', 'option reslim=841.3044107966125;', 'option reslim=838.5491259358823;', 'option reslim=836.276531397365;', 'option reslim=834.114047549665;', 'option reslim=831.9871679963544;', 'option reslim=829.8414322156459;', 'option reslim=825.956447083503;', 'option reslim=823.463997239247;', 'option reslim=820.8737213769928;', 'option reslim=818.26882609725;', 'option reslim=815.6710593830794;', 'option reslim=812.3273713933304;', 'option reslim=809.9256698768586;', 'option reslim=807.5458079809323;', 'option reslim=805.4762027040124;', 'option reslim=803.3694162042812;', 'option reslim=801.2983832815662;', 'option reslim=797.4206500230357;', 'option reslim=794.4543864428997;', 'option reslim=791.0538925398141;', 'option reslim=786.386771411635;', 'option reslim=783.7404983630404;', 'option reslim=781.5098834820092;', 'option reslim=779.2099414505064;', 'option reslim=865.0397132141516;', 'option reslim=862.9276652401313;', 'option reslim=860.8206315096468;', 'option reslim=857.8331919964403;', 'option reslim=855.3080019168556;', 'option reslim=853.1032334789634;', 'option reslim=850.868644325994;', 'option reslim=848.1874819481745;', 'option reslim=845.8457178967074;', 'option reslim=843.5240903822705;', 'option reslim=839.8075523143634;', 'option reslim=837.6211811704561;', 'option reslim=835.4147571697831;', 'option reslim=832.4826265238225;', 'option reslim=830.042783995159;', 'option reslim=827.9301624177024;', 'option reslim=823.9797467207536;', 'option reslim=821.5113083748147;', 'option reslim=818.9164026901126;', 'option reslim=816.4482421260327;', 'option reslim=814.1199759310111;', 'option reslim=812.1181237092242;', 'option reslim=809.2453420525417;', 'option reslim=807.1418924005702;', 'option reslim=805.0545961242169;', 'option reslim=802.6001754095778;', 'option reslim=800.0738109899685;', 'option reslim=797.8232010966167;', 'option reslim=795.1554087996483;', 'option reslim=790.4871681919321;', 'option reslim=860.2641784902662;', 'option reslim=857.5019642226398;', 'option reslim=855.2198942927644;', 'option reslim=852.2041912376881;', 'option reslim=849.8636611420661;', 'option reslim=845.1627426529303;', 'option reslim=842.8196924570948;', 'option reslim=840.6548446007073;', 'option reslim=837.9395749857649;', 'option reslim=835.440371921286;', 'option reslim=832.8585228715092;', 'option reslim=830.6679136427119;', 'option reslim=828.5148250479251;', 'option reslim=824.5452972846106;', 'option reslim=820.3349394621328;', 'option reslim=818.2430181093514;', 'option reslim=816.0452083777636;', 'option reslim=813.4495373023674;', 'option reslim=811.1388875674456;', 'option reslim=807.7410509940237;', 'option reslim=805.5435171006247;', 'option reslim=803.4660579608753;', 'option reslim=800.9602888701484;', 'option reslim=798.4001676710322;', 'option reslim=795.781226940453;', 'option reslim=793.2684393236414;', 'option reslim=790.5867917602882;', 'option reslim=788.4639555765316;', 'option reslim=785.9379492225125;', 'option reslim=783.6525004655123;', 'option reslim=779.0399895710871;', 'option reslim=776.34795876313;', 'option reslim=774.2656824588776;', 'option reslim=771.6529376152903;', 'option reslim=769.236512709409;', 'option reslim=767.1427448159084;', 'option reslim=765.0382279288024;', 'option reslim=864.204083705321;', 'option reslim=861.8987256577238;', 'option reslim=859.7557397829369;', 'option reslim=856.8448996134102;', 'option reslim=854.2057197336107;', 'option reslim=852.0458580711856;', 'option reslim=849.3111884379759;', 'option reslim=847.0235619144514;', 'option reslim=844.230163066648;', 'option reslim=842.1439896887168;', 'option reslim=839.1194654600695;', 'option reslim=836.8454335490242;', 'option reslim=834.5440301224589;', 'option reslim=831.051732763648;', 'option reslim=828.8430628171191;', 'option reslim=824.8494952246547;', 'option reslim=819.530997948721;', 'option reslim=817.4215833498165;', 'option reslim=815.2060777628794;', 'option reslim=813.079944703728;', 'option reslim=810.1269323946908;', 'option reslim=807.1251977104694;', 'option reslim=804.6077758735046;', 'option reslim=802.2403937000781;', 'option reslim=800.0630292678252;', 'option reslim=797.4898991882801;', 'option reslim=794.6178254736587;', 'option reslim=792.5829833000898;', 'option reslim=789.7415032684803;', 'option reslim=787.2124000731856;', 'option reslim=785.1020556529984;', 'option reslim=782.4159675026312;', 'option reslim=780.1548301242292;', 'option reslim=777.9026103448123;', 'option reslim=775.7449211804196;', 'option reslim=772.9621083810925;', 'option reslim=872.712919395417;', 'option reslim=870.5351541759446;', 'option reslim=868.3799734683707;', 'option reslim=866.2750932602212;', 'option reslim=864.0887468149886;', 'option reslim=861.9537254823372;', 'option reslim=859.8213438391685;', 'option reslim=855.8802007762715;', 'option reslim=853.6793305370957;', 'option reslim=850.3579454654828;', 'option reslim=847.9103557439521;', 'option reslim=845.5948068508878;', 'option reslim=842.9800347434357;', 'option reslim=840.8776681451127;', 'option reslim=838.7391359061003;', 'option reslim=835.7540602283552;', 'option reslim=832.7597306147218;', 'option reslim=829.3273178292438;', 'option reslim=827.1548166479915;', 'option reslim=822.4372795689851;', 'option reslim=819.216115755029;', 'option reslim=816.925968634896;', 'option reslim=814.8248335169628;', 'option reslim=812.7426790976897;', 'option reslim=810.7482776865363;', 'option reslim=808.6222568554804;', 'option reslim=806.5529537042603;', 'option reslim=804.477915853262;', 'option reslim=800.5764085836709;', 'option reslim=798.4462090842426;', 'option reslim=795.9060390722007;', 'option reslim=792.9845773102716;', 'option reslim=790.9313602587208;', 'option reslim=788.6538706151769;', 'option reslim=784.0163447288796;']
+  solver: conopt
+direction_norm: Linf
+starting_point: [14, 3]
+logical_constraint_list: ComponentSet(['one_reflux (key=one_reflux)', 'one_boilup (key=one_boilup)'])
+disjunction_list: None
+infinity_output: 100000000.0
+preprocessing: true
+preprocessing_feasibility_tol: 1e-06
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f7710b7c680>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+
+2026-03-10 15:14:08,208 | INFO | ld_benchmark.column-NT17-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-03-10 15:14:08,208 | INFO | ld_benchmark.column-NT17-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-03-10 15:14:08,229 | INFO | ld_benchmark.column-NT17-ldsda | Original model has 637 constraints (255 nonlinear) and 15 disjunctions, with 467 variables, of which 28 are binary, 0 are integer, and 439 are continuous.
+2026-03-10 15:14:08,330 | INFO | ld_benchmark.column-NT17-ldsda | Reformulation Summary:
+2026-03-10 15:14:08,330 | INFO | ld_benchmark.column-NT17-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-03-10 15:14:08,330 | INFO | ld_benchmark.column-NT17-ldsda |       1 |       1 |  1 | 15 | YR[2], YR[3], YR[4], YR[5], YR[6], YR[7], YR[8], YR[9], YR[10], YR[11], YR[12], YR[13], YR[14], YR[15], YR[16]
+2026-03-10 15:14:08,330 | INFO | ld_benchmark.column-NT17-ldsda |       2 |       1 |  1 | 15 | YB[2], YB[3], YB[4], YB[5], YB[6], YB[7], YB[8], YB[9], YB[10], YB[11], YB[12], YB[13], YB[14], YB[15], YB[16]
+2026-03-10 15:14:08,330 | INFO | ld_benchmark.column-NT17-ldsda | =====================================================================================================
+2026-03-10 15:14:08,331 | INFO | ld_benchmark.column-NT17-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-03-10 15:14:08,331 | INFO | ld_benchmark.column-NT17-ldsda | LD-SDA Preprocessing Phase 1: minimising I1 (logical infeasibility)
+2026-03-10 15:14:44,295 | INFO | ld_benchmark.column-NT17-ldsda | Phase 1 complete. Feasible point found: (14, 3) (I1 = 0)
+2026-03-10 15:14:44,295 | INFO | ld_benchmark.column-NT17-ldsda | LD-SDA Preprocessing Phase 2: minimising I2 (constraint infeasibility)
+2026-03-10 15:15:49,993 | INFO | ld_benchmark.column-NT17-ldsda | Phase 2 complete. Feasible point found: (14, 3) (I2 = 0)
+2026-03-10 15:15:54,627 | INFO | ld_benchmark.column-NT17-ldsda |         0     Initial point                (14, 3)          -inf   20081.39683       inf%    106.42  *
+2026-03-10 15:15:58,516 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (13, 2)          -inf   20081.39683       inf%    110.31  
+2026-03-10 15:16:01,533 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (13, 3)          -inf   19548.71933       inf%    113.32  *
+2026-03-10 15:16:04,188 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (13, 4)          -inf   19346.12480       inf%    115.98  *
+2026-03-10 15:16:07,575 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (14, 2)          -inf   19346.12480       inf%    119.37  
+2026-03-10 15:16:10,262 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (14, 4)          -inf   19346.12480       inf%    122.05  
+2026-03-10 15:16:12,588 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (15, 2)          -inf   19346.12480       inf%    124.38  
+2026-03-10 15:16:14,767 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (15, 3)          -inf   19346.12480       inf%    126.56  
+2026-03-10 15:16:17,368 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (15, 4)          -inf   19346.12480       inf%    129.16  
+2026-03-10 15:16:19,477 | INFO | ld_benchmark.column-NT17-ldsda |         1       Line search                (12, 5)          -inf   19346.12480       inf%    131.27  
+2026-03-10 15:16:21,622 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (12, 3)          -inf   19346.12480       inf%    133.41  
+2026-03-10 15:16:23,666 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (12, 4)          -inf   19346.12480       inf%    135.46  
+2026-03-10 15:16:25,932 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (13, 5)          -inf   19346.12480       inf%    137.72  
+2026-03-10 15:16:28,457 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (14, 5)          -inf   19346.12480       inf%    140.25  
+2026-03-10 15:16:28,457 | INFO | ld_benchmark.column-NT17-ldsda | Search path: (14, 3) -> (13, 4)
+2026-03-10 15:16:28,457 | INFO | ld_benchmark.column-NT17-ldsda | 
+Solved in 2 iterations and 140.24836 seconds
+Optimal objective value 19346.1248010994
+Relative optimality gap inf%

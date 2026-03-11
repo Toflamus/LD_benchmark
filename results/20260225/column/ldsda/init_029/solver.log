@@ -1,0 +1,75 @@
+2026-02-25 15:59:05,746 | INFO | ld_benchmark.column-NT17-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-02-25 15:59:05,746 | INFO | ld_benchmark.column-NT17-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.column-NT17-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f737d4044a0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [12, 1]
+logical_constraint_list: ComponentSet(['one_reflux (key=one_reflux)', 'one_boilup (key=one_boilup)'])
+disjunction_list: None
+
+2026-02-25 15:59:05,747 | INFO | ld_benchmark.column-NT17-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-25 15:59:05,747 | INFO | ld_benchmark.column-NT17-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-02-25 15:59:05,768 | INFO | ld_benchmark.column-NT17-ldsda | Original model has 637 constraints (255 nonlinear) and 15 disjunctions, with 467 variables, of which 28 are binary, 0 are integer, and 439 are continuous.
+2026-02-25 15:59:05,869 | INFO | ld_benchmark.column-NT17-ldsda | Reformulation Summary:
+2026-02-25 15:59:05,869 | INFO | ld_benchmark.column-NT17-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-25 15:59:05,869 | INFO | ld_benchmark.column-NT17-ldsda |   0 | 1 | 15 | ['YR[2]', 'YR[3]', 'YR[4]', 'YR[5]', 'YR[6]', 'YR[7]', 'YR[8]', 'YR[9]', 'YR[10]', 'YR[11]', 'YR[12]', 'YR[13]', 'YR[14]', 'YR[15]', 'YR[16]']
+2026-02-25 15:59:05,869 | INFO | ld_benchmark.column-NT17-ldsda |   1 | 1 | 15 | ['YB[2]', 'YB[3]', 'YB[4]', 'YB[5]', 'YB[6]', 'YB[7]', 'YB[8]', 'YB[9]', 'YB[10]', 'YB[11]', 'YB[12]', 'YB[13]', 'YB[14]', 'YB[15]', 'YB[16]']
+2026-02-25 15:59:05,870 | INFO | ld_benchmark.column-NT17-ldsda | =====================================================================================================
+2026-02-25 15:59:05,870 | INFO | ld_benchmark.column-NT17-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-25 15:59:09,348 | INFO | ld_benchmark.column-NT17-ldsda |         0     Initial point                (12, 1)          -inf   20515.88950       inf%      3.60  *
+2026-02-25 15:59:11,306 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (11, 1)          -inf   20515.88950       inf%      5.56  
+2026-02-25 15:59:13,431 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (11, 2)          -inf   20392.21950       inf%      7.68  *
+2026-02-25 15:59:15,452 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (12, 2)          -inf   19853.73216       inf%      9.70  *
+2026-02-25 15:59:17,491 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (13, 1)          -inf   19853.73216       inf%     11.74  
+2026-02-25 15:59:19,817 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (13, 2)          -inf   19853.73216       inf%     14.07  
+2026-02-25 15:59:22,035 | INFO | ld_benchmark.column-NT17-ldsda |         1       Line search                (12, 3)          -inf   19449.85151       inf%     16.29  *
+2026-02-25 15:59:24,253 | INFO | ld_benchmark.column-NT17-ldsda |         1       Line search                (12, 4)          -inf   19449.85151       inf%     18.51  
+2026-02-25 15:59:26,640 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (11, 3)          -inf   19449.85151       inf%     20.89  
+2026-02-25 15:59:28,896 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (11, 4)          -inf   19449.85151       inf%     23.15  
+2026-02-25 15:59:31,435 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (13, 3)          -inf   19449.85151       inf%     25.69  
+2026-02-25 15:59:33,911 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (13, 4)          -inf   19346.12471       inf%     28.16  *
+2026-02-25 15:59:36,457 | INFO | ld_benchmark.column-NT17-ldsda |         2       Line search                (14, 5)          -inf   19346.12471       inf%     30.71  
+2026-02-25 15:59:38,748 | INFO | ld_benchmark.column-NT17-ldsda |         3   Neighbor search                (12, 5)          -inf   19346.12471       inf%     33.00  
+2026-02-25 15:59:41,152 | INFO | ld_benchmark.column-NT17-ldsda |         3   Neighbor search                (13, 5)          -inf   19346.12471       inf%     35.40  
+2026-02-25 15:59:43,447 | INFO | ld_benchmark.column-NT17-ldsda |         3   Neighbor search                (14, 3)          -inf   19346.12471       inf%     37.70  
+2026-02-25 15:59:45,785 | INFO | ld_benchmark.column-NT17-ldsda |         3   Neighbor search                (14, 4)          -inf   19346.12471       inf%     40.04  
+2026-02-25 15:59:45,786 | INFO | ld_benchmark.column-NT17-ldsda | 
+Solved in 3 iterations and 40.03804 seconds
+Optimal objective value 19346.1247128231
+Relative optimality gap inf%

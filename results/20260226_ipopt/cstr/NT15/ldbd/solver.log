@@ -1,0 +1,77 @@
+2026-02-26 12:32:23,324 | INFO | ld_benchmark.cstr-NT15-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-02-26 12:32:23,324 | INFO | ld_benchmark.cstr-NT15-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.cstr-NT15-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7fdd99800360>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [1, 1]
+logical_constraint_list: ComponentSet(['one_unreacted_feed (key=one_unreacted_feed)', 'one_recycle (key=one_recycle)'])
+disjunction_list: None
+infinity_output: 100000000.0
+separation_solver: gurobi
+separation_solver_args:
+
+2026-02-26 12:32:23,325 | INFO | ld_benchmark.cstr-NT15-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 12:32:23,325 | INFO | ld_benchmark.cstr-NT15-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-02-26 12:32:23,332 | INFO | ld_benchmark.cstr-NT15-ldbd | Original model has 290 constraints (47 nonlinear) and 30 disjunctions, with 216 variables, of which 60 are binary, 0 are integer, and 156 are continuous.
+2026-02-26 12:32:23,374 | INFO | ld_benchmark.cstr-NT15-ldbd | Reformulation Summary:
+2026-02-26 12:32:23,374 | INFO | ld_benchmark.cstr-NT15-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 12:32:23,374 | INFO | ld_benchmark.cstr-NT15-ldbd | =====================================================================================================
+2026-02-26 12:32:23,375 | INFO | ld_benchmark.cstr-NT15-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 12:32:24,367 | INFO | ld_benchmark.cstr-NT15-ldbd |         0     Initial point                 (1, 1)          -inf       9.89474       inf%      1.04  *
+2026-02-26 12:32:24,368 | INFO | ld_benchmark.cstr-NT15-ldbd |         1    Skipped Anchor                 (1, 1)          -inf       9.89474       inf%      1.04  
+2026-02-26 12:32:26,700 | INFO | ld_benchmark.cstr-NT15-ldbd |         1          Neighbor                 (2, 2)          -inf       4.06188       inf%      3.37  *
+2026-02-26 12:32:26,707 | INFO | ld_benchmark.cstr-NT15-ldbd |         1            Master                (1, 15)   -1399999933.23892       4.06188   34466782959.09%      3.38  
+2026-02-26 12:32:26,707 | INFO | ld_benchmark.cstr-NT15-ldbd |         1         UB update                 (2, 2)   -1399999933.23892       4.06188   34466782959.09%      3.38  
+2026-02-26 12:32:26,862 | INFO | ld_benchmark.cstr-NT15-ldbd |         2            Master               (15, 15)     -71.76523       4.06188   1866.80%      3.54  
+2026-02-26 12:32:26,862 | INFO | ld_benchmark.cstr-NT15-ldbd |         2         UB update                 (2, 2)     -71.76523       4.06188   1866.80%      3.54  
+2026-02-26 12:32:27,866 | INFO | ld_benchmark.cstr-NT15-ldbd |         3            Anchor               (15, 15)     -71.76523       2.82939   2636.42%      4.54  *
+2026-02-26 12:32:28,830 | INFO | ld_benchmark.cstr-NT15-ldbd |         3          Neighbor               (14, 14)     -71.76523       2.82939   2636.42%      5.50  
+2026-02-26 12:32:30,064 | INFO | ld_benchmark.cstr-NT15-ldbd |         3          Neighbor               (15, 14)     -71.76523       2.82939   2636.42%      6.74  
+2026-02-26 12:32:30,078 | INFO | ld_benchmark.cstr-NT15-ldbd |         3            Master                (15, 1)   -99999993.10014       2.82939   3534325502.42%      6.75  
+2026-02-26 12:32:30,078 | INFO | ld_benchmark.cstr-NT15-ldbd |         3         UB update               (15, 15)   -99999993.10014       2.82939   3534325502.42%      6.75  
+2026-02-26 12:32:31,013 | INFO | ld_benchmark.cstr-NT15-ldbd |         4            Anchor                (15, 1)   -99999993.10014       2.82939   3534325502.42%      7.69  
+2026-02-26 12:32:31,989 | INFO | ld_benchmark.cstr-NT15-ldbd |         4          Neighbor                (14, 1)   -99999993.10014       2.82939   3534325502.42%      8.66  
+2026-02-26 12:32:33,087 | INFO | ld_benchmark.cstr-NT15-ldbd |         4          Neighbor                (14, 2)   -99999993.10014       2.82939   3534325502.42%      9.76  
+2026-02-26 12:32:34,268 | INFO | ld_benchmark.cstr-NT15-ldbd |         4          Neighbor                (15, 2)   -99999993.10014       2.82939   3534325502.42%     10.94  
+2026-02-26 12:32:34,287 | INFO | ld_benchmark.cstr-NT15-ldbd |         4            Master               (15, 15)       2.79930       2.82939      1.06%     10.96  
+2026-02-26 12:32:34,287 | INFO | ld_benchmark.cstr-NT15-ldbd |         4         UB update               (15, 15)       2.79930       2.82939      1.06%     10.96  
+2026-02-26 12:32:34,287 | INFO | ld_benchmark.cstr-NT15-ldbd | Master stalled and best point is already an anchor. Terminating.
+2026-02-26 12:32:34,288 | INFO | ld_benchmark.cstr-NT15-ldbd | LDBD bounds converged: UB=2.829394062811061, LB=2.7992979500458994
+2026-02-26 12:32:34,288 | INFO | ld_benchmark.cstr-NT15-ldbd | Search path: (1, 1) -> (1, 15) -> (15, 15) -> (15, 1) -> (15, 15)
+2026-02-26 12:32:34,288 | INFO | ld_benchmark.cstr-NT15-ldbd | Anchor points: (1, 1) -> (1, 15) -> (15, 15) -> (15, 1)
+2026-02-26 12:32:34,289 | INFO | ld_benchmark.cstr-NT15-ldbd | 
+Solved in 4 iterations and 10.96390 seconds
+Optimal objective value 2.8293940628
+Relative optimality gap 1.06369%

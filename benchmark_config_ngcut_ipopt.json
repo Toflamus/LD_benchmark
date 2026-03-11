@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "run": {
+    "test": "column",
+    "algorithms": [
+      "gdpopt.ldsda",
+      "gdpopt.ldbd"
+    ],
+    "cstr_nt_list": [5, 10, 15, 20, 25, 30],
+    "column_keys": null
+  },
+  "outputs": {
+    "date": "today",
+    "results_dir": null,
+    "clear": false
+  },
+  "common": {
+    "tee": false,
+    "time_limit": 900,
+    "direction_norm": "Linf",
+    "add_no_good_cuts": true,
+    "mip_solver": "gurobi",
+    "separation_solver": "gurobi",
+    "subproblem_solver": "gams",
+    "subproblem_solver_args": {
+      "solver": "ipopt",
+      "add_options": [
+        "option threads = 1;",
+        "option reslim = 3600;",
+        "option iterlim = 5000;",
+        "$onecho > ipopt.opt",
+        "tol 1e-06",
+        "constr_viol_tol 1e-06",
+        "acceptable_iter 15",
+        "min_hessian_perturbation 1e-08",
+        "nlp_upper_bound_inf 1.0e10",
+        "nlp_lower_bound_inf -1.0e10",
+        "max_iter 5000",
+        "max_cpu_time 3600",
+        "$offecho",
+        "GAMS_MODEL.optfile = 1;"
+      ]
+    }
+  }
+}

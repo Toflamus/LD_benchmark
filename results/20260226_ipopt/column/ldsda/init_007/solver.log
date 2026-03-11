@@ -1,0 +1,75 @@
+2026-02-26 12:01:12,598 | INFO | ld_benchmark.column-NT17-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-02-26 12:01:12,598 | INFO | ld_benchmark.column-NT17-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.column-NT17-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7fb543804360>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [14, 3]
+logical_constraint_list: ComponentSet(['one_reflux (key=one_reflux)', 'one_boilup (key=one_boilup)'])
+disjunction_list: None
+
+2026-02-26 12:01:12,599 | INFO | ld_benchmark.column-NT17-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 12:01:12,599 | INFO | ld_benchmark.column-NT17-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-02-26 12:01:12,620 | INFO | ld_benchmark.column-NT17-ldsda | Original model has 637 constraints (255 nonlinear) and 15 disjunctions, with 467 variables, of which 28 are binary, 0 are integer, and 439 are continuous.
+2026-02-26 12:01:12,726 | INFO | ld_benchmark.column-NT17-ldsda | Reformulation Summary:
+2026-02-26 12:01:12,726 | INFO | ld_benchmark.column-NT17-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 12:01:12,726 | INFO | ld_benchmark.column-NT17-ldsda | =====================================================================================================
+2026-02-26 12:01:12,726 | INFO | ld_benchmark.column-NT17-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 12:01:14,752 | INFO | ld_benchmark.column-NT17-ldsda |         0     Initial point                (14, 3)          -inf   20081.39677       inf%      2.15  *
+2026-02-26 12:01:16,916 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (13, 2)          -inf   20081.39677       inf%      4.32  
+2026-02-26 12:01:19,295 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (13, 3)          -inf   19548.71945       inf%      6.70  *
+2026-02-26 12:01:21,290 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (13, 4)          -inf   19346.12471       inf%      8.69  *
+2026-02-26 12:01:23,391 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (14, 2)          -inf   19346.12471       inf%     10.79  
+2026-02-26 12:01:25,345 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (14, 4)          -inf   19346.12471       inf%     12.75  
+2026-02-26 12:01:27,510 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (15, 2)          -inf   19346.12471       inf%     14.91  
+2026-02-26 12:01:29,689 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (15, 3)          -inf   19346.12471       inf%     17.09  
+2026-02-26 12:01:32,762 | INFO | ld_benchmark.column-NT17-ldsda |         1   Neighbor search                (15, 4)          -inf   19346.12471       inf%     20.16  
+2026-02-26 12:01:34,706 | INFO | ld_benchmark.column-NT17-ldsda |         1       Line search                (12, 5)          -inf   19346.12471       inf%     22.11  
+2026-02-26 12:01:36,621 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (12, 3)          -inf   19346.12471       inf%     24.02  
+2026-02-26 12:01:38,586 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (12, 4)          -inf   19346.12471       inf%     25.99  
+2026-02-26 12:01:40,545 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (12, 5)          -inf   19346.12471       inf%     27.95  
+2026-02-26 12:01:42,785 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (13, 3)          -inf   19346.12471       inf%     30.19  
+2026-02-26 12:01:45,003 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (13, 5)          -inf   19346.12471       inf%     32.40  
+2026-02-26 12:01:47,059 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (14, 3)          -inf   19346.12471       inf%     34.46  
+2026-02-26 12:01:48,996 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (14, 4)          -inf   19346.12471       inf%     36.40  
+2026-02-26 12:01:51,052 | INFO | ld_benchmark.column-NT17-ldsda |         2   Neighbor search                (14, 5)          -inf   19346.12471       inf%     38.45  
+2026-02-26 12:01:51,052 | INFO | ld_benchmark.column-NT17-ldsda | Search path: (14, 3) -> (13, 4)
+2026-02-26 12:01:51,053 | INFO | ld_benchmark.column-NT17-ldsda | 
+Solved in 2 iterations and 38.45385 seconds
+Optimal objective value 19346.1247128231
+Relative optimality gap inf%

@@ -1,0 +1,83 @@
+2026-02-26 11:49:58,978 | INFO | ld_benchmark.small_batch-default-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-02-26 11:49:58,979 | INFO | ld_benchmark.small_batch-default-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.small_batch-default-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7fb543804360>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [3, 3, 3]
+logical_constraint_list: ComponentSet(['lim[mixer] (key=lim[mixer])', 'lim[reactor] (key=lim[reactor])', 'lim[centrifuge] (key=lim[centrifuge])'])
+disjunction_list: None
+
+2026-02-26 11:49:58,979 | INFO | ld_benchmark.small_batch-default-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 11:49:58,979 | INFO | ld_benchmark.small_batch-default-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-02-26 11:49:58,981 | INFO | ld_benchmark.small_batch-default-ldsda | Original model has 34 constraints (1 nonlinear) and 9 disjunctions, with 37 variables, of which 18 are binary, 0 are integer, and 19 are continuous.
+2026-02-26 11:49:58,991 | INFO | ld_benchmark.small_batch-default-ldsda | Reformulation Summary:
+2026-02-26 11:49:58,991 | INFO | ld_benchmark.small_batch-default-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 11:49:58,991 | INFO | ld_benchmark.small_batch-default-ldsda | =====================================================================================================
+2026-02-26 11:49:58,992 | INFO | ld_benchmark.small_batch-default-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 11:49:59,599 | INFO | ld_benchmark.small_batch-default-ldsda |         0     Initial point              (3, 3, 3)          -inf   239960.01112       inf%      0.62  *
+2026-02-26 11:50:00,160 | INFO | ld_benchmark.small_batch-default-ldsda |         1   Neighbor search              (2, 2, 2)          -inf   204601.96758       inf%      1.18  *
+2026-02-26 11:50:00,739 | INFO | ld_benchmark.small_batch-default-ldsda |         1   Neighbor search              (2, 2, 3)          -inf   204601.96758       inf%      1.76  
+2026-02-26 11:50:01,314 | INFO | ld_benchmark.small_batch-default-ldsda |         1   Neighbor search              (2, 3, 2)          -inf   204601.96758       inf%      2.33  
+2026-02-26 11:50:01,892 | INFO | ld_benchmark.small_batch-default-ldsda |         1   Neighbor search              (2, 3, 3)          -inf   204601.96758       inf%      2.91  
+2026-02-26 11:50:02,493 | INFO | ld_benchmark.small_batch-default-ldsda |         1   Neighbor search              (3, 2, 2)          -inf   204601.96758       inf%      3.51  
+2026-02-26 11:50:03,065 | INFO | ld_benchmark.small_batch-default-ldsda |         1   Neighbor search              (3, 2, 3)          -inf   204601.96758       inf%      4.09  
+2026-02-26 11:50:03,654 | INFO | ld_benchmark.small_batch-default-ldsda |         1   Neighbor search              (3, 3, 2)          -inf   204601.96758       inf%      4.67  
+2026-02-26 11:50:04,784 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (2, 2, 1)          -inf   167427.65708       inf%      5.80  *
+2026-02-26 11:50:05,379 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (2, 2, 3)          -inf   167427.65708       inf%      6.40  
+2026-02-26 11:50:05,953 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (2, 3, 1)          -inf   167427.65708       inf%      6.97  
+2026-02-26 11:50:06,543 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (2, 3, 2)          -inf   167427.65708       inf%      7.56  
+2026-02-26 11:50:07,108 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (2, 3, 3)          -inf   167427.65708       inf%      8.13  
+2026-02-26 11:50:07,793 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (3, 2, 1)          -inf   167427.65708       inf%      8.81  
+2026-02-26 11:50:08,380 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (3, 2, 2)          -inf   167427.65708       inf%      9.40  
+2026-02-26 11:50:08,948 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (3, 2, 3)          -inf   167427.65708       inf%      9.97  
+2026-02-26 11:50:09,504 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (3, 3, 1)          -inf   167427.65708       inf%     10.52  
+2026-02-26 11:50:10,061 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (3, 3, 2)          -inf   167427.65708       inf%     11.08  
+2026-02-26 11:50:10,679 | INFO | ld_benchmark.small_batch-default-ldsda |         2   Neighbor search              (3, 3, 3)          -inf   167427.65708       inf%     11.70  
+2026-02-26 11:50:11,504 | INFO | ld_benchmark.small_batch-default-ldsda |         3   Neighbor search              (2, 2, 2)          -inf   167427.65708       inf%     12.52  
+2026-02-26 11:50:12,084 | INFO | ld_benchmark.small_batch-default-ldsda |         3   Neighbor search              (2, 3, 1)          -inf   167427.65708       inf%     13.10  
+2026-02-26 11:50:12,676 | INFO | ld_benchmark.small_batch-default-ldsda |         3   Neighbor search              (2, 3, 2)          -inf   167427.65708       inf%     13.70  
+2026-02-26 11:50:13,346 | INFO | ld_benchmark.small_batch-default-ldsda |         3   Neighbor search              (3, 2, 1)          -inf   167427.65708       inf%     14.37  
+2026-02-26 11:50:13,926 | INFO | ld_benchmark.small_batch-default-ldsda |         3   Neighbor search              (3, 2, 2)          -inf   167427.65708       inf%     14.95  
+2026-02-26 11:50:14,496 | INFO | ld_benchmark.small_batch-default-ldsda |         3   Neighbor search              (3, 3, 1)          -inf   167427.65708       inf%     15.52  
+2026-02-26 11:50:15,111 | INFO | ld_benchmark.small_batch-default-ldsda |         3   Neighbor search              (3, 3, 2)          -inf   167427.65708       inf%     16.13  
+2026-02-26 11:50:15,111 | INFO | ld_benchmark.small_batch-default-ldsda | Search path: (3, 3, 3) -> (2, 2, 2) -> (2, 2, 1)
+2026-02-26 11:50:15,112 | INFO | ld_benchmark.small_batch-default-ldsda | 
+Solved in 3 iterations and 16.13209 seconds
+Optimal objective value 167427.6570779763
+Relative optimality gap inf%

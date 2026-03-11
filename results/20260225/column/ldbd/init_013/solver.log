@@ -1,0 +1,107 @@
+2026-02-25 16:58:11,557 | INFO | ld_benchmark.column-NT17-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-02-25 16:58:11,558 | INFO | ld_benchmark.column-NT17-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.column-NT17-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7fe1c1a184a0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [13, 6]
+logical_constraint_list: ComponentSet(['one_reflux (key=one_reflux)', 'one_boilup (key=one_boilup)'])
+disjunction_list: None
+infinity_output: 100000000.0
+separation_solver: gurobi
+separation_solver_args:
+
+2026-02-25 16:58:11,558 | INFO | ld_benchmark.column-NT17-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-25 16:58:11,558 | INFO | ld_benchmark.column-NT17-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-02-25 16:58:11,584 | INFO | ld_benchmark.column-NT17-ldbd | Original model has 637 constraints (255 nonlinear) and 15 disjunctions, with 467 variables, of which 28 are binary, 0 are integer, and 439 are continuous.
+2026-02-25 16:58:11,707 | INFO | ld_benchmark.column-NT17-ldbd | Reformulation Summary:
+2026-02-25 16:58:11,707 | INFO | ld_benchmark.column-NT17-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-25 16:58:11,707 | INFO | ld_benchmark.column-NT17-ldbd | =====================================================================================================
+2026-02-25 16:58:11,707 | INFO | ld_benchmark.column-NT17-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-25 16:58:14,307 | INFO | ld_benchmark.column-NT17-ldbd |         0     Initial point                (13, 6)          -inf   22283.53707       inf%      2.75  *
+2026-02-25 16:58:14,308 | INFO | ld_benchmark.column-NT17-ldbd |         1    Skipped Anchor                (13, 6)          -inf   22283.53707       inf%      2.75  
+2026-02-25 16:58:16,455 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (12, 5)          -inf   20916.39220       inf%      4.90  *
+2026-02-25 16:58:21,067 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (13, 5)          -inf   19880.17762       inf%      9.51  *
+2026-02-25 16:58:23,999 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (14, 5)          -inf   19880.17762       inf%     12.44  
+2026-02-25 16:58:26,043 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (14, 6)          -inf   19880.17762       inf%     14.48  
+2026-02-25 16:58:29,252 | INFO | ld_benchmark.column-NT17-ldbd |         1            Master                (15, 1)   -349901774.80050   19880.17762   1760153.56%     17.69  
+2026-02-25 16:58:29,253 | INFO | ld_benchmark.column-NT17-ldbd |         1         UB update                (13, 5)   -349901774.80050   19880.17762   1760153.56%     17.69  
+2026-02-25 16:58:31,286 | INFO | ld_benchmark.column-NT17-ldbd |         2            Anchor                (15, 1)   -349901774.80050   19880.17762   1760153.56%     19.73  
+2026-02-25 16:58:33,532 | INFO | ld_benchmark.column-NT17-ldbd |         2          Neighbor                (14, 1)   -349901774.80050   19880.17762   1760153.56%     21.97  
+2026-02-25 16:58:35,808 | INFO | ld_benchmark.column-NT17-ldbd |         2          Neighbor                (14, 2)   -349901774.80050   19880.17762   1760153.56%     24.25  
+2026-02-25 16:58:38,742 | INFO | ld_benchmark.column-NT17-ldbd |         2          Neighbor                (15, 2)   -349901774.80050   19880.17762   1760153.56%     27.18  
+2026-02-25 16:58:38,754 | INFO | ld_benchmark.column-NT17-ldbd |         2            Master                 (7, 1)   15891.50599   19880.17762     20.06%     27.20  
+2026-02-25 16:58:38,754 | INFO | ld_benchmark.column-NT17-ldbd |         2         UB update                (13, 5)   15891.50599   19880.17762     20.06%     27.20  
+2026-02-25 16:58:42,280 | INFO | ld_benchmark.column-NT17-ldbd |         3            Master                (13, 4)   18303.11738   19880.17762      7.93%     30.72  
+2026-02-25 16:58:42,280 | INFO | ld_benchmark.column-NT17-ldbd |         3         UB update                (13, 5)   18303.11738   19880.17762      7.93%     30.72  
+2026-02-25 16:58:44,400 | INFO | ld_benchmark.column-NT17-ldbd |         4            Anchor                (13, 4)   18303.11738   19346.12471      5.39%     32.84  *
+2026-02-25 16:58:46,387 | INFO | ld_benchmark.column-NT17-ldbd |         4          Neighbor                (12, 3)   18303.11738   19346.12471      5.39%     34.83  
+2026-02-25 16:58:48,408 | INFO | ld_benchmark.column-NT17-ldbd |         4          Neighbor                (12, 4)   18303.11738   19346.12471      5.39%     36.85  
+2026-02-25 16:58:48,408 | INFO | ld_benchmark.column-NT17-ldbd |         4   Skipped Neighbor                (12, 5)   18303.11738   19346.12471      5.39%     36.85  
+2026-02-25 16:58:51,151 | INFO | ld_benchmark.column-NT17-ldbd |         4          Neighbor                (13, 3)   18303.11738   19346.12471      5.39%     39.59  
+2026-02-25 16:58:51,152 | INFO | ld_benchmark.column-NT17-ldbd |         4   Skipped Neighbor                (13, 5)   18303.11738   19346.12471      5.39%     39.59  
+2026-02-25 16:58:53,709 | INFO | ld_benchmark.column-NT17-ldbd |         4          Neighbor                (14, 3)   18303.11738   19346.12471      5.39%     42.15  
+2026-02-25 16:58:56,172 | INFO | ld_benchmark.column-NT17-ldbd |         4          Neighbor                (14, 4)   18303.11738   19346.12471      5.39%     44.61  
+2026-02-25 16:58:56,172 | INFO | ld_benchmark.column-NT17-ldbd |         4   Skipped Neighbor                (14, 5)   18303.11738   19346.12471      5.39%     44.61  
+2026-02-25 16:58:56,202 | INFO | ld_benchmark.column-NT17-ldbd |         4            Master                (12, 4)   18951.90859   19346.12471      2.04%     44.64  
+2026-02-25 16:58:56,203 | INFO | ld_benchmark.column-NT17-ldbd |         4         UB update                (13, 4)   18951.90859   19346.12471      2.04%     44.64  
+2026-02-25 16:58:56,203 | INFO | ld_benchmark.column-NT17-ldbd |         4   Anchor (promoted)                (12, 4)   18951.90859   19346.12471      2.04%     44.64  
+2026-02-25 16:58:56,204 | INFO | ld_benchmark.column-NT17-ldbd |         5    Skipped Anchor                (12, 4)   18951.90859   19346.12471      2.04%     44.65  
+2026-02-25 16:58:58,590 | INFO | ld_benchmark.column-NT17-ldbd |         5          Neighbor                (11, 3)   18951.90859   19346.12471      2.04%     47.03  
+2026-02-25 16:59:00,868 | INFO | ld_benchmark.column-NT17-ldbd |         5          Neighbor                (11, 4)   18951.90859   19346.12471      2.04%     49.31  
+2026-02-25 16:59:02,328 | INFO | ld_benchmark.column-NT17-ldbd |         5   Skipped Neighbor                (12, 3)   18951.90859   19346.12471      2.04%     50.77  
+2026-02-25 16:59:02,328 | INFO | ld_benchmark.column-NT17-ldbd |         5   Skipped Neighbor                (12, 5)   18951.90859   19346.12471      2.04%     50.77  
+2026-02-25 16:59:02,329 | INFO | ld_benchmark.column-NT17-ldbd |         5   Skipped Neighbor                (13, 3)   18951.90859   19346.12471      2.04%     50.77  
+2026-02-25 16:59:02,329 | INFO | ld_benchmark.column-NT17-ldbd |         5   Skipped Neighbor                (13, 4)   18951.90859   19346.12471      2.04%     50.77  
+2026-02-25 16:59:02,330 | INFO | ld_benchmark.column-NT17-ldbd |         5   Skipped Neighbor                (13, 5)   18951.90859   19346.12471      2.04%     50.77  
+2026-02-25 16:59:02,357 | INFO | ld_benchmark.column-NT17-ldbd |         5            Master                (14, 5)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:02,358 | INFO | ld_benchmark.column-NT17-ldbd |         5         UB update                (13, 4)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:02,358 | INFO | ld_benchmark.column-NT17-ldbd |         5   Anchor (promoted)                (14, 5)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:02,359 | INFO | ld_benchmark.column-NT17-ldbd |         6    Skipped Anchor                (14, 5)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:02,359 | INFO | ld_benchmark.column-NT17-ldbd |         6   Skipped Neighbor                (13, 4)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:02,360 | INFO | ld_benchmark.column-NT17-ldbd |         6   Skipped Neighbor                (13, 5)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:02,360 | INFO | ld_benchmark.column-NT17-ldbd |         6   Skipped Neighbor                (13, 6)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:02,360 | INFO | ld_benchmark.column-NT17-ldbd |         6   Skipped Neighbor                (14, 4)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:02,360 | INFO | ld_benchmark.column-NT17-ldbd |         6   Skipped Neighbor                (14, 6)   19242.39791   19346.12471      0.54%     50.80  
+2026-02-25 16:59:04,831 | INFO | ld_benchmark.column-NT17-ldbd |         6          Neighbor                (15, 4)   19242.39791   19346.12471      0.54%     53.27  
+2026-02-25 16:59:07,015 | INFO | ld_benchmark.column-NT17-ldbd |         6          Neighbor                (15, 5)   19242.39791   19346.12471      0.54%     55.46  
+2026-02-25 16:59:09,301 | INFO | ld_benchmark.column-NT17-ldbd |         6          Neighbor                (15, 6)   19242.39791   19346.12471      0.54%     57.74  
+2026-02-25 16:59:09,341 | INFO | ld_benchmark.column-NT17-ldbd |         6            Master                (13, 4)   19346.12471   19346.12471      0.00%     57.78  
+2026-02-25 16:59:09,341 | INFO | ld_benchmark.column-NT17-ldbd |         6         UB update                (13, 4)   19346.12471   19346.12471      0.00%     57.78  
+2026-02-25 16:59:09,341 | INFO | ld_benchmark.column-NT17-ldbd | LDBD bounds converged: UB=19346.12471282314, LB=19346.12471282314
+2026-02-25 16:59:09,342 | INFO | ld_benchmark.column-NT17-ldbd | Anchor path: (13, 6) -> (15, 1) -> (7, 1) -> (13, 4) -> (12, 4) -> (14, 5)
+2026-02-25 16:59:09,345 | INFO | ld_benchmark.column-NT17-ldbd | 
+Solved in 6 iterations and 57.78657 seconds
+Optimal objective value 19346.1247128231
+Relative optimality gap 0.00000%

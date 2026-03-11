@@ -1,0 +1,1383 @@
+nohup: ignoring input
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+ERROR: evaluating object as numeric value: tray[2].binary_indicator_var
+        (object: <class 'pyomo.gdp.disjunct.AutoLinkedBinaryVar'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+ERROR: evaluating object as numeric value: obj
+        (object: <class 'pyomo.core.base.objective.ScalarObjective'>)
+    No value for uninitialized AutoLinkedBinaryVar object
+    tray[2].binary_indicator_var
+WARNING (W1002): Setting Var 'reboil_ratio' to a numeric value `0.9527`
+outside the bounds (1.3, 4).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_L_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (0.1, 16).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING (W1002): Setting Var 'H_V_spec_feed[benzene]' to a numeric value `0`
+outside the bounds (30, 56).
+    See also https://pyomo.readthedocs.io/en/latest/errors.html#w1002
+WARNING: implicitly casting 'total_cond.indicator_var' value 1 to bool
+Config: /home/atom/a/wang7617/SECQUOIA/Pyomos/LD_benchmark/benchmark_config_ngcut_conopt.json
+Done. Results written under: /home/atom/a/wang7617/SECQUOIA/Pyomos/LD_benchmark/results/20260311_ngcut_conopt

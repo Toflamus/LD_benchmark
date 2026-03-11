@@ -1,0 +1,10 @@
+model,instance,algorithm,algorithm_full,initial_point_key,starting_point,objective_value,wall_time_s,cpu_time_s,termination_condition,solver_status
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",-0.9995999999999999,10.61438075825572,10.611660463735461,optimal,ok
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",-0.9995999999999999,9.80415580701083,9.801894692704082,optimal,ok
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",-0.9995999999999999,10.846023606136441,10.844086391851306,optimal,ok
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",,0.00027831271290779114,,EXCEPTION,ERROR
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",-0.9829386666666665,8.758667975664139,8.756334135308862,optimal,ok
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",-0.9829386666666665,8.215102723799646,8.213050965219736,optimal,ok
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",-0.9829386666666665,8.061552491039038,8.059553060680628,optimal,ok
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",-0.9995999999999999,9.644039493985474,9.641870479099452,optimal,ok
+toy,default,LDBD,gdpopt.ldbd,,"(5, 1)",-0.9829386666666665,8.418858005665243,8.416528945788741,optimal,ok

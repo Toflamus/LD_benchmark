@@ -1,0 +1,75 @@
+2026-02-27 11:44:26,410 | INFO | ld_benchmark.column-NT17-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-02-27 11:44:26,411 | INFO | ld_benchmark.column-NT17-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.column-NT17-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  add_options: ['option threads = 1;', 'option reslim = 3600;', 'option iterlim = 5000;', '$onecho > conopt.opt', 'rtnwma 1e-06', 'rtnopt 1e-06', 'lstall 15', 'rtvmin 1e-08', 'lsmeth 2', 'lsisol 1', 'rtmaxv 1.0e10', '$offecho', 'GAMS_MODEL.optfile = 1;']
+  solver: conopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f477f0787c0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [15, 4]
+logical_constraint_list: ComponentSet(['one_reflux (key=one_reflux)', 'one_boilup (key=one_boilup)'])
+disjunction_list: None
+infinity_output: 100000000.0
+separation_solver: gurobi
+separation_solver_args:
+
+2026-02-27 11:44:26,411 | INFO | ld_benchmark.column-NT17-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-27 11:44:26,411 | INFO | ld_benchmark.column-NT17-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-02-27 11:44:26,433 | INFO | ld_benchmark.column-NT17-ldbd | Original model has 637 constraints (255 nonlinear) and 15 disjunctions, with 467 variables, of which 28 are binary, 0 are integer, and 439 are continuous.
+2026-02-27 11:44:26,535 | INFO | ld_benchmark.column-NT17-ldbd | Reformulation Summary:
+2026-02-27 11:44:26,535 | INFO | ld_benchmark.column-NT17-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-27 11:44:26,535 | INFO | ld_benchmark.column-NT17-ldbd | =====================================================================================================
+2026-02-27 11:44:26,536 | INFO | ld_benchmark.column-NT17-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-27 11:44:28,939 | INFO | ld_benchmark.column-NT17-ldbd |         0     Initial point                (15, 4)          -inf   20418.81276       inf%      2.53  *
+2026-02-27 11:44:28,940 | INFO | ld_benchmark.column-NT17-ldbd |         1    Skipped Anchor                (15, 4)          -inf   20418.81276       inf%      2.53  
+2026-02-27 11:44:33,449 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (14, 3)          -inf   20081.39683       inf%      7.04  *
+2026-02-27 11:44:35,961 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (14, 4)          -inf   19740.34083       inf%      9.55  *
+2026-02-27 11:44:38,047 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (14, 5)          -inf   19740.34083       inf%     11.64  
+2026-02-27 11:44:39,951 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (15, 3)          -inf   19740.34083       inf%     13.54  
+2026-02-27 11:44:43,555 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (15, 5)          -inf   19740.34083       inf%     17.14  
+2026-02-27 11:44:43,563 | INFO | ld_benchmark.column-NT17-ldbd |         1            Master                 (1, 1)   10700.90159   19740.34083     45.79%     17.15  
+2026-02-27 11:44:43,563 | INFO | ld_benchmark.column-NT17-ldbd |         1         UB update                (14, 4)   10700.90159   19740.34083     45.79%     17.15  
+2026-02-27 11:44:44,344 | INFO | ld_benchmark.column-NT17-ldbd |         2            Master                (1, 15)    5504.49325   19740.34083     72.12%     17.93  
+2026-02-27 11:44:44,345 | INFO | ld_benchmark.column-NT17-ldbd |         2         UB update                (14, 4)    5504.49325   19740.34083     72.12%     17.93  
+2026-02-27 11:44:45,131 | INFO | ld_benchmark.column-NT17-ldbd |         3            Master               (15, 15)   16667.19683   19740.34083     15.57%     18.72  
+2026-02-27 11:44:45,131 | INFO | ld_benchmark.column-NT17-ldbd |         3         UB update                (14, 4)   16667.19683   19740.34083     15.57%     18.72  
+2026-02-27 11:44:45,926 | INFO | ld_benchmark.column-NT17-ldbd |         4            Master                (14, 4)   19740.34083   19740.34083      0.00%     19.51  
+2026-02-27 11:44:45,926 | INFO | ld_benchmark.column-NT17-ldbd |         4         UB update                (14, 4)   19740.34083   19740.34083      0.00%     19.51  
+2026-02-27 11:44:45,927 | INFO | ld_benchmark.column-NT17-ldbd |         4   Anchor (promoted)                (14, 4)   19740.34083   19740.34083      0.00%     19.52  
+2026-02-27 11:44:45,927 | INFO | ld_benchmark.column-NT17-ldbd | LDBD bounds converged: UB=19740.340832308204, LB=19740.340832308204
+2026-02-27 11:44:45,928 | INFO | ld_benchmark.column-NT17-ldbd | Search path: (15, 4) -> (1, 1) -> (1, 15) -> (15, 15) -> (14, 4)
+2026-02-27 11:44:45,928 | INFO | ld_benchmark.column-NT17-ldbd | Anchor points: (15, 4) -> (1, 1) -> (1, 15) -> (15, 15) -> (14, 4)
+2026-02-27 11:44:45,931 | INFO | ld_benchmark.column-NT17-ldbd | 
+Solved in 4 iterations and 19.51942 seconds
+Optimal objective value 19740.3408323082
+Relative optimality gap 0.00000%

@@ -1,0 +1,2 @@
+model,instance,algorithm,algorithm_full,initial_point_key,starting_point,objective_value,wall_time_s,cpu_time_s,termination_condition,solver_status
+small_batch,default,LDSDA,gdpopt.ldsda,,"(3, 3, 3)",167427.65710272908,6.934135410003364,6.932048745453358,locallyOptimal,ok

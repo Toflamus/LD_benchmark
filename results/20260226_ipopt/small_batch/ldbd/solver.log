@@ -1,0 +1,96 @@
+2026-02-26 11:50:15,125 | INFO | ld_benchmark.small_batch-default-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-02-26 11:50:15,125 | INFO | ld_benchmark.small_batch-default-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.small_batch-default-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7fb543804360>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [3, 3, 3]
+logical_constraint_list: ComponentSet(['lim[mixer] (key=lim[mixer])', 'lim[reactor] (key=lim[reactor])', 'lim[centrifuge] (key=lim[centrifuge])'])
+disjunction_list: None
+infinity_output: 100000000.0
+separation_solver: gurobi
+separation_solver_args:
+
+2026-02-26 11:50:15,127 | INFO | ld_benchmark.small_batch-default-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 11:50:15,127 | INFO | ld_benchmark.small_batch-default-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-02-26 11:50:15,130 | INFO | ld_benchmark.small_batch-default-ldbd | Original model has 34 constraints (1 nonlinear) and 9 disjunctions, with 37 variables, of which 18 are binary, 0 are integer, and 19 are continuous.
+2026-02-26 11:50:15,139 | INFO | ld_benchmark.small_batch-default-ldbd | Reformulation Summary:
+2026-02-26 11:50:15,139 | INFO | ld_benchmark.small_batch-default-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 11:50:15,139 | INFO | ld_benchmark.small_batch-default-ldbd | =====================================================================================================
+2026-02-26 11:50:15,140 | INFO | ld_benchmark.small_batch-default-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 11:50:15,737 | INFO | ld_benchmark.small_batch-default-ldbd |         0     Initial point              (3, 3, 3)          -inf   239960.01112       inf%      0.61  *
+2026-02-26 11:50:15,737 | INFO | ld_benchmark.small_batch-default-ldbd |         1    Skipped Anchor              (3, 3, 3)          -inf   239960.01112       inf%      0.61  
+2026-02-26 11:50:16,312 | INFO | ld_benchmark.small_batch-default-ldbd |         1          Neighbor              (2, 2, 2)          -inf   204601.96758       inf%      1.18  *
+2026-02-26 11:50:16,873 | INFO | ld_benchmark.small_batch-default-ldbd |         1          Neighbor              (2, 2, 3)          -inf   204601.96758       inf%      1.75  
+2026-02-26 11:50:17,422 | INFO | ld_benchmark.small_batch-default-ldbd |         1          Neighbor              (2, 3, 2)          -inf   204601.96758       inf%      2.29  
+2026-02-26 11:50:18,046 | INFO | ld_benchmark.small_batch-default-ldbd |         1          Neighbor              (2, 3, 3)          -inf   204601.96758       inf%      2.92  
+2026-02-26 11:50:18,627 | INFO | ld_benchmark.small_batch-default-ldbd |         1          Neighbor              (3, 2, 2)          -inf   204601.96758       inf%      3.50  
+2026-02-26 11:50:19,169 | INFO | ld_benchmark.small_batch-default-ldbd |         1          Neighbor              (3, 2, 3)          -inf   204601.96758       inf%      4.04  
+2026-02-26 11:50:19,735 | INFO | ld_benchmark.small_batch-default-ldbd |         1          Neighbor              (3, 3, 2)          -inf   204601.96758       inf%      4.61  
+2026-02-26 11:50:19,743 | INFO | ld_benchmark.small_batch-default-ldbd |         1            Master              (3, 3, 1)   165611.39013   204601.96758     19.06%      4.61  
+2026-02-26 11:50:19,743 | INFO | ld_benchmark.small_batch-default-ldbd |         1         UB update              (2, 2, 2)   165611.39013   204601.96758     19.06%      4.61  
+2026-02-26 11:50:20,343 | INFO | ld_benchmark.small_batch-default-ldbd |         2            Anchor              (3, 3, 1)   165611.39013   181201.66547      8.60%      5.21  *
+2026-02-26 11:50:20,927 | INFO | ld_benchmark.small_batch-default-ldbd |         2          Neighbor              (2, 2, 1)   165611.39013   167427.65708      1.08%      5.80  *
+2026-02-26 11:50:20,927 | INFO | ld_benchmark.small_batch-default-ldbd |         2   Skipped Neighbor              (2, 2, 2)   165611.39013   167427.65708      1.08%      5.80  
+2026-02-26 11:50:21,531 | INFO | ld_benchmark.small_batch-default-ldbd |         2          Neighbor              (2, 3, 1)   165611.39013   167427.65708      1.08%      6.40  
+2026-02-26 11:50:21,532 | INFO | ld_benchmark.small_batch-default-ldbd |         2   Skipped Neighbor              (2, 3, 2)   165611.39013   167427.65708      1.08%      6.40  
+2026-02-26 11:50:22,110 | INFO | ld_benchmark.small_batch-default-ldbd |         2          Neighbor              (3, 2, 1)   165611.39013   167427.65708      1.08%      6.98  
+2026-02-26 11:50:22,110 | INFO | ld_benchmark.small_batch-default-ldbd |         2   Skipped Neighbor              (3, 2, 2)   165611.39013   167427.65708      1.08%      6.98  
+2026-02-26 11:50:22,111 | INFO | ld_benchmark.small_batch-default-ldbd |         2   Skipped Neighbor              (3, 3, 2)   165611.39013   167427.65708      1.08%      6.98  
+2026-02-26 11:50:22,124 | INFO | ld_benchmark.small_batch-default-ldbd |         2            Master              (3, 1, 1)   166394.54342   167427.65708      0.62%      7.00  
+2026-02-26 11:50:22,124 | INFO | ld_benchmark.small_batch-default-ldbd |         2         UB update              (2, 2, 1)   166394.54342   167427.65708      0.62%      7.00  
+2026-02-26 11:50:22,176 | INFO | ld_benchmark.small_batch-default-ldbd |         3            Master              (1, 3, 1)   144519.35473   167427.65708     13.68%      7.05  
+2026-02-26 11:50:22,176 | INFO | ld_benchmark.small_batch-default-ldbd |         3         UB update              (2, 2, 1)   144519.35473   167427.65708     13.68%      7.05  
+2026-02-26 11:50:22,234 | INFO | ld_benchmark.small_batch-default-ldbd |         4            Master              (2, 3, 1)   167036.08043   167427.65708      0.23%      7.11  
+2026-02-26 11:50:22,234 | INFO | ld_benchmark.small_batch-default-ldbd |         4         UB update              (2, 2, 1)   167036.08043   167427.65708      0.23%      7.11  
+2026-02-26 11:50:22,235 | INFO | ld_benchmark.small_batch-default-ldbd |         4   Anchor (promoted)              (2, 3, 1)   167036.08043   167427.65708      0.23%      7.11  
+2026-02-26 11:50:22,235 | INFO | ld_benchmark.small_batch-default-ldbd |         5    Skipped Anchor              (2, 3, 1)   167036.08043   167427.65708      0.23%      7.11  
+2026-02-26 11:50:22,317 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Skipped Neighbor              (1, 3, 1)   167036.08043   167427.65708      0.23%      7.19  
+2026-02-26 11:50:22,357 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Skipped Neighbor              (2, 2, 1)   167036.08043   167427.65708      0.23%      7.23  
+2026-02-26 11:50:22,357 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Skipped Neighbor              (2, 2, 2)   167036.08043   167427.65708      0.23%      7.23  
+2026-02-26 11:50:22,357 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Skipped Neighbor              (2, 3, 2)   167036.08043   167427.65708      0.23%      7.23  
+2026-02-26 11:50:22,357 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Skipped Neighbor              (3, 2, 1)   167036.08043   167427.65708      0.23%      7.23  
+2026-02-26 11:50:22,358 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Skipped Neighbor              (3, 2, 2)   167036.08043   167427.65708      0.23%      7.23  
+2026-02-26 11:50:22,359 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Skipped Neighbor              (3, 3, 1)   167036.08043   167427.65708      0.23%      7.23  
+2026-02-26 11:50:22,359 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Skipped Neighbor              (3, 3, 2)   167036.08043   167427.65708      0.23%      7.23  
+2026-02-26 11:50:22,379 | INFO | ld_benchmark.small_batch-default-ldbd |         5            Master              (2, 2, 1)   167427.65708   167427.65708      0.00%      7.25  
+2026-02-26 11:50:22,379 | INFO | ld_benchmark.small_batch-default-ldbd |         5         UB update              (2, 2, 1)   167427.65708   167427.65708      0.00%      7.25  
+2026-02-26 11:50:22,380 | INFO | ld_benchmark.small_batch-default-ldbd |         5   Anchor (promoted)              (2, 2, 1)   167427.65708   167427.65708      0.00%      7.25  
+2026-02-26 11:50:22,380 | INFO | ld_benchmark.small_batch-default-ldbd | LDBD bounds converged: UB=167427.6570779763, LB=167427.6570779762
+2026-02-26 11:50:22,380 | INFO | ld_benchmark.small_batch-default-ldbd | Search path: (3, 3, 3) -> (3, 3, 1) -> (3, 1, 1) -> (1, 3, 1) -> (2, 3, 1) -> (2, 2, 1)
+2026-02-26 11:50:22,380 | INFO | ld_benchmark.small_batch-default-ldbd | Anchor points: (3, 3, 3) -> (3, 3, 1) -> (3, 1, 1) -> (1, 3, 1) -> (2, 3, 1) -> (2, 2, 1)
+2026-02-26 11:50:22,381 | INFO | ld_benchmark.small_batch-default-ldbd | 
+Solved in 5 iterations and 7.25316 seconds
+Optimal objective value 167427.6570779763
+Relative optimality gap 0.00000%

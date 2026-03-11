@@ -1,0 +1,68 @@
+2026-02-25 15:43:50,360 | INFO | ld_benchmark.cstr-NT30-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-02-25 15:43:50,360 | INFO | ld_benchmark.cstr-NT30-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.cstr-NT30-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f737d4044a0>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [1, 1]
+logical_constraint_list: ComponentSet(['one_unreacted_feed (key=one_unreacted_feed)', 'one_recycle (key=one_recycle)'])
+disjunction_list: None
+
+2026-02-25 15:43:50,361 | INFO | ld_benchmark.cstr-NT30-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-25 15:43:50,361 | INFO | ld_benchmark.cstr-NT30-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-02-25 15:43:50,376 | INFO | ld_benchmark.cstr-NT30-ldsda | Original model has 575 constraints (92 nonlinear) and 60 disjunctions, with 426 variables, of which 120 are binary, 0 are integer, and 306 are continuous.
+2026-02-25 15:43:50,502 | INFO | ld_benchmark.cstr-NT30-ldsda | Reformulation Summary:
+2026-02-25 15:43:50,502 | INFO | ld_benchmark.cstr-NT30-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-25 15:43:50,502 | INFO | ld_benchmark.cstr-NT30-ldsda |   0 | 1 | 30 | ['YF[1]', 'YF[2]', 'YF[3]', 'YF[4]', 'YF[5]', 'YF[6]', 'YF[7]', 'YF[8]', 'YF[9]', 'YF[10]', 'YF[11]', 'YF[12]', 'YF[13]', 'YF[14]', 'YF[15]', 'YF[16]', 'YF[17]', 'YF[18]', 'YF[19]', 'YF[20]', 'YF[21]', 'YF[22]', 'YF[23]', 'YF[24]', 'YF[25]', 'YF[26]', 'YF[27]', 'YF[28]', 'YF[29]', 'YF[30]']
+2026-02-25 15:43:50,502 | INFO | ld_benchmark.cstr-NT30-ldsda |   1 | 1 | 30 | ['YR_is_recycle[1].indicator_var', 'YR_is_recycle[2].indicator_var', 'YR_is_recycle[3].indicator_var', 'YR_is_recycle[4].indicator_var', 'YR_is_recycle[5].indicator_var', 'YR_is_recycle[6].indicator_var', 'YR_is_recycle[7].indicator_var', 'YR_is_recycle[8].indicator_var', 'YR_is_recycle[9].indicator_var', 'YR_is_recycle[10].indicator_var', 'YR_is_recycle[11].indicator_var', 'YR_is_recycle[12].indicator_var', 'YR_is_recycle[13].indicator_var', 'YR_is_recycle[14].indicator_var', 'YR_is_recycle[15].indicator_var', 'YR_is_recycle[16].indicator_var', 'YR_is_recycle[17].indicator_var', 'YR_is_recycle[18].indicator_var', 'YR_is_recycle[19].indicator_var', 'YR_is_recycle[20].indicator_var', 'YR_is_recycle[21].indicator_var', 'YR_is_recycle[22].indicator_var', 'YR_is_recycle[23].indicator_var', 'YR_is_recycle[24].indicator_var', 'YR_is_recycle[25].indicator_var', 'YR_is_recycle[26].indicator_var', 'YR_is_recycle[27].indicator_var', 'YR_is_recycle[28].indicator_var', 'YR_is_recycle[29].indicator_var', 'YR_is_recycle[30].indicator_var']
+2026-02-25 15:43:50,502 | INFO | ld_benchmark.cstr-NT30-ldsda | =====================================================================================================
+2026-02-25 15:43:50,503 | INFO | ld_benchmark.cstr-NT30-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-25 15:43:52,539 | INFO | ld_benchmark.cstr-NT30-ldsda |         0     Initial point                 (1, 1)          -inf       9.89474       inf%      2.18  *
+2026-02-25 15:43:54,418 | INFO | ld_benchmark.cstr-NT30-ldsda |         1   Neighbor search                 (2, 1)          -inf       4.06188       inf%      4.06  *
+2026-02-25 15:43:56,201 | INFO | ld_benchmark.cstr-NT30-ldsda |         1   Neighbor search                 (2, 2)          -inf       4.06188       inf%      5.84  *
+2026-02-25 15:43:57,936 | INFO | ld_benchmark.cstr-NT30-ldsda |         1       Line search                 (3, 3)          -inf       3.31485       inf%      7.58  *
+2026-02-25 15:44:00,094 | INFO | ld_benchmark.cstr-NT30-ldsda |         1       Line search                 (4, 4)          -inf       3.13378       inf%      9.73  *
+2026-02-25 15:44:01,903 | INFO | ld_benchmark.cstr-NT30-ldsda |         1       Line search                 (5, 5)          -inf       3.06201       inf%     11.54  *
+2026-02-25 15:44:03,726 | INFO | ld_benchmark.cstr-NT30-ldsda |         1       Line search                 (6, 6)          -inf       3.00728       inf%     13.37  *
+2026-02-25 15:44:09,149 | INFO | ld_benchmark.cstr-NT30-ldsda |         2   Neighbor search                 (6, 5)          -inf       3.00728       inf%     18.79  
+2026-02-25 15:44:11,260 | INFO | ld_benchmark.cstr-NT30-ldsda |         2   Neighbor search                 (7, 5)          -inf       3.00728       inf%     20.90  
+2026-02-25 15:44:13,080 | INFO | ld_benchmark.cstr-NT30-ldsda |         2   Neighbor search                 (7, 6)          -inf       3.00728       inf%     22.72  
+2026-02-25 15:44:13,081 | INFO | ld_benchmark.cstr-NT30-ldsda | 
+Solved in 2 iterations and 22.71968 seconds
+Optimal objective value 3.0072779743
+Relative optimality gap inf%

@@ -1,0 +1,65 @@
+2026-02-26 12:31:37,053 | INFO | ld_benchmark.cstr-NT5-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-02-26 12:31:37,053 | INFO | ld_benchmark.cstr-NT5-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.cstr-NT5-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  solver: ipopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7fdd99800360>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [1, 1]
+logical_constraint_list: ComponentSet(['one_unreacted_feed (key=one_unreacted_feed)', 'one_recycle (key=one_recycle)'])
+disjunction_list: None
+
+2026-02-26 12:31:37,053 | INFO | ld_benchmark.cstr-NT5-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 12:31:37,053 | INFO | ld_benchmark.cstr-NT5-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-02-26 12:31:37,057 | INFO | ld_benchmark.cstr-NT5-ldsda | Original model has 100 constraints (17 nonlinear) and 10 disjunctions, with 76 variables, of which 20 are binary, 0 are integer, and 56 are continuous.
+2026-02-26 12:31:37,497 | INFO | ld_benchmark.cstr-NT5-ldsda | Reformulation Summary:
+2026-02-26 12:31:37,497 | INFO | ld_benchmark.cstr-NT5-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 12:31:37,497 | INFO | ld_benchmark.cstr-NT5-ldsda | =====================================================================================================
+2026-02-26 12:31:37,498 | INFO | ld_benchmark.cstr-NT5-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 12:31:38,166 | INFO | ld_benchmark.cstr-NT5-ldsda |         0     Initial point                 (1, 1)          -inf       9.89474       inf%      1.11  *
+2026-02-26 12:31:38,841 | INFO | ld_benchmark.cstr-NT5-ldsda |         1   Neighbor search                 (2, 1)          -inf       4.06188       inf%      1.79  *
+2026-02-26 12:31:39,469 | INFO | ld_benchmark.cstr-NT5-ldsda |         1   Neighbor search                 (2, 2)          -inf       4.06188       inf%      2.41  
+2026-02-26 12:31:40,124 | INFO | ld_benchmark.cstr-NT5-ldsda |         1       Line search                 (3, 3)          -inf       3.31485       inf%      3.07  *
+2026-02-26 12:31:40,822 | INFO | ld_benchmark.cstr-NT5-ldsda |         1       Line search                 (4, 4)          -inf       3.13378       inf%      3.77  *
+2026-02-26 12:31:41,485 | INFO | ld_benchmark.cstr-NT5-ldsda |         1       Line search                 (5, 5)          -inf       3.06201       inf%      4.43  *
+2026-02-26 12:31:42,141 | INFO | ld_benchmark.cstr-NT5-ldsda |         2   Neighbor search                 (4, 4)          -inf       3.06201       inf%      5.09  
+2026-02-26 12:31:42,799 | INFO | ld_benchmark.cstr-NT5-ldsda |         2   Neighbor search                 (5, 4)          -inf       3.06201       inf%      5.75  
+2026-02-26 12:31:42,799 | INFO | ld_benchmark.cstr-NT5-ldsda | Search path: (1, 1) -> (2, 2) -> (3, 3) -> (4, 4) -> (5, 5)
+2026-02-26 12:31:42,800 | INFO | ld_benchmark.cstr-NT5-ldsda | 
+Solved in 2 iterations and 5.74617 seconds
+Optimal objective value 3.0620145766
+Relative optimality gap inf%

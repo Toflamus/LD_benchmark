@@ -1,0 +1,2 @@
+model,instance,algorithm,algorithm_full,initial_point_key,starting_point,objective_value,wall_time_s,cpu_time_s,termination_condition,solver_status
+cstr,NT30,LDBD,gdpopt.ldbd,,"(1, 1)",4.061881654046266,10.44709273148328,10.445031949318945,optimal,ok

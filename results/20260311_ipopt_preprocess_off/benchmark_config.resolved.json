@@ -1,0 +1,106 @@
+{
+  "loaded_config": {
+    "common": {
+      "direction_norm": "Linf",
+      "mip_solver": "gurobi",
+      "preprocessing": false,
+      "separation_solver": "gurobi",
+      "subproblem_solver": "gams",
+      "subproblem_solver_args": {
+        "add_options": [
+          "option threads = 1;",
+          "option reslim = 3600;",
+          "option iterlim = 5000;",
+          "$onecho > ipopt.opt",
+          "tol 1e-06",
+          "constr_viol_tol 1e-06",
+          "acceptable_iter 15",
+          "min_hessian_perturbation 1e-08",
+          "nlp_upper_bound_inf 1.0e10",
+          "nlp_lower_bound_inf -1.0e10",
+          "max_iter 5000",
+          "max_cpu_time 3600",
+          "$offecho",
+          "GAMS_MODEL.optfile = 1;"
+        ],
+        "solver": "ipopt"
+      },
+      "tee": false,
+      "time_limit": 900
+    },
+    "outputs": {
+      "clear": false,
+      "date": "today",
+      "results_dir": null
+    },
+    "run": {
+      "algorithms": [
+        "gdpopt.ldsda",
+        "gdpopt.ldbd"
+      ],
+      "column_keys": null,
+      "cstr_nt_list": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30
+      ],
+      "test": "all"
+    },
+    "version": 1
+  },
+  "resolved": {
+    "algorithms": [
+      "gdpopt.ldsda",
+      "gdpopt.ldbd"
+    ],
+    "clear": false,
+    "column_keys": null,
+    "common": {
+      "direction_norm": "Linf",
+      "mip_solver": "gurobi",
+      "mip_solver_args": {},
+      "preprocessing": false,
+      "separation_solver": "gurobi",
+      "separation_solver_args": {},
+      "subproblem_solver": "gams",
+      "subproblem_solver_args": {
+        "add_options": [
+          "option threads = 1;",
+          "option reslim = 3600;",
+          "option iterlim = 5000;",
+          "$onecho > ipopt.opt",
+          "tol 1e-06",
+          "constr_viol_tol 1e-06",
+          "acceptable_iter 15",
+          "min_hessian_perturbation 1e-08",
+          "nlp_upper_bound_inf 1.0e10",
+          "nlp_lower_bound_inf -1.0e10",
+          "max_iter 5000",
+          "max_cpu_time 3600",
+          "$offecho",
+          "GAMS_MODEL.optfile = 1;"
+        ],
+        "solver": "ipopt"
+      },
+      "tee": false,
+      "time_limit": 900
+    },
+    "cstr_nt_list": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "date": "20260311",
+    "results_day_dir": "/home/atom/a/wang7617/SECQUOIA/Pyomos/LD_benchmark/results/20260311_ipopt_preprocess_off",
+    "test": "column"
+  },
+  "schema_version": 1,
+  "source_config_path": "/home/atom/a/wang7617/SECQUOIA/Pyomos/LD_benchmark/benchmark_config.json",
+  "timestamp_local": "2026-03-11T00:32:10.861370"
+}

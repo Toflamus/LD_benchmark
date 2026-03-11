@@ -1,0 +1,77 @@
+{
+  "algorithm_full": "gdpopt.ldsda",
+  "algorithm_tag": "LDSDA",
+  "common_config": {
+    "direction_norm": "Linf",
+    "minlp_solver": "gams",
+    "minlp_solver_args": {
+      "add_options": [
+        "option threads = 1;",
+        "option reslim = 3600;",
+        "option iterlim = 5000;",
+        "$onecho > conopt.opt",
+        "rtnwma 1e-06",
+        "rtnopt 1e-06",
+        "lstall 15",
+        "rtvmin 1e-08",
+        "lsmeth 2",
+        "lsisol 1",
+        "rtmaxv 1.0e10",
+        "$offecho",
+        "GAMS_MODEL.optfile = 1;"
+      ],
+      "solver": "conopt"
+    },
+    "mip_solver": "gurobi",
+    "mip_solver_args": {},
+    "nlp_solver": "ipopt",
+    "nlp_solver_args": {},
+    "separation_solver": "gurobi",
+    "separation_solver_args": {},
+    "tee": false,
+    "time_limit": 900
+  },
+  "initial_point_key": 3,
+  "instance": "NT17",
+  "logical_constraint_count": 2,
+  "model": "column",
+  "pyomo_version": "6.10.0.dev0",
+  "schema_version": 1,
+  "solve_kwargs": {
+    "direction_norm": "Linf",
+    "minlp_solver": "gams",
+    "minlp_solver_args": {
+      "add_options": [
+        "option threads = 1;",
+        "option reslim = 3600;",
+        "option iterlim = 5000;",
+        "$onecho > conopt.opt",
+        "rtnwma 1e-06",
+        "rtnopt 1e-06",
+        "lstall 15",
+        "rtvmin 1e-08",
+        "lsmeth 2",
+        "lsisol 1",
+        "rtmaxv 1.0e10",
+        "$offecho",
+        "GAMS_MODEL.optfile = 1;"
+      ],
+      "solver": "conopt"
+    },
+    "mip_solver": "gurobi",
+    "mip_solver_args": {},
+    "nlp_solver": "ipopt",
+    "nlp_solver_args": {},
+    "starting_point": [
+      12,
+      4
+    ],
+    "tee": false,
+    "time_limit": 900
+  },
+  "starting_point": [
+    12,
+    4
+  ],
+  "timestamp_utc": "2026-02-27T16:32:09.905296+00:00"
+}

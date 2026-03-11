@@ -1,0 +1,93 @@
+2026-03-11 00:40:28,823 | INFO | ld_benchmark.column-NT17-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-03-11 00:40:28,823 | INFO | ld_benchmark.column-NT17-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.column-NT17-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+subproblem_solver: gams
+subproblem_solver_args:
+  add_options: ['option threads = 1;', 'option reslim = 3600;', 'option iterlim = 5000;', '$onecho > ipopt.opt', 'tol 1e-06', 'constr_viol_tol 1e-06', 'acceptable_iter 15', 'min_hessian_perturbation 1e-08', 'nlp_upper_bound_inf 1.0e10', 'nlp_lower_bound_inf -1.0e10', 'max_iter 5000', 'max_cpu_time 3600', '$offecho', 'GAMS_MODEL.optfile = 1;', 'option reslim=865.3537904229015;', 'option reslim=863.0294862138107;', 'option reslim=860.7986965840682;', 'option reslim=858.4397000754252;', 'option reslim=856.0558813316748;', 'option reslim=853.4033632781357;', 'option reslim=850.6877356339246;', 'option reslim=848.4059106297791;', 'option reslim=846.0514166755602;', 'option reslim=843.5462898472324;', 'option reslim=841.1587485326454;', 'option reslim=838.8787947343662;', 'option reslim=836.2038488416001;', 'option reslim=833.8836071435362;', 'option reslim=830.7580252187327;', 'option reslim=825.3038961468264;', 'option reslim=823.1155504947528;', 'option reslim=820.9899598136544;', 'option reslim=818.6705877231434;', 'option reslim=816.395948883146;', 'option reslim=813.8709535980597;', 'option reslim=811.1739919669926;', 'option reslim=808.9572538621724;', 'option reslim=806.7315466366708;', 'option reslim=886.9908060207963;', 'option reslim=884.3084711460397;', 'option reslim=881.9507278474048;', 'option reslim=879.6718501094729;', 'option reslim=877.2557990169153;', 'option reslim=874.6418584752828;', 'option reslim=871.8640411021188;', 'option reslim=869.5985651025549;', 'option reslim=867.3148643570021;', 'option reslim=864.9990731943399;', 'option reslim=862.2697389861569;', 'option reslim=860.1127243153751;', 'option reslim=857.907609032467;', 'option reslim=855.6458809124306;', 'option reslim=852.9306695852429;', 'option reslim=850.3878336278722;', 'option reslim=848.1969221606851;', 'option reslim=845.9843502361327;', 'option reslim=841.8994903676212;', 'option reslim=839.7209120448679;', 'option reslim=837.3125775326043;', 'option reslim=835.058529663831;', 'option reslim=864.8412734810263;', 'option reslim=862.1613761316985;', 'option reslim=859.8648627344519;', 'option reslim=857.6251632254571;', 'option reslim=855.072765275836;', 'option reslim=852.7986332243308;', 'option reslim=850.4868840808049;', 'option reslim=848.1910268012434;', 'option reslim=845.9151432355866;', 'option reslim=843.3690950786695;', 'option reslim=841.128378521651;', 'option reslim=838.7768438514322;', 'option reslim=836.3834141334519;', 'option reslim=834.0320162763819;', 'option reslim=830.7460270160809;', 'option reslim=828.4692751364782;', 'option reslim=824.7416146229953;', 'option reslim=822.3045887984335;', 'option reslim=818.7859927164391;', 'option reslim=814.988381058909;', 'option reslim=812.6623311797157;', 'option reslim=809.9172609997913;', 'option reslim=807.4430013075471;', 'option reslim=805.2679736297578;', 'option reslim=803.0463427547365;', 'option reslim=800.8651109021157;', 'option reslim=798.6528111314401;', 'option reslim=796.4288502326235;', 'option reslim=793.7845633514225;', 'option reslim=791.620798910968;', 'option reslim=789.1115622334182;', 'option reslim=786.8718137610704;']
+  solver: ipopt
+direction_norm: Linf
+starting_point: [13, 3]
+logical_constraint_list: ComponentSet(['one_reflux (key=one_reflux)', 'one_boilup (key=one_boilup)'])
+disjunction_list: None
+infinity_output: 100000000.0
+preprocessing: true
+preprocessing_feasibility_tol: 1e-06
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f602ae80680>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+separation_solver: gurobi
+separation_solver_args:
+
+2026-03-11 00:40:28,823 | INFO | ld_benchmark.column-NT17-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-03-11 00:40:28,823 | INFO | ld_benchmark.column-NT17-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-03-11 00:40:28,845 | INFO | ld_benchmark.column-NT17-ldbd | Original model has 637 constraints (255 nonlinear) and 15 disjunctions, with 467 variables, of which 28 are binary, 0 are integer, and 439 are continuous.
+2026-03-11 00:40:28,948 | INFO | ld_benchmark.column-NT17-ldbd | Reformulation Summary:
+2026-03-11 00:40:28,948 | INFO | ld_benchmark.column-NT17-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-03-11 00:40:28,948 | INFO | ld_benchmark.column-NT17-ldbd |       1 |       1 |  1 | 15 | YR[2], YR[3], YR[4], YR[5], YR[6], YR[7], YR[8], YR[9], YR[10], YR[11], YR[12], YR[13], YR[14], YR[15], YR[16]
+2026-03-11 00:40:28,948 | INFO | ld_benchmark.column-NT17-ldbd |       2 |       1 |  1 | 15 | YB[2], YB[3], YB[4], YB[5], YB[6], YB[7], YB[8], YB[9], YB[10], YB[11], YB[12], YB[13], YB[14], YB[15], YB[16]
+2026-03-11 00:40:28,948 | INFO | ld_benchmark.column-NT17-ldbd | =====================================================================================================
+2026-03-11 00:40:28,949 | INFO | ld_benchmark.column-NT17-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-03-11 00:40:28,949 | INFO | ld_benchmark.column-NT17-ldbd | LD-BD Preprocessing Phase 1: minimising I1 (logical infeasibility)
+2026-03-11 00:40:30,171 | INFO | ld_benchmark.column-NT17-ldbd |         1    Skipped Anchor                (13, 3)          -inf           inf       nan%      1.35  
+2026-03-11 00:40:40,594 | INFO | ld_benchmark.column-NT17-ldbd |         1            Master                 (1, 1)       0.00000           inf       nan%     11.77  
+2026-03-11 00:40:40,594 | INFO | ld_benchmark.column-NT17-ldbd |         1         UB update                (13, 3)       0.00000       0.00000      0.00%     11.77  *
+2026-03-11 00:40:40,594 | INFO | ld_benchmark.column-NT17-ldbd | LDBD bounds converged: UB=0.0, LB=0.0
+2026-03-11 00:40:40,594 | INFO | ld_benchmark.column-NT17-ldbd | Search path: (13, 3) -> (1, 1)
+2026-03-11 00:40:40,594 | INFO | ld_benchmark.column-NT17-ldbd | Anchor points: (13, 3) -> (1, 1)
+2026-03-11 00:40:40,595 | INFO | ld_benchmark.column-NT17-ldbd | Phase 1 complete. Feasible point found: (13, 3) (I1 = 0)
+2026-03-11 00:40:40,595 | INFO | ld_benchmark.column-NT17-ldbd | LD-BD Preprocessing Phase 2: minimising I2 (constraint infeasibility)
+2026-03-11 00:40:43,245 | INFO | ld_benchmark.column-NT17-ldbd |         1    Skipped Anchor                (13, 3)          -inf           inf       nan%     14.42  
+2026-03-11 00:41:02,065 | INFO | ld_benchmark.column-NT17-ldbd |         1            Master                 (1, 1)       0.00000           inf       nan%     33.24  
+2026-03-11 00:41:02,065 | INFO | ld_benchmark.column-NT17-ldbd |         1         UB update                (13, 3)       0.00000       0.00000      0.00%     33.24  *
+2026-03-11 00:41:02,065 | INFO | ld_benchmark.column-NT17-ldbd | LDBD bounds converged: UB=0.0, LB=0.0
+2026-03-11 00:41:02,065 | INFO | ld_benchmark.column-NT17-ldbd | Search path: (13, 3) -> (1, 1)
+2026-03-11 00:41:02,065 | INFO | ld_benchmark.column-NT17-ldbd | Anchor points: (13, 3) -> (1, 1)
+2026-03-11 00:41:02,065 | INFO | ld_benchmark.column-NT17-ldbd | Phase 2 complete. Feasible point found: (13, 3) (I2 = 0)
+2026-03-11 00:41:04,631 | INFO | ld_benchmark.column-NT17-ldbd |         0     Initial point                (13, 3)          -inf   19548.71945       inf%     35.81  *
+2026-03-11 00:41:04,631 | INFO | ld_benchmark.column-NT17-ldbd |         1    Skipped Anchor                (13, 3)          -inf   19548.71945       inf%     35.81  
+2026-03-11 00:41:07,174 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (12, 2)          -inf   19548.71945       inf%     38.35  
+2026-03-11 00:41:09,585 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (12, 3)          -inf   19449.85151       inf%     40.76  *
+2026-03-11 00:41:12,065 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (12, 4)          -inf   19449.85151       inf%     43.24  
+2026-03-11 00:41:14,260 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (13, 2)          -inf   19449.85151       inf%     45.44  
+2026-03-11 00:41:16,498 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (13, 4)          -inf   19346.12475       inf%     47.67  *
+2026-03-11 00:41:18,769 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (14, 2)          -inf   19346.12475       inf%     49.94  
+2026-03-11 00:41:21,334 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (14, 3)          -inf   19346.12475       inf%     52.51  
+2026-03-11 00:41:23,584 | INFO | ld_benchmark.column-NT17-ldbd |         1          Neighbor                (14, 4)          -inf   19346.12475       inf%     54.76  
+2026-03-11 00:41:23,592 | INFO | ld_benchmark.column-NT17-ldbd |         1            Master                (1, 15)   15931.16766   19346.12475     17.65%     54.77  
+2026-03-11 00:41:23,592 | INFO | ld_benchmark.column-NT17-ldbd |         1         UB update                (13, 4)   15931.16766   19346.12475     17.65%     54.77  
+2026-03-11 00:41:24,389 | INFO | ld_benchmark.column-NT17-ldbd |         2            Master               (13, 15)   12929.80244   19346.12475     33.17%     55.56  
+2026-03-11 00:41:24,389 | INFO | ld_benchmark.column-NT17-ldbd |         2         UB update                (13, 4)   12929.80244   19346.12475     33.17%     55.56  
+2026-03-11 00:41:25,177 | INFO | ld_benchmark.column-NT17-ldbd |         3            Master                 (1, 3)   18362.30414   19346.12475      5.09%     56.35  
+2026-03-11 00:41:25,177 | INFO | ld_benchmark.column-NT17-ldbd |         3         UB update                (13, 4)   18362.30414   19346.12475      5.09%     56.35  
+2026-03-11 00:41:25,971 | INFO | ld_benchmark.column-NT17-ldbd |         4            Master                (13, 4)   19346.12475   19346.12475      0.00%     57.15  
+2026-03-11 00:41:25,971 | INFO | ld_benchmark.column-NT17-ldbd |         4         UB update                (13, 4)   19346.12475   19346.12475      0.00%     57.15  
+2026-03-11 00:41:25,972 | INFO | ld_benchmark.column-NT17-ldbd |         4   Anchor (promoted)                (13, 4)   19346.12475   19346.12475      0.00%     57.15  
+2026-03-11 00:41:25,972 | INFO | ld_benchmark.column-NT17-ldbd | LDBD bounds converged: UB=19346.124748130627, LB=19346.124748148024
+2026-03-11 00:41:25,972 | INFO | ld_benchmark.column-NT17-ldbd | Search path: (13, 3) -> (1, 15) -> (13, 15) -> (1, 3) -> (13, 4)
+2026-03-11 00:41:25,972 | INFO | ld_benchmark.column-NT17-ldbd | Anchor points: (13, 3) -> (1, 15) -> (13, 15) -> (1, 3) -> (13, 4)
+2026-03-11 00:41:25,974 | INFO | ld_benchmark.column-NT17-ldbd | 
+Solved in 4 iterations and 57.14996 seconds
+Optimal objective value 19346.1247481306
+Relative optimality gap 0.00000%

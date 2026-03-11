@@ -1,0 +1,82 @@
+2026-02-26 18:10:00,400 | INFO | ld_benchmark.cstr-NT20-ldbd | Starting GDPopt version 22.5.13 using LDBD algorithm
+2026-02-26 18:10:00,400 | INFO | ld_benchmark.cstr-NT20-ldbd | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.cstr-NT20-ldbd (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  add_options: ['option threads = 1;', 'option reslim = 3600;', 'option iterlim = 5000;', '$onecho > conopt.opt', 'rtnwma 1e-06', 'rtnopt 1e-06', 'lstall 15', 'rtvmin 1e-08', 'lsmeth 2', 'lsisol 1', 'rtmaxv 1.0e10', '$offecho', 'GAMS_MODEL.optfile = 1;']
+  solver: conopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f5ab5430400>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [1, 1]
+logical_constraint_list: ComponentSet(['one_unreacted_feed (key=one_unreacted_feed)', 'one_recycle (key=one_recycle)'])
+disjunction_list: None
+infinity_output: 100000000.0
+separation_solver: gurobi
+separation_solver_args:
+
+2026-02-26 18:10:00,400 | INFO | ld_benchmark.cstr-NT20-ldbd | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 18:10:00,400 | INFO | ld_benchmark.cstr-NT20-ldbd | 
+Liñán, D. A.; Ricardez‐Sandoval, L. A. A Benders Decomposition Framework for the Optimization of Disjunctive Superstructures with Ordered Discrete Decisions. AIChE Journal 2023, 69 (5), e18008. https://doi.org/10.1002/aic.18008.
+2026-02-26 18:10:00,410 | INFO | ld_benchmark.cstr-NT20-ldbd | Original model has 385 constraints (62 nonlinear) and 40 disjunctions, with 286 variables, of which 80 are binary, 0 are integer, and 206 are continuous.
+2026-02-26 18:10:00,472 | INFO | ld_benchmark.cstr-NT20-ldbd | Reformulation Summary:
+2026-02-26 18:10:00,472 | INFO | ld_benchmark.cstr-NT20-ldbd |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 18:10:00,472 | INFO | ld_benchmark.cstr-NT20-ldbd | =====================================================================================================
+2026-02-26 18:10:00,473 | INFO | ld_benchmark.cstr-NT20-ldbd | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 18:10:01,580 | INFO | ld_benchmark.cstr-NT20-ldbd |         0     Initial point                 (1, 1)          -inf       9.89474       inf%      1.18  *
+2026-02-26 18:10:01,580 | INFO | ld_benchmark.cstr-NT20-ldbd |         1    Skipped Anchor                 (1, 1)          -inf       9.89474       inf%      1.18  
+2026-02-26 18:10:02,855 | INFO | ld_benchmark.cstr-NT20-ldbd |         1          Neighbor                 (2, 1)          -inf       4.06188       inf%      2.45  *
+2026-02-26 18:10:03,942 | INFO | ld_benchmark.cstr-NT20-ldbd |         1          Neighbor                 (2, 2)          -inf       4.06188       inf%      3.54  
+2026-02-26 18:10:03,949 | INFO | ld_benchmark.cstr-NT20-ldbd |         1            Master                (20, 1)    -100.92951       4.06188   2584.80%      3.55  
+2026-02-26 18:10:03,949 | INFO | ld_benchmark.cstr-NT20-ldbd |         1         UB update                 (2, 1)    -100.92951       4.06188   2584.80%      3.55  
+2026-02-26 18:10:05,194 | INFO | ld_benchmark.cstr-NT20-ldbd |         2            Anchor                (20, 1)    -100.92951       3.61612   2891.10%      4.79  *
+2026-02-26 18:10:06,311 | INFO | ld_benchmark.cstr-NT20-ldbd |         2          Neighbor                (19, 1)    -100.92951       3.60768   2897.63%      5.91  *
+2026-02-26 18:10:07,431 | INFO | ld_benchmark.cstr-NT20-ldbd |         2          Neighbor                (19, 2)    -100.92951       3.60768   2897.63%      7.03  
+2026-02-26 18:10:08,542 | INFO | ld_benchmark.cstr-NT20-ldbd |         2          Neighbor                (20, 2)    -100.92951       3.60768   2897.63%      8.14  
+2026-02-26 18:10:08,553 | INFO | ld_benchmark.cstr-NT20-ldbd |         2            Master                 (3, 1)       3.47259       3.60768      3.74%      8.15  
+2026-02-26 18:10:08,553 | INFO | ld_benchmark.cstr-NT20-ldbd |         2         UB update                (19, 1)       3.47259       3.60768      3.74%      8.15  
+2026-02-26 18:10:09,659 | INFO | ld_benchmark.cstr-NT20-ldbd |         3            Anchor                 (3, 1)       3.47259       3.31485      4.76%      9.26  *
+2026-02-26 18:10:09,660 | INFO | ld_benchmark.cstr-NT20-ldbd |         3   Skipped Neighbor                 (2, 1)       3.47259       3.31485      4.76%      9.26  
+2026-02-26 18:10:09,661 | INFO | ld_benchmark.cstr-NT20-ldbd |         3   Skipped Neighbor                 (2, 2)       3.47259       3.31485      4.76%      9.26  
+2026-02-26 18:10:10,757 | INFO | ld_benchmark.cstr-NT20-ldbd |         3          Neighbor                 (3, 2)       3.47259       3.31485      4.76%     10.36  
+2026-02-26 18:10:12,042 | INFO | ld_benchmark.cstr-NT20-ldbd |         3          Neighbor                 (4, 1)       3.47259       3.13434     10.79%     11.64  *
+2026-02-26 18:10:13,135 | INFO | ld_benchmark.cstr-NT20-ldbd |         3          Neighbor                 (4, 2)       3.47259       3.13434     10.79%     12.73  
+2026-02-26 18:10:13,152 | INFO | ld_benchmark.cstr-NT20-ldbd |         3            Master                 (4, 1)       3.13434       3.13434      0.00%     12.75  
+2026-02-26 18:10:13,152 | INFO | ld_benchmark.cstr-NT20-ldbd |         3         UB update                 (4, 1)       3.13434       3.13434      0.00%     12.75  
+2026-02-26 18:10:13,152 | INFO | ld_benchmark.cstr-NT20-ldbd |         3   Anchor (promoted)                 (4, 1)       3.13434       3.13434      0.00%     12.75  
+2026-02-26 18:10:13,152 | INFO | ld_benchmark.cstr-NT20-ldbd | LDBD bounds converged: UB=3.134337036451064, LB=3.134337036451064
+2026-02-26 18:10:13,152 | INFO | ld_benchmark.cstr-NT20-ldbd | Search path: (1, 1) -> (20, 1) -> (3, 1) -> (4, 1)
+2026-02-26 18:10:13,153 | INFO | ld_benchmark.cstr-NT20-ldbd | Anchor points: (1, 1) -> (20, 1) -> (3, 1) -> (4, 1)
+2026-02-26 18:10:13,154 | INFO | ld_benchmark.cstr-NT20-ldbd | 
+Solved in 3 iterations and 12.75363 seconds
+Optimal objective value 3.1343370365
+Relative optimality gap 0.00000%
+2026-02-26 18:10:13,155 | INFO | ld_benchmark.cstr-NT20-ldbd | Visited point (2, 1): objective=4.061881684654232, feasible=True
+2026-02-26 18:10:13,155 | INFO | ld_benchmark.cstr-NT20-ldbd | Visited point (2, 2): objective=4.061881686983498, feasible=True

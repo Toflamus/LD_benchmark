@@ -1,0 +1,72 @@
+2026-02-26 18:08:50,661 | INFO | ld_benchmark.cstr-NT10-ldsda | Starting GDPopt version 22.5.13 using LDSDA algorithm
+2026-02-26 18:08:50,661 | INFO | ld_benchmark.cstr-NT10-ldsda | iterlim: None
+time_limit: 900
+tee: false
+logger: <Logger ld_benchmark.cstr-NT10-ldsda (INFO)>
+mip_solver: gurobi
+mip_solver_args:
+nlp_solver: ipopt
+nlp_solver_args:
+minlp_solver: gams
+minlp_solver_args:
+  add_options: ['option threads = 1;', 'option reslim = 3600;', 'option iterlim = 5000;', '$onecho > conopt.opt', 'rtnwma 1e-06', 'rtnopt 1e-06', 'lstall 15', 'rtvmin 1e-08', 'lsmeth 2', 'lsisol 1', 'rtmaxv 1.0e10', '$offecho', 'GAMS_MODEL.optfile = 1;']
+  solver: conopt
+local_minlp_solver: bonmin
+local_minlp_solver_args:
+small_dual_tolerance: 1e-08
+integer_tolerance: 1e-05
+constraint_tolerance: 1e-06
+variable_tolerance: 1e-08
+subproblem_initialization_method: <function restore_vars_to_original_values at 0x7f5ab5430400>
+call_before_subproblem_solve: <class 'type'>
+call_after_subproblem_solve: <class 'type'>
+call_after_subproblem_feasible: <class 'type'>
+force_subproblem_nlp: false
+subproblem_presolve: true
+tighten_nlp_var_bounds: false
+round_discrete_vars: true
+max_fbbt_iterations: 3
+bound_tolerance: 1e-06
+direction_norm: Linf
+starting_point: [1, 1]
+logical_constraint_list: ComponentSet(['one_unreacted_feed (key=one_unreacted_feed)', 'one_recycle (key=one_recycle)'])
+disjunction_list: None
+
+2026-02-26 18:08:50,662 | INFO | ld_benchmark.cstr-NT10-ldsda | If you use this software, you may cite the following:
+            - Implementation:
+            Chen, Q; Johnson, ES; Bernal, DE; Valentin, R; Kale, S;
+            Bates, J; Siirola, JD; Grossmann, IE.
+            Pyomo.GDP: an ecosystem for logic based modeling and optimization
+            development.
+            Optimization and Engineering, 2021.
+2026-02-26 18:08:50,662 | INFO | ld_benchmark.cstr-NT10-ldsda | 
+- LDSDA algorithm:
+        Bernal DE, Ovalle D, Liñán DA, Ricardez-Sandoval LA, Gómez JM, Grossmann IE.
+        Process Superstructure Optimization through Discrete Steepest Descent Optimization: a GDP Analysis and Applications in Process Intensification.
+        Computer Aided Chemical Engineering 2022 Jan 1 (Vol. 49, pp. 1279-1284). Elsevier.
+        https://doi.org/10.1016/B978-0-323-85159-6.50213-X
+2026-02-26 18:08:50,667 | INFO | ld_benchmark.cstr-NT10-ldsda | Original model has 195 constraints (32 nonlinear) and 20 disjunctions, with 146 variables, of which 40 are binary, 0 are integer, and 106 are continuous.
+2026-02-26 18:08:50,694 | INFO | ld_benchmark.cstr-NT10-ldsda | Reformulation Summary:
+2026-02-26 18:08:50,694 | INFO | ld_benchmark.cstr-NT10-ldsda |   Index | Ext Var | LB | UB | Associated Boolean Vars
+2026-02-26 18:08:50,694 | INFO | ld_benchmark.cstr-NT10-ldsda | =====================================================================================================
+2026-02-26 18:08:50,695 | INFO | ld_benchmark.cstr-NT10-ldsda | Iteration |   Search Type   |  External Variables  | Lower Bound | Upper Bound |   Gap    | Time(s)
+
+2026-02-26 18:08:51,460 | INFO | ld_benchmark.cstr-NT10-ldsda |         0     Initial point                 (1, 1)          -inf       9.89474       inf%      0.80  *
+2026-02-26 18:08:52,311 | INFO | ld_benchmark.cstr-NT10-ldsda |         1   Neighbor search                 (2, 1)          -inf       4.06188       inf%      1.65  *
+2026-02-26 18:08:53,071 | INFO | ld_benchmark.cstr-NT10-ldsda |         1   Neighbor search                 (2, 2)          -inf       4.06188       inf%      2.41  
+2026-02-26 18:08:53,846 | INFO | ld_benchmark.cstr-NT10-ldsda |         1       Line search                 (3, 3)          -inf       3.31485       inf%      3.18  *
+2026-02-26 18:08:54,598 | INFO | ld_benchmark.cstr-NT10-ldsda |         1       Line search                 (4, 4)          -inf       3.13378       inf%      3.94  *
+2026-02-26 18:08:55,323 | INFO | ld_benchmark.cstr-NT10-ldsda |         1       Line search                 (5, 5)          -inf       3.06201       inf%      4.66  *
+2026-02-26 18:08:56,115 | INFO | ld_benchmark.cstr-NT10-ldsda |         1       Line search                 (6, 6)          -inf       3.00728       inf%      5.45  *
+2026-02-26 18:08:56,873 | INFO | ld_benchmark.cstr-NT10-ldsda |         1       Line search                 (7, 7)          -inf       2.96605       inf%      6.21  *
+2026-02-26 18:08:57,627 | INFO | ld_benchmark.cstr-NT10-ldsda |         1       Line search                 (8, 8)          -inf       2.93441       inf%      6.96  *
+2026-02-26 18:08:58,366 | INFO | ld_benchmark.cstr-NT10-ldsda |         1       Line search                 (9, 9)          -inf       2.90953       inf%      7.70  *
+2026-02-26 18:08:59,147 | INFO | ld_benchmark.cstr-NT10-ldsda |         1       Line search               (10, 10)          -inf       2.88954       inf%      8.48  *
+2026-02-26 18:08:59,980 | INFO | ld_benchmark.cstr-NT10-ldsda |         2   Neighbor search                (10, 9)          -inf       2.88954       inf%      9.32  
+2026-02-26 18:08:59,980 | INFO | ld_benchmark.cstr-NT10-ldsda | Search path: (1, 1) -> (2, 2) -> (3, 3) -> (4, 4) -> (5, 5) -> (6, 6) -> (7, 7) -> (8, 8) -> (9, 9) -> (10, 10)
+2026-02-26 18:08:59,980 | INFO | ld_benchmark.cstr-NT10-ldsda | 
+Solved in 2 iterations and 9.31790 seconds
+Optimal objective value 2.8895369685
+Relative optimality gap inf%
+2026-02-26 18:08:59,981 | INFO | ld_benchmark.cstr-NT10-ldsda | Visited point (2, 1): objective=4.061881684654232, feasible=True
+2026-02-26 18:08:59,982 | INFO | ld_benchmark.cstr-NT10-ldsda | Visited point (2, 2): objective=4.061881685895478, feasible=True

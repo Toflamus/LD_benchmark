@@ -1,0 +1,95 @@
+{
+  "algorithm_full": "gdpopt.ldbd",
+  "algorithm_tag": "LDBD",
+  "common_config": {
+    "direction_norm": "Linf",
+    "mip_solver": "gurobi",
+    "mip_solver_args": {},
+    "preprocessing": false,
+    "separation_solver": "gurobi",
+    "separation_solver_args": {},
+    "subproblem_solver": "gams",
+    "subproblem_solver_args": {
+      "add_options": [
+        "option threads = 1;",
+        "option reslim = 3600;",
+        "option iterlim = 5000;",
+        "$onecho > conopt.opt",
+        "rtnwma 1e-06",
+        "rtnopt 1e-06",
+        "lstall 15",
+        "rtvmin 1e-08",
+        "lsmeth 2",
+        "lsisol 1",
+        "rtmaxv 1.0e10",
+        "$offecho",
+        "GAMS_MODEL.optfile = 1;",
+        "option reslim=898.0884684417397;",
+        "option reslim=895.5485370084643;",
+        "option reslim=893.349098559469;",
+        "option reslim=891.29579346627;",
+        "option reslim=889.2047434868291;",
+        "option reslim=887.0400112848729;",
+        "option reslim=884.7268311632797;",
+        "option reslim=880.1020936490968;",
+        "option reslim=877.3668700121343;"
+      ],
+      "solver": "conopt"
+    },
+    "tee": false,
+    "time_limit": 900
+  },
+  "initial_point_key": 1,
+  "instance": "NT17",
+  "logical_constraint_count": 2,
+  "model": "column",
+  "pyomo_version": "6.10.0.dev0",
+  "schema_version": 1,
+  "solve_kwargs": {
+    "direction_norm": "Linf",
+    "mip_solver": "gurobi",
+    "mip_solver_args": {},
+    "preprocessing": false,
+    "separation_solver": "gurobi",
+    "separation_solver_args": {},
+    "starting_point": [
+      13,
+      4
+    ],
+    "subproblem_solver": "gams",
+    "subproblem_solver_args": {
+      "add_options": [
+        "option threads = 1;",
+        "option reslim = 3600;",
+        "option iterlim = 5000;",
+        "$onecho > conopt.opt",
+        "rtnwma 1e-06",
+        "rtnopt 1e-06",
+        "lstall 15",
+        "rtvmin 1e-08",
+        "lsmeth 2",
+        "lsisol 1",
+        "rtmaxv 1.0e10",
+        "$offecho",
+        "GAMS_MODEL.optfile = 1;",
+        "option reslim=898.0884684417397;",
+        "option reslim=895.5485370084643;",
+        "option reslim=893.349098559469;",
+        "option reslim=891.29579346627;",
+        "option reslim=889.2047434868291;",
+        "option reslim=887.0400112848729;",
+        "option reslim=884.7268311632797;",
+        "option reslim=880.1020936490968;",
+        "option reslim=877.3668700121343;"
+      ],
+      "solver": "conopt"
+    },
+    "tee": false,
+    "time_limit": 900
+  },
+  "starting_point": [
+    13,
+    4
+  ],
+  "timestamp_utc": "2026-03-10T21:29:45.329217+00:00"
+}
